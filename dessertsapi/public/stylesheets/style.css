@@ -1,0 +1,67 @@
+html, body {
+  height: 100%;
+}
+
+
+#landing{color:white;
+
+    padding: 10px;
+  
+}
+#landinglink{
+    color:white;
+    padding: 10px;
+}
+
+#greenbutton{float: right;
+
+}
+#main{
+    position: relative;
+
+
+}
+.list-group{
+    padding-top: 12px;
+}
+
+.h3{
+    color: navy;
+}
+#list{
+    color: navy;
+}
+.well{
+    max-width: 800px;
+      margin-bottom: 0px;
+    border-bottom: none;
+    border-left: none;
+  
+}
+#dessertimage{
+    max-width: 680px;
+}
+#name{
+    color:navy;
+}
+#time{
+    float: right;
+}
+#author{
+    font-style: bold;
+}
+
+#landingbg{background-image: url(images/cakes-489849_1280.jpg);
+    width: 100%;
+    height: 100%;
+    
+}
+#landing{
+/*
+    margin: auto;
+  position: absolute;
+    text-align: center;
+    align-self: center;
+*/
+/*  top: 0; left: 0; bottom: 0; right: 0;*/
+}

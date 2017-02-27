@@ -1,0 +1,70 @@
+<% include ../partials/header %><br><br>
+<div class="container">
+    <div class="row">
+<div class="col-md-3">
+  <h3 id="list">Desserts</h3>
+  <ul class="list-group">
+    <li class="list-group-item active">First item</li>
+    <li class="list-group-item">Second item</li>
+    <li class="list-group-item">Third item</li>
+  </ul>
+</div>
+<div class="col-md-9" id="main" >
+    <div class="thumbnail">
+    	<img src="<%= dessert.image %>" class="img-responsive" id="dessertimage">
+    </div>
+     <div id="name">
+    	<h1><%= dessert.name %></h1>
+    </div>
+
+    <div>
+    	<h4><%= dessert.description %></h4>
+    </div>
+    <div>
+        <h4>
+            <i>submitted by  <%= dessert.creator.username %> </i>
+        </h4>
+        
+    </div>
+    <div class = "tpbutton btn-toolbar" style="text-align:center">
+        <% if(currentUser && currentUser.id == dessert.creator.id) { %>
+    <a href="<%= dessert.id %>/edit" class="btn btn-warning" >Edit</a>
+   
+       
+        <form method="POST" action="/desserts/<%= dessert.id %>?_method=DELETE">
+            <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+        <% } %> 
+    </div><br>
+        <div class="well" >
+              <h4>
+                  <div id="greenbutton">
+                      <a href="<%= dessert.id %>/comments/new" class="btn btn-success" >Add New Comment</a>
+                  </div><br><br>
+                  
+                 <% dessert.comments.forEach(function(showcomment){ %>
+                <div id="author"><strong><%= showcomment.author.username %></strong></div><div id="time">10 days ago</div>
+                <div><%= showcomment.text %></div>
+                  <div class = "tpbutton btn-toolbar" style="text-align:center">
+                  
+                      
+                      <% if(currentUser && currentUser.id == showcomment.author.id) { %> 
+                      <a href="/desserts/<%=dessert.id %>/comments/<%= showcomment.id%>/edit" class="btn btn-warning" >Edit</a>
+                      <form method="POST" action="/desserts/<%= dessert.id %>/comments/<%=showcomment.id%>?_method=DELETE">
+            <button type="submit" class="btn btn-danger">Delete</button>
+                      </form>
+                      <% } %> 
+                  </div>
+                     <% }) %> 
+                  
+                 
+             </h4>
+        </div>
+
+    </div>
+
+    <a href="/desserts">Back</a>
+        </div>
+    </div>
+
+

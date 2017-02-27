@@ -1,0 +1,26 @@
+<% include ./partials/header %>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-4">
+			<div>
+				<h1 style="margin-top:2em;">register a new account</h1>
+
+				<form action="/register" method="POST">
+					<input class="form-control" style="width:25em;" type="text" name="username" placeholder="create a username"><br/>
+
+					<input class="form-control" style="width:25em;" type="password" name="password" placeholder="create a password"><br/>
+                    
+                    <input class="form-control" style="width:25em;" type="email" name="email" placeholder="enter your email address"><br/>
+
+					<button type="submit" class="btn btn-primary" style="width:25em;">Submit!</button>
+				</form><br />
+
+				<a href="/">Back</a>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+<% include ./partials/footer %>

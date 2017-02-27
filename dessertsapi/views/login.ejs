@@ -1,0 +1,23 @@
+<% include ./partials/header %>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-4">
+			<div>
+				<h1 style="margin-top:2em;">Login to the desserts</h1>
+
+				<form action="/login" method="POST">
+					<input class="form-control" style="width:25em;" type="text" name="username" placeholder="username"><br/>
+
+					<input class="form-control" style="width:25em;" type="password" name="password" placeholder="password"><br/>
+
+					<button type="submit" class="btn btn-primary" style="width:25em;">Submit!</button>
+				</form><br />
+
+				<a href="/">Back</a>
+				
+			</div>
+		</div>
+	</div>
+</div>
+<% include ./partials/footer %>

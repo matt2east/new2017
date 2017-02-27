@@ -1,0 +1,26 @@
+<% include ../partials/header %>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-4">
+			<div>
+				<h1 style="margin-top:2em;">Edit Comment </h1>
+                <div>
+				<form method="POST" action="/desserts/<%= dessert%>/comments/<%=comment%>?_method=PUT">
+					<input class="form-control" style="width:25em;" type="text" name="editCommentText" placeholder="Text"><br/>
+
+					
+
+					<button type="submit" class="btn btn-primary" style="width:25em;">Submit!</button>
+				</form><br />
+                    
+                    <div class="container">
+
+				<a href="/desserts/<%= dessert.id %>">Back</a></div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+<% include ../partials/footer %>
