@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>the angry sports coach</title>
+      <script src="script.js"></script>
+      <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body style="background:#D5DBDB" font-family="Comic San">
+  <h1>Welcome to the angry sports coach app!</h1>
+      <h2>Now you too can be an angry sports coach and yell at your team.</h2>
+      <img src="angrycoach.jpg" alt="a very angry coach yelling" height=300px, width=275px>
+      <br>
+      <div id="forms">  
+        <div id="willHide">Which sport are you coaching?
+            <br>
+     <select id="sportSelect">
+         <option class="sportOption" value="soccer">soccer</option>
+         <option class="sportOption" value="football">football</option>
+         <option class="sportOption" value="basketball">basketball</option>
+         <option class="sportOption" value="baseball">baseball</option>
+    </select>
+          <button type="button" onclick="pickSport()" id="pickSportButton">Submit</button>
+            <br>
+            <div id="youSelected"></div>
+                
+      </div>
+          <br>
+          <div>Add your own rant lines.</div>
+      
+       <form id="newYell">
+          <input id="addNew" type=text placeholder="add your own">
+          <input type=button onclick="addYell()" value="Add"/>
+      </form>
+          <br>
+     
+      <div>How many lines do you want to yell?<br>
+     <select id="lengthSelect">
+         <option class="lengthOption" value="1">1</option>
+         <option class="lengthOption" value="2">2</option>
+         <option class="lengthOption" value="3">3</option>
+         <option class="lengthOption" value="4">4</option>
+         <option class="lengthOption" value="5">5</option>
+    </select>
+          <button type="button" onclick="generateRant()">Start ranting</button>
+</div>
+      </div>
+     
+      <div>
+          <h2>Your rant is:</h2>
+          <div id="yourRant" style="font-size:30px"></div>
+      </div>
+           
+      <div id="alertNeeded" style="font-size:16px"></div>
+   
+      
+
+      
+      
+  </body>
+</html>

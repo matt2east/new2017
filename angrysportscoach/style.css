@@ -1,0 +1,24 @@
+body{font-family:"Comic Sans MS", cursive, sans-serif;
+}
+#yourRant{
+    color:black;
+}
+#alertNeeded{
+    color:red;
+}
+#forms{
+    position: absolute;
+    left: 400px;
+    top: 135px;
+}
+#angrycoach{
+    width:500px;
+}
+#youSelected{
+    font-style:italic;
+}
+#yourRant{
+    font-style:italic;
+}
+
+
