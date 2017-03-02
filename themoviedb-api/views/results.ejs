@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie results</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+      </script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+      
+</head>
+<body>
+           <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">The Movie Project</a>
+    </div>
+
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+   
+        <li><a href="/">Home</a></li>
+       
+      </ul>
+    
+     
+    </div>
+  </div>
+        </nav>
+    <br><br><br><br>
+    
+    
+<div id="results">Now Playing at a Theater Near You:</div><br>
+<div class="eachmovie">
+   <% data.results.forEach(function (item, index, array){ %>
+    <div class="movietitle"><%= item.title %></div>
+    <div><%= item.overview %></div>
+    <div>Rating: <%= item.vote_average %> out of 10 stars</div>
+    <div class="poster"><img class="image" src="https://image.tmdb.org/t/p/w500/<%=item.poster_path%>"></div>
+  
+    <% }) %>  
+</div>
+
+    
+
+
+
+</body>
+</html>
