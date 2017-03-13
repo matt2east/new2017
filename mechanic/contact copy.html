@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Contact Shane's Automotive, Leander TX</title>
+             <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=font1|font2|etc' type='text/css'>
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+
+      <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+      
+      <style>
+      #map {
+        width: 100%;
+        height: 300px;
+        background-color: grey;
+      }
+          </style>
+
+  </head>
+     <body>
+    
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        
+      <a class="navbar-brand" href="#"><i class="fa fa-wrench" aria-hidden="true"></i><i class="fa fa-car" aria-hidden="true"></i></a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav" id="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>  
+  <div>      
+ <h1 class="title"><strong>Shane's Automotive</strong></h1>
+         </div>
+         
+          <div class="container">
+         <div class="row">
+             <div class="section">
+                 <div class="col-sm-5">
+        <img src="images/16.jpg" class="image">
+        </div>
+                 <div class="surroundtext col-sm-7">
+    <div class="bodytext">
+        <h2>contact</h2>
+        <h3>Shane DeRocher</h3>
+  <ul id="contact">
+      <li>phone: (512)887-0653</li>
+      <li>email: sderocher25@gmail.com</li>
+      <li>location: <br>402 Horseshoe Drive<br>
+Leander, Texas</li>
+        </ul>
+       </div></div></div></div><br>
+         
+        
+         
+
+    <div id="map"></div>
+              </div>
+    <script>
+      function initMap() {
+        var shaneLocation = {lat: 30.569388, lng: -97.853953};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: shaneLocation
+        });
+        var marker = new google.maps.Marker({
+          position: shaneLocation,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo3SiMje_WxRSzvhNCx4iwVOqurCWiy34&callback=initMap">
+    </script>
+      
+
+      
+
+                     
+                     
+                     
+                     
+                     
+                     
+  <nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+  
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><a class="navbar-brand" href="#"><i class="fa fa-wrench" aria-hidden="true"></i><i class="fa fa-car" aria-hidden="true"></i></a>
+      <ul class="nav navbar-nav" id="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>   
+     
+ 
+  
+  </body>
+</html>
