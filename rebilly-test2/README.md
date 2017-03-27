@@ -7,7 +7,7 @@ npm install path <br />
 npm install path <br />
 npm install request <br />
 
-2. In your terminal while in the project directory, run the command "node app". <br /> <br />
+2. In your terminal while in the project directory, run the command "node app". <br />
 
 3. You will see an input form. Do a search and consume the API. <br />
 
