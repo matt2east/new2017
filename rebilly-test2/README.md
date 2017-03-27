@@ -11,4 +11,5 @@ npm install request <br />
 
 3. You will see an input form. Do a search and consume the API. <br />
 
-For any questions please contact: matt2east(at)gmail(dot)com
+For any questions please contact: matt2east(at)gmail(dot)com <br />
+Thanks for the opportunity!

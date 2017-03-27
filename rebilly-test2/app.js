@@ -19,7 +19,6 @@ app.get('/results', function(req, res) {
         if (!error && response.statusCode == 200) {
             var data = JSON.parse(body);    
             res.render('results.ejs', {data: data})
-            console.log(body);
         };
     })             
 });
@@ -31,7 +30,6 @@ app.get('/:id/details', function(req, res) {
         if (!error && response.statusCode == 200) {
             var data = JSON.parse(body);    
             res.render('details.ejs', {data: data});
-            console.log(body)
         };
     })             
 });
