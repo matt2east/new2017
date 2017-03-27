@@ -9,7 +9,7 @@ npm install request <br />
 
 2. In your terminal while in the project directory, run the command "node app". <br />
 
-3. You will see an input form. Do a search and consume the API. <br />
+3. In your browser type "http://localhost:3000/". You will see an input form. Do a search and consume the API. <br />
 
 For any questions please contact: matt2east(at)gmail(dot)com <br />
 Thanks for the opportunity!
