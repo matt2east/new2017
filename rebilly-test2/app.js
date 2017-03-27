@@ -23,7 +23,6 @@ app.get('/results', function(req, res) {
     })             
 });
 app.get('/:id/details', function(req, res) {
-    console.log("params is " + req.params.id);
      var movie =  req.params.id;
     request("http://www.omdbapi.com/?i="+movie+"&plot=full",
             function (error, response, body) {
