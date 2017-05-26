@@ -5,6 +5,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #f5f6f8;
+    
 }
 
 li {
@@ -117,7 +118,13 @@ li .button {
     padding-left: 30px;
     background-color:white;
     list-style-type: disc;
-    
-    
-}
 
+}
+.divitem{
+    float:none;
+
+        
+}
+#lock{
+    padding-top:40px;
+}
