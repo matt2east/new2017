@@ -5,12 +5,18 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #f5f6f8;
+    display:block;  
+}
+.toplist{
     
 }
 
 li {
     float: left;
     padding: 10px;
+}
+topitem{
+    
 }
 
 li a {
@@ -46,7 +52,7 @@ li .button {
     font-size: 18px;
 }
 #last{
-    padding-right: 100px;
+    padding-right: 25px;
     
 }
 * {
@@ -129,6 +135,7 @@ li .button {
     font-family: 'Open Sans', sans-serif;
     font-weight: 500;
     padding-left: 30px;
+    padding-bottom:100px;
     background-color:white;
     list-style-type: none;
 
