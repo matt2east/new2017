@@ -32,6 +32,7 @@ h1{
 }
 #logo{
     padding-top:5px;
+    
 }
 
 li .button {
@@ -46,6 +47,7 @@ li .button {
 }
 #last{
     padding-right: 100px;
+    
 }
 * {
     box-sizing: border-box;
@@ -71,7 +73,8 @@ li .button {
     float: left;
     padding-right: 30px;
     padding-top: 15px;
-  border-top: 1px solid #f5f6f8; 
+    padding-bottom: 15px;
+    border-top: 1px solid #d8d8d8; 
 }
 .default {
     font-size: 18px;
@@ -83,20 +86,20 @@ li .button {
 .col1{
     float:left;
     width:34%;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     padding-left:30px;
 }
 .col2{
     float:left;
     width:33%;
     padding-left:5px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
 }
 .col3{
     float:left;
     width:33%;
     padding-left:5px; 
-    padding-bottom: 10px;
+    padding-bottom: 30px;
 }
 .title1{
     font-size: 16px;
@@ -120,6 +123,16 @@ li .button {
     list-style-type: disc;
 
 }
+.divlist2{
+    font-size: 18px;
+    color: #666666;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    padding-left: 30px;
+    background-color:white;
+    list-style-type: none;
+
+}
 .divitem{
     float:none;
 
@@ -127,4 +140,61 @@ li .button {
 }
 #lock{
     padding-top:40px;
+}
+#advantages{
+    padding-top:40px;
+}
+
+
+.footerholder {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+   
+}
+
+.footer {
+    background: none repeat scroll 0 0 #3a3d40;
+    height: 30px;
+    margin: auto;
+    width: 100%;
+    padding-bottom: 60px;
+    padding-top: 10px;
+   
+}
+.footeritem{
+    color: #dddddd;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.fa {
+/*    padding: 20px;*/
+    font-size: 12px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+
+}
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+.fa-linkedin {
+    background: navy;
+    color: white;
 }
