@@ -11,6 +11,7 @@ ul {
 
 
 .toplist{
+    text-align: center;
     
 }
 
@@ -231,8 +232,11 @@ li .button {
     width: 100%;
 }
 @media only screen and (max-width: 600px) {
-    li {float: none}
-    #serpentlogo{display:block}
+    li {float: left}
+    #serpentlogo{
+       
+        float: none;    
+    }
     li .button{display: none}
     .col1{float: none;
     padding-left:0;}
@@ -264,9 +268,9 @@ li .button {
     float: none;
     display: inline;
     padding-bottom: 400px;
-    padding-top: 0px;    
-        
+    padding-top: 0px;       
     }
+    
  
     
 
