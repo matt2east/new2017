@@ -49,8 +49,10 @@ h1{
     color: #333333;
     text-decoration: none;
     padding-left: 30px;
-
 }
+ #toph1{
+        padding-top: 40px;
+    }
 #logo{
     padding-top:5px;
     
@@ -88,7 +90,7 @@ li .button {
     width: 30%;
     float: left;
     padding-right: 30px;
-    padding-top: 80px;
+    padding-top: 30px;
 }
 .main2 {
     width: 100%;
@@ -169,6 +171,9 @@ li .button {
 .divitem2{
     float:none;
 
+}
+#cloud{
+    padding-top:100px;
 }
 
 #lock{
