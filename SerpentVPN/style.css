@@ -5,6 +5,7 @@ ul {
     overflow: hidden;
     background-color: #f5f6f8;
     display:block;  
+
 }
 
 
@@ -142,12 +143,7 @@ li .button {
     list-style-image:url(assets/checkmark.svg);
 }
  
-.divlist:before {
-/*
-    content: url('assets/checkmark.svg')
-    margin-right: 10px;
-*/
-}
+
 
 .check{
     padding-right: 25px;
@@ -198,6 +194,7 @@ li .button {
     padding-bottom: 20px;
     padding-left: 40px;
     padding-right: 40px;
+
 }
 .fa {
 /*    padding: 20px;*/
@@ -223,23 +220,44 @@ li .button {
     color: white;
 }
 
+ .social{
+        display:inline;
+     
+    }
+
 
 /* For mobile phones: */
 [class*="col-"] {
     width: 100%;
 }
 @media only screen and (max-width: 600px) {
-    /* For tablets: */
-    ul {
-    background-color: aquamarine;  
-}
     li {float: none}
-    #serpentlogo{display:inline}
+    #serpentlogo{display:block}
     li .button{display: none}
     .col1{float: none;
     padding-left:0;}
     .col2{float: none}
     .col3{float: none}
-    .main {display: inline}
+    .main {float: none}
+    .footeritem{
+    float: none;
+    display: block;
+    }
+    .footerholder{
+  background: none;
+        float: none;
+    display: block;
+    }
+    .footer{
+        height:auto;
+    }
+    .social{
+        display:block;
+        float:none;
+    }
+ 
+    
+
+
    
 }
