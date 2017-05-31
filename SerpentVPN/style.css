@@ -1,3 +1,4 @@
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -232,17 +233,31 @@ li .button {
     width: 100%;
 }
 @media only screen and (max-width: 600px) {
-    li {float: left}
+
+    h1{
+        width: 100%;
+        }
+  
+    li {float: left;
+   
+    }
     #serpentlogo{
        
         float: none;    
     }
     li .button{display: none}
     .col1{float: none;
-    padding-left:0;}
-    .col2{float: none}
-    .col3{float: none}
-    .main {float: none}
+    padding-left:0;
+    width:100%;}
+    .col2{float: none;
+    width:100%}
+    .col3{float: none;
+    width:100%}
+    .main {float: none;
+    width:100%;}
+    .menu{
+        width:100%;
+    }
     .footeritem{
     float: none;
     display: block;
@@ -254,22 +269,37 @@ li .button {
     }
     .footer{
         height:auto;
+      
     }
     .social{
         display:block;
         float:none;
+        padding-top:10px;
+        
+    }
+    #cloud{
+    float:none;
+    display:inline;
+       
     }
     #lock{
-        float: none;
-    display: inline;
-        
+    float: none;
+    display: inline;    
     }
     #advantages{
     float: none;
     display: inline;
     padding-bottom: 400px;
-    padding-top: 0px;       
+      
+     
     }
+    .main2{
+    border-top: none; 
+    }
+    .divlist2{
+    padding-bottom: 0px;
+    }
+  
     
  
     
