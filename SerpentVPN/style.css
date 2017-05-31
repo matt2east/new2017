@@ -1,9 +1,8 @@
 
 #topnav{
-      position: fixed;
-  top: 0;
-  width: 100%;
-    
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 ul {
@@ -13,18 +12,10 @@ ul {
     overflow: hidden;
     background-color: #f5f6f8;
     display:block;  
-
 }
 
-
-
-.toplist{
-   
-    text-align: center;
-    
-   
- 
-    
+.toplist{   
+    text-align: center;   
 }
 
 li {
@@ -51,7 +42,7 @@ h1{
     padding-left: 30px;
 }
  #toph1{
-        padding-top: 40px;
+    padding-top: 40px;
     }
 #logo{
     padding-top:5px;
@@ -81,9 +72,7 @@ li .button {
 .menu {
     width: 70%;
     float: left;
-    padding-top: 40px;
-
-    
+    padding-top: 40px;   
 }
 
 .main {
@@ -158,8 +147,6 @@ li .button {
     list-style-image:url(assets/checkmark.svg);
 }
  
-
-
 .check{
     padding-right: 25px;
 }
@@ -240,11 +227,10 @@ li .button {
 
  .social{
         display:inline;
-     
     }
 
 
-/* For mobile phones: */
+/* small screen: */
 [class*="col-"] {
     width: 100%;
 }
@@ -252,7 +238,6 @@ li .button {
 
     h1{
         width: 100%;
-       
         }
     #toph1{
         padding-bottom: 20px;
@@ -263,7 +248,7 @@ li .button {
     }
     #serpentlogo{
        
-        float: none;    
+    float: none;    
     }
     li .button{display: none}
     .col1{float: none;
@@ -279,7 +264,7 @@ li .button {
    }
     .menu{
     width:100%;
-   padding:40px;
+    padding:40px;
         
     }
     #menutop{
@@ -297,35 +282,27 @@ li .button {
         
     }
     .footer{
-        height:auto;
-        padding-bottom:0px;
+    height:auto;
+    padding-bottom:0px;
       
     }
     .social{
-        display:block;
-        float:none;
-        padding-top:10px;
+    display:block;
+    float:none;
+    padding-top:10px;
         
     }
     #cloud{
-   
     align-content: center;
     padding-left: 120px;
-     
-       
     }
     #lock{
-     
     align-self: center;
-        padding-left: 120px;
-       
+    padding-left: 120px;   
     }
     #advantages{
-    
     padding-bottom: 400px;
-        padding-left: 120px;
-      
-     
+    padding-left: 120px; 
     }
     .main2{
     border-top: none; 
@@ -334,13 +311,7 @@ li .button {
     padding-bottom: 0px;
     }
     .toplist{
-        padding-bottom: 40px;
+    padding-bottom: 40px;
     }
-  
-    
- 
-    
 
-
-   
 }
