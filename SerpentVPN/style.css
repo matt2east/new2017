@@ -254,7 +254,8 @@ li .button {
     .col3{float: none;
     width:100%}
     .main {float: none;
-    width:100%;}
+    width:100%;
+    align-content: right;}
     .menu{
         width:100%;
     }
@@ -266,9 +267,11 @@ li .button {
   background: none;
         float: none;
     display: block;
+        
     }
     .footer{
         height:auto;
+        padding-bottom:0px;
       
     }
     .social{
@@ -280,6 +283,7 @@ li .button {
     #cloud{
     float:none;
     display:inline;
+   
        
     }
     #lock{
