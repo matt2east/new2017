@@ -1,6 +1,6 @@
 body {
     font-family: 'Lato', sans-serif;
-background-color: cadetblue}
+background-color: white}
 
 .navbar-brand{
     font-weight: 1000;
@@ -16,7 +16,7 @@ img {
 
 .well{
     text-align: center;
-/*    background: antiquewhite;*/
+    background: white;
     padding-bottom: 3px;
 }
 
@@ -36,3 +36,10 @@ a.deco-none {
     height: 150px;
     padding-right:10px;
 }
+.forms{
+    padding: 20px;
+}
+.measurements{
+    background-image: url(images/sewing-1229711_1920.jpg);
+color: #2cddd7;}
+

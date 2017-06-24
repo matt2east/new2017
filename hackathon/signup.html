@@ -28,84 +28,111 @@
   
 
 </head>
-    <body>
-Which gender of clothes are you searching for?<br>        
-<label class="checkbox-inline"><input type="checkbox" value="">Mens</label>
-<label class="checkbox-inline"><input type="checkbox" value="">Womens</label>
-<label class="checkbox-inline"><input type="checkbox" value="">Non-Binary</label>    
-<!--
-        <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-group">
-    <label for="exampleSelect1">Example select</label>
-    <select class="form-control" id="exampleSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleSelect2">Example multiple select</label>
-    <select multiple class="form-control" id="exampleSelect2">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleTextarea">Example textarea</label>
-    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-    <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
-  </div>
-  <fieldset class="form-group">
-    <legend>Radio buttons</legend>
-    <div class="form-check">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-        Option one is this and that&mdash;be sure to include why it's great
-      </label>
-    </div>
-    <div class="form-check">
-    <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-        Option two can be something else and selecting it will deselect option one
-      </label>
-    </div>
-    <div class="form-check disabled">
-    <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-        Option three is disabled
-      </label>
-    </div>
-  </fieldset>
-  <div class="form-check">
-    <label class="form-check-label">
-      <input type="checkbox" class="form-check-input">
-      Check me out
-    </label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
--->
-
-
+    <body class="measurements">
+<form action="#"method="get">       
+<div class="forms" >
+<h1>Body Measurements</h1>      
+Which body type are you searching for?<br>        
+<label class="checkbox-inline"><input type="checkbox" class="dropdowntext" value="">Mens</label>
+<label class="checkbox-inline"><input type="checkbox" class="dropdowntext" value="">Womens</label>
+<label class="checkbox-inline"><input type="checkbox" class="dropdowntext" value="">Non-Binary</label>
+<label class="checkbox-inline"><input type="checkbox" class="dropdowntext" value="">4th Option</label>    <br><br>
+  
         
+
+   <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">What is your body sizing problem?
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li>Hips</li>
+      <li>Chest</li>
+    <li>Waist</li>
+        <li>Neck</li> 
+        <li>Shoulders</li> 
+    </ul>
+  </div>
+</div>
+        
+<!--top form      -->
+<div class="forms">
+<div class="form-group row">
+  <div class="col-xs-2">
+    <label for="ex1">Neck Length</label>
+    <input class="form-control" id="ex1" type="text">
+  </div>
+    <div class="col-xs-4">Units
+             <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li class="dropdowntext">Inches</li>
+      <li>Centimeters</li> 
+    </ul>
+  </div>
+    </div>
+    <div class="form-group row">
+  <div class="col-xs-2">
+    <label for="ex1">Waist Length</label>
+    <input class="form-control" id="ex1" type="text">
+  </div>
+    <div class="col-xs-4">Units
+             <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li>Inches</li>
+      <li>Centimeters</li> 
+    </ul>
+  </div>
+    </div>
+        </div>    
+</div>   
+        </div>
+        <div class="forms">
+<div class="form-group row">
+  <div class="col-xs-2">
+    <label for="ex1">Seat Length</label>
+    <input class="form-control" id="ex1" type="text">
+  </div>
+    <div class="col-xs-4">Units
+             <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li>Inches</li>
+      <li>Centimeters</li> 
+    </ul>
+  </div>
+    </div>
+    <div class="form-group row">
+  <div class="col-xs-2">
+    <label for="ex1">Trowser Waist Length</label>
+    <input class="form-control" id="ex1" type="text">
+  </div>
+    <div class="col-xs-4">Units
+             <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li>Inches</li>
+      <li>Centimeters</li> 
+    </ul>
+  </div>
+    </div>
+        </div>    
+</div>   
+                  <button type="submit" class="btn btn-primary btn-lg" id="signupdiv">
+                <a class="deco-none" href="#">Submit</a>
+            </button>
+        </div>
+
+        </form>
+        
+<!--        test-->
+        
+        
+  
+
    
 
 

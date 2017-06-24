@@ -1,3 +1,5 @@
+
+
 function signupScroll() {
     var elmnt = document.getElementById("signupiv");
     elmnt.scrollIntoView();
@@ -12,3 +14,4 @@ function howitworksScroll() {
     var elmnt = document.getElementById("howitworksdiv");
     elmnt.scrollIntoView();
 }
+
