@@ -1,0 +1,38 @@
+body {
+    font-family: 'Lato', sans-serif;
+background-color: cadetblue}
+
+.navbar-brand{
+    font-weight: 1000;
+}
+
+img {
+    width:500px; /* you can use % */
+    height:300px;
+    z-index: 0;
+    padding-bottom:5px;
+    padding-top: 5px;
+}
+
+.well{
+    text-align: center;
+/*    background: antiquewhite;*/
+    padding-bottom: 3px;
+}
+
+.btn-success{
+
+    position:relative;
+/*    left:700px;*/
+    z-index:1000;
+    padding-top:5px;
+}
+a.deco-none {
+    color:#ffffff !important;
+    text-decoration:none !important;
+}
+.gallery{
+    width: 200px;
+    height: 150px;
+    padding-right:10px;
+}
