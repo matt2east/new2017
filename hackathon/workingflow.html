@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+#test {
+    display: none;
+}
+
+</style>
+</head>
+    
+<!--    I did not create this.-->
+
+<body>
+
+<form action="/action_page.php">
+  Waist:<br>
+  <input type="text" id="waist" value="10">
+  <br>
+  Price:<br>
+  <input type="text" id="lastname" value="20">
+  <br><br>
+  <input type="button" value="Narrow it down!" onclick="myFunction()">
+</form> 
+
+<table id="demo">
+  <tr>
+    <th>Picture</th>
+    <th>Waist</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>xx</td>
+    <td>10</td>
+    <td>xx</td>
+  <tr>
+      <td>yy</td>
+      <td>20</td>
+      <td>yy</td>
+    </tr>
+
+
+<script>
+function myFunction() {
+    var rows = document.getElementById("demo").rows;
+//    alert(rows.length);
+    
+   var i;
+    for (i = 0; i < rows.length; i++) {
+      if (rows[i].cells[1].textContent==document.getElementById("waist").value) {
+//          alert("rows value is " + rows[i].cells[1].value);
+//          alert("waist value is " + document.getElementById("waist").value);
+//          alert(rows[i].cells[1].value == document.getElementById("waist").value);
+          rows[i].id = "test";
+        }
+    }    
+   // if (rows[1].cells[0].value=document.getElementById("waist").value) {
+    //       rows[0].id = "test";
+    //     }
+    
+   
+
+
+}
+</script>
+
+</body>
+</html>
+
+<!-- document.getElementById("waist").value 
+var i;
+    for (i = 0; i < c.length; i++) {
+      if (c[i].cells[1].value="company") {
+          c[i].innerHTML = "test" + i;
+        }
+    }
+-->
