@@ -14,7 +14,7 @@ body {
 }
 
 .navbar-brand{
-    font-weight: 1000;
+    font-weight: bold;
     
 }
 
@@ -106,14 +106,35 @@ color: #2cddd7;}
     width:150px;
     height: 150px;
 }
+
+.listingimage:hover{
+    width:500px;
+    height: 500px;
+}
+
 #search{
-    padding:2px;
-/*    background-color:#A8A8A8;*/
+   width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+/*    background-image: url('images/698956-icon-111-search-128.png');*/
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
     
 }
 #results{
      overflow-x: hidden;
     overflow-y: scroll;
+}
+
+.greatmatch{
+    color: crimson;
+    font-weight: bold
 }
 
 
