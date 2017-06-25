@@ -1,24 +1,65 @@
 body {
     font-family: 'Lato', sans-serif;
-background-color: white}
+}
+.textouter{
+    text-align: center;
+    width:auto;
+    display: inline-block;
+   
+}
+.textinner{
+  width: 500px;  
+        display: block;
+
+}
 
 .navbar-brand{
     font-weight: 1000;
+    
 }
 
 img {
-    width:500px; /* you can use % */
+    width:50%; 
     height:300px;
     z-index: 0;
     padding-bottom:5px;
     padding-top: 5px;
 }
 
-.well{
-    text-align: center;
-    background: white;
+#section1{
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    max-height:600px;
+    display: block;
+    padding-top:60px;
+    align-content: center;
+    text-align:center;
     padding-bottom: 3px;
+    background-color:#DCDCDC;
+   
+    
 }
+h1 {margin-top : 0 ; padding-top: 0;
+font-family: 'Lato', sans-serif;}
+
+#overviewdiv{
+    font-family: 'Lato', sans-serif;
+    align-content: center;
+    text-align:center;
+    padding-bottom: 3px;
+    background-color:#F5F5F5;
+    vertical-align: top;
+}
+#howitworksdiv{       
+font-family: 'Lato', sans-serif;
+    max-height:600px;
+    align-content: center;
+    text-align:center;
+    padding-bottom: 3px;
+    background-color:#D3D3D3;
+    vertical-align: top;
+}
+
 
 .btn-success{
 
@@ -32,8 +73,8 @@ a.deco-none {
     text-decoration:none !important;
 }
 .gallery{
-    width: 200px;
-    height: 150px;
+    width: 250px;
+    height: 180px;
     padding-right:10px;
 }
 .forms{
@@ -42,4 +83,13 @@ a.deco-none {
 .measurements{
     background-image: url(images/sewing-1229711_1920.jpg);
 color: #2cddd7;}
+
+.text{
+    width: 600px;
+    text-align: center;
+/*    position:fixed;*/
+}
+.measurementunits{
+    display:inline;
+}
 

@@ -29,6 +29,34 @@
 
 </head>
     <body class="measurements">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">TruFyt</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-left">
+<!--        <li ><a href="#signup" onclick="signupScroll()">Sign Up</a></li>-->
+        <li><a href="#overview" onclick="overviewScroll()">Overview</a></li>
+        <li><a href="#howitworks" onclick="howitworksScroll()">How It Works</a></li>
+
+      </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li><a href="#vendors">Become a Vendor</a></li>
+<!--        <li><a href="#login">Login</a></li>    -->
+ 
+      </ul>    
+    </div>
+  </div>
+</nav> <br><br>
+        
+<!--        forms-->
+        
 <form action="#"method="get">       
 <div class="forms" >
 <h1>Body Measurements</h1>      
@@ -38,100 +66,60 @@ Which body type are you searching for?<br>
 <label class="checkbox-inline"><input type="checkbox" class="dropdowntext" value="">Non-Binary</label>
 <label class="checkbox-inline"><input type="checkbox" class="dropdowntext" value="">4th Option</label>    <br><br>
   
-        
+   <form action="#">
+       What is your body size problem?<br>
+  <select name="What is your body size problem?">
+    <option value="hips">Hips</option>
+    <option value="chest">Chest</option>
+    <option value="waist">Waist</option>
+    <option value="neck">Neck</option>
+      <option value="shoulders">Shoulders</option>
+  </select>
+</form>     
 
-   <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">What is your body sizing problem?
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-      <li>Hips</li>
-      <li>Chest</li>
-    <li>Waist</li>
-        <li>Neck</li> 
-        <li>Shoulders</li> 
-    </ul>
-  </div>
 </div>
-        
-<!--top form      -->
-<div class="forms">
-<div class="form-group row">
-  <div class="col-xs-2">
-    <label for="ex1">Neck Length</label>
-    <input class="form-control" id="ex1" type="text">
-  </div>
-    <div class="col-xs-4">Units
-             <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-      <li class="dropdowntext">Inches</li>
-      <li>Centimeters</li> 
-    </ul>
-  </div>
-    </div>
-    <div class="form-group row">
-  <div class="col-xs-2">
-    <label for="ex1">Waist Length</label>
-    <input class="form-control" id="ex1" type="text">
-  </div>
-    <div class="col-xs-4">Units
-             <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-      <li>Inches</li>
-      <li>Centimeters</li> 
-    </ul>
-  </div>
-    </div>
-        </div>    
-</div>   
-        </div>
-        <div class="forms">
-<div class="form-group row">
-  <div class="col-xs-2">
-    <label for="ex1">Seat Length</label>
-    <input class="form-control" id="ex1" type="text">
-  </div>
-    <div class="col-xs-4">Units
-             <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-      <li>Inches</li>
-      <li>Centimeters</li> 
-    </ul>
-  </div>
-    </div>
-    <div class="form-group row">
-  <div class="col-xs-2">
-    <label for="ex1">Trowser Waist Length</label>
-    <input class="form-control" id="ex1" type="text">
-  </div>
-    <div class="col-xs-4">Units
-             <div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-      <li>Inches</li>
-      <li>Centimeters</li> 
-    </ul>
-  </div>
-    </div>
-        </div>    
-</div>   
-                  <button type="submit" class="btn btn-primary btn-lg" id="signupdiv">
-                <a class="deco-none" href="#">Submit</a>
+<div class="measurementunits"><form action="#"><br>
+<input type="text" name="neck" placeholder="Neck length">
+<select name="neck">
+    <option value="hips">inches</option>
+    <option value="chest">cm</option>
+</select>
+</form>
+</div><br>
+<div class="measurementunits"><form action="#"><br>
+<input type="text" name="waist" placeholder="Waist length">
+<select name="neck">
+    <option value="inches">inches</option>
+    <option value="inches">cm</option>
+</select>
+</form>
+</div><br>
+<div class="measurementunits"><form action="#"><br>
+<input type="text" name="seat" placeholder="Seat length">
+<select name="neck">
+    <option value="inches">inches</option>
+    <option value="inches">cm</option>
+</select>
+</form>
+</div><br>
+    <div class="measurementunits"><form action="#"><br>
+ <input type="text" name="trowser" placeholder="Trowser waist length">
+<select name="neck">
+    <option value="inches">inches</option>
+    <option value="inches">cm</option>
+</select>
+</form>
+</div><br>
+    
+    
+  <button type="submit" class="btn btn-success btn-lg" id="signupdiv">
+                <a class="deco-none" href="signup.html">Submit</a>
             </button>
-        </div>
 
         </form>
         
 <!--        test-->
         
-        
-  
 
    
 
