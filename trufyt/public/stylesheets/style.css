@@ -1,0 +1,42 @@
+#results{
+    position: absolute;
+    font-size: 20px;
+    left: 80px;
+}
+body.main{
+    background-image: url("movie.jpg")
+}
+#maintext{
+    color: white;
+    font-weight: bolder;
+    font-size: 40px;
+     text-align: center;
+    margin-top: 30%;
+}
+.btn{
+    text-align: center;
+    font-size: 15px;
+}
+.movietitle{
+    font-size: 20px;
+    padding-top:10px;
+}
+.movieinfo{
+    padding-bottom: 15px;
+}
+.image{
+    height:350px;
+    width:250px;
+}
+.poster{
+      padding-top: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid gray;
+}
+.eachmovie{
+    position: absolute;
+    left: 80px;
+    width:50%;
+    height: 300px;    
+   
+}
