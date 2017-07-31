@@ -3,17 +3,20 @@ function sendForm(){
     var apiDisplay = "http://api.screenshotmachine.com/?key=2df3a8&dimension=320x240&format=png&url=";
     var userLink = document.getElementById("linkValue").value;
     var fullUrl = api.concat(userLink);
-    var displauImage = apiDisplay.concat(userLink)
+    var myImage = apiDisplay.concat(userLink)
 //    alert("the full url is" + fullUrl)
     document.getElementById("linkValue").value = fullUrl;
 //    alert(document.getElementById("linkValue").value);
-var displayImage = document.createElement('img');
-displayImage.src = displauImage;
-displayImage.innerHTML = displauImage;
-// apend the anchor to the body
-// of course you can append it almost to any other dom element
-document.getElementById('hiddendiv').appendChild(displayImage);
-
+    var x = document.getElementById('clicktoHide');
+    x.style.display = 'none';
+    var node = document.createElement("h3");
+    var textnode = document.createTextNode("Thanks for submitting the form. Here is the image you submitted.");
+    node.appendChild(textnode);
+    document.getElementById("hiddendiv").appendChild(node);
+    var displayImage = document.createElement('img');
+    displayImage.src = myImage;
+    displayImage.innerHTML = myImage;
+    document.getElementById('hiddendiv').appendChild(displayImage);
 }
 
 //var img = document.createElement('img');
@@ -43,22 +46,22 @@ function getFormData() {
     data[k] = elements[k].value;
     var str = ""; // declare empty string outside of loop to allow
                   // it to be appended to for each item in the loop
-    if(elements[k].type === "checkbox"){ // special case for Edge's html collection
-      str = str + elements[k].checked + ", "; // take the string and append 
-                                              // the current checked value to 
-                                              // the end of it, along with 
-                                              // a comma and a space
-      data[k] = str.slice(0, -2); // remove the last comma and space 
-                                  // from the  string to make the output 
-                                  // prettier in the spreadsheet
-    }else if(elements[k].length){
-      for(var i = 0; i < elements[k].length; i++){
-        if(elements[k].item(i).checked){
-          str = str + elements[k].item(i).value + ", "; // same as above
-          data[k] = str.slice(0, -2);
-        }
-      }
-    }
+//    if(elements[k].type === "checkbox"){ // special case for Edge's html collection
+//      str = str + elements[k].checked + ", "; // take the string and append 
+//                                              // the current checked value to 
+//                                              // the end of it, along with 
+//                                              // a comma and a space
+//      data[k] = str.slice(0, -2); // remove the last comma and space 
+//                                  // from the  string to make the output 
+//                                  // prettier in the spreadsheet
+//    }else if(elements[k].length){
+//      for(var i = 0; i < elements[k].length; i++){
+//        if(elements[k].item(i).checked){
+//          str = str + elements[k].item(i).value + ", "; // same as above
+//          data[k] = str.slice(0, -2);
+//        }
+//      }
+//    }
   });
   console.log(data);
   return data;
@@ -80,7 +83,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
         console.log( xhr.status, xhr.statusText )
         console.log(xhr.responseText);
         document.getElementById('gform').style.display = 'none'; // hide form
-        document.getElementById('thankyou_message').style.display = 'block';
+//        document.getElementById('thankyou_message').style.display = 'block';
         return;
     };
     // url encode form data for sending as post data

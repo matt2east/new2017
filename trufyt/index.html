@@ -4,27 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="contact form example">
-  <title>Contact Form Example</title>
-    <script src="form.js"></script>
+     <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Trufyt design submission form</title>
+
 </head>
 
 <body>
     <div>
         <h1 >Welcome to Trufyt!</h1>
-        <h2 class="clicktoHide">Send us the specs for your clothing design.</h2>
+        <h2 id="clicktoHide">Send us the specs for your clothing design.</h2>
     </div>
-
 
 <!-- START HERE -->
 <!--   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-   <!-- Style The Contact Form How Ever You Prefer -->
-<!--   <link rel="stylesheet" href="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/style.css">-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
 
     <form id="gform" method="POST"
-  action="https://script.google.com/macros/s/AKfycby3ww4nc3D4d0jTKYrdN-q4g8rEdeSYTX6Jl0mVLhFqC67R7AB9/exec"
-        >
-    <!-- change the form action to your script url -->
+  action="https://script.google.com/macros/s/AKfycby3ww4nc3D4d0jTKYrdN-q4g8rEdeSYTX6Jl0mVLhFqC67R7AB9/exec">
 
         <fieldset>
             <label for="name">Name: </label>
@@ -36,16 +33,11 @@
             <input name="link" size="60" id="linkValue" placeholder="www.trufyt.com"/>
         </fieldset>
       
-      
-    
-
         <fieldset>
             <label for="message">Your comments: </label>
-            <textarea name="message" size="60" rows="10"></textarea>
+            <textarea name="message" rows="1" cols="170"></textarea>
         </fieldset>
       
- 
-
         <fieldset>
             <label for="email"><em>Your</em> Email Address:</label>
             <input id="email" name="email" type="email" value=""
@@ -55,17 +47,15 @@
         Must be a valid email address</span>
 -->
         </fieldset>
-
         <button class="button-success pure-button button-xlarge" onclick="sendForm()">
       <i class="fa fa-paper-plane"></i>&nbsp;Send
         </button>
 
   </form>
     
-    
     <div id="hiddendiv"></div>
+<!--    <div id="thankyou_message">this is a test</div>-->
     
-
     <script data-cfasync="false" type="text/javascript"
 src="form.js">
     </script>
