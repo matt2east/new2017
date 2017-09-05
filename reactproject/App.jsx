@@ -1,9 +1,16 @@
 import React from 'react';
 
-class Greeting extends React.Component {
+class ChildProps extends React.Component {
   render() {
-    return <h3>this is a stateless, propless child component</h3>;
+    return <div><h1>{this.props.headerProp}</h1>
+            <h2>{this.props.contentProp}</h2>
+            <div>stateles</div>
+        </div>;
   }
+}
+ChildProps.defaultProps = {
+   headerProp: "Header from props...",
+   contentProp:"Content from props..."
 }
 
 class App extends React.Component {
@@ -46,11 +53,10 @@ class App extends React.Component {
         </label><br></br>
         <input type="submit" value="Submit" onClick = {this.updateState}/>
         <h2>{this.state.data}</h2>
-            <Greeting></Greeting>
+            <ChildProps></ChildProps>
       </form>
     );
   }
 }
 
 export default App;
-
