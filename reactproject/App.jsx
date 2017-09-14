@@ -6,11 +6,12 @@ class Child extends React.Component {
   }
 }
 
+
 class ChildProps extends React.Component {
   render() {
     return <div><h1>{this.props.headerProp}</h1>
             <h2>{this.props.contentProp}</h2>
-            <div>stateles</div>
+            <div>stateless</div>
         </div>;
   }
 }
@@ -22,7 +23,7 @@ ChildProps.defaultProps = {
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: '', data: '', childVisible: true};
+    this.state = {value: '', data: '', childVisible: true, hide: true, finished: false};
      this.updateState = this.updateState.bind(this);  
 
     this.handleChange = this.handleChange.bind(this);
@@ -43,7 +44,7 @@ class App extends React.Component {
       let api = "http://api.screenshotmachine.com/?key=2df3a8&dimension=1024xfull&format=png&url=";  
     let input = this.state.value;
     let newVal = api + input;    
-    this.setState({value: '', data: newVal, childVisible: !this.state.childVisible})
+    this.setState({value: '', data: newVal, childVisible: !this.state.childVisible, hide: false, finished: true})
    }
     
      
@@ -62,10 +63,11 @@ class App extends React.Component {
         }
             </div>
             <br></br>
-          <input type="text" value={this.state.value} placeholder="text" onChange={this.handleChange} />
+          <input className="hide" type="text" value={this.state.value} placeholder="text" onChange={this.handleChange} style={{display: this.state.hide ? 'block' : 'none' }}/>
         </label><br></br>
-        <input type="submit" value="Submit" onClick = {this.updateState}/>
-        <img src={this.state.data}></img>
+        <input className="hide" type="submit" value="Submit" onClick = {this.updateState} style={{display: this.state.hide ? 'block' : 'none' }}/>
+            <div className="finished" style={{display: this.state.finished ? 'block' : 'none' }}>Here is your result.</div>
+        <img src={this.state.data}></img>    
             <ChildProps></ChildProps>
       </form>
     );
