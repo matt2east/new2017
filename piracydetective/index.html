@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="contact form example">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <title>Internet piracy report form</title>
+
+</head>
+
+<body>
+    <div>
+        <h1 >Report internet piracy!</h1>
+        <h2 id="clicktoHide">Alert copyright holders to internet piracy and help protect intellectual property.</h2>
+    </div>
+    
+<!--
+    <div class="tooltip">Hover over me
+  <span class="tooltiptext">Tooltip text</span>
+</div>
+-->
+
+<!-- START HERE -->
+<!--   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">-->
+
+
+    <form id="gform" method="POST"
+  action="https://script.google.com/macros/s/AKfycby3ww4nc3D4d0jTKYrdN-q4g8rEdeSYTX6Jl0mVLhFqC67R7AB9/exec">
+
+        <fieldset>
+            <label for="name">Name: </label>
+            <input name="name" size="60" placeholder="your name"/>
+        </fieldset>
+      
+        <fieldset>
+            <label for="name">URL: </label>
+            <input name="link" size="60" id="linkValue" placeholder="www.matthewmyers.tech"/>
+        </fieldset>
+      
+        <fieldset>
+            <label for="message">Your comments: </label>
+            <textarea name="message" rows="1" cols="100"></textarea>
+        </fieldset>
+      
+        <fieldset>
+            <label for="email">Email Address:</label>
+            <input id="email" name="email" type="email" value=""
+      required placeholder="your.name@email.com"/>
+<!--
+      <span id="email-invalid" style="display:none">
+        Must be a valid email address</span>
+-->
+        </fieldset>
+        <button class="button-success pure-button button-xlarge" onclick="sendForm()">
+      <i class="fa fa-paper-plane"></i>&nbsp;Send
+        </button>
+
+  </form>
+    
+    <div id="hiddendiv"></div>
+<!--    <div id="thankyou_message">this is a test</div>-->
+    
+    <script data-cfasync="false" type="text/javascript"
+src="form.js">
+    </script>
+</body>
+</html>
