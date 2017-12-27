@@ -51,6 +51,16 @@ a {
     text-decoration: none;
     color: #1d9b6c; }
 
+/*
+#emailHelp {
+color: whitesmoke;}
+*/
+
+.btn-danger{
+background-color: #ba444a;
+border-color: whitesmoke}
+
+
 #mainNav {
   font-family: 'Averia Serif Libre', cursive;
 font-family: 'Adamina', serif;
