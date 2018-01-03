@@ -98,7 +98,7 @@ font-family: 'Adamina', serif;
       background-color: transparent; }
   @media (min-width: 992px) {
     #mainNav {
-      padding-top: 20px;
+      padding-top: 10px;
       padding-bottom: 20px;
       -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
       -moz-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
@@ -189,6 +189,9 @@ font-family: 'Adamina', serif;
     padding-bottom: 200px; }
   #map {
     height: 350px; } }
+
+#about,#music, #contact {
+    padding-top:40px}
 
 .btn {
   font-family: 'Lato';
