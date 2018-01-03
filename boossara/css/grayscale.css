@@ -56,14 +56,17 @@ a {
 #emailHelp {
 color: whitesmoke;}
 */
-li{
-    font-weight: 1000;
+
+ul, li{
+    font-weight: 600;
+    font-size: 18px;
 }
 
-.btn-danger{
-background-color: #ba444a;
-border-color: whitesmoke}
 
+.btn-danger{
+    background-color: #ba444a;
+    border-color: whitesmoke
+}
 
 #mainNav {
   font-family: 'Averia Serif Libre', cursive;
@@ -78,7 +81,8 @@ font-family: 'Adamina', serif;
     color: #ba444a;
     border: 1px solid #ba444a; }
   #mainNav .navbar-brand {
-    font-weight: 700; }
+    font-weight: 700;
+    font-size:22px}
   #mainNav a {
     color: #ba444a; }
   #mainNav .navbar-nav .nav-item {
@@ -118,7 +122,7 @@ font-family: 'Adamina', serif;
   display: table;
   width: 100%;
   height: auto;
-  padding: 200px 0;
+  padding: 200px;
   text-align: center;
   color: #ba444a;
   background: url("../img/singer1.jpg") no-repeat bottom center scroll;

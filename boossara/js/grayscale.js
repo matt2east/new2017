@@ -42,12 +42,12 @@
 })(jQuery); // End of use strict
 
 // Google Maps Scripts
-var map = null;
-// When the window has finished loading create our google map below
-google.maps.event.addDomListener(window, 'load', init);
-google.maps.event.addDomListener(window, 'resize', function() {
-  map.setCenter(new google.maps.LatLng(40.6700, -73.9400));
-});
+//var map = null;
+//// When the window has finished loading create our google map below
+//google.maps.event.addDomListener(window, 'load', init);
+//google.maps.event.addDomListener(window, 'resize', function() {
+//  map.setCenter(new google.maps.LatLng(40.6700, -73.9400));
+//});
 
 function init() {
   // Basic options for a simple Google Map
@@ -244,7 +244,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     document.getElementById('email-invalid').style.display = 'block';
     return false;
   } else { 
-    alert("Thank you for subscribing!");  
+    console.log("Thank you for subscribing!");  
     var url = event.target.action;  //
     var xhr = new XMLHttpRequest();
     xhr.open('POST', url);
@@ -267,6 +267,7 @@ function loaded() {
   console.log('contact form submission handler loaded successfully');
   // bind to the submit event of our form
   var form = document.getElementById('gform');
-  form.addEventListener("submit", handleFormSubmit, false);
+//  form.addEventListener("submit", handleFormSubmit, false); 
+    //email form logic
 };
 document.addEventListener('DOMContentLoaded', loaded, false);
