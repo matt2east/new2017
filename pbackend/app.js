@@ -22,8 +22,6 @@ var Pirate = mongoose.model('Pirate', pirateSchema);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-
 app.get('/', function(req, res) {
     res.render('home');
 });
@@ -32,16 +30,9 @@ app.get('/results', function(req, res) {
     res.render('results.ejs');
 });
 
-	
-
-
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-
-/**bodyParser.json(options)
- * Parses the text as JSON and exposes the resulting object on req.body.
- */
 
 
 app.post('/', function(req, res){
@@ -58,35 +49,6 @@ console.log(req.body.newInput + " entry was created");
 //    } else {throw err;}
 //});
 })
-
-
-
-//
-//router.post('/', function(req, res){
-////    console.log("posting new dessert")
-//	Dessert.create( //.create = .new and .save
-//	{ name: req.body.newDessertName, image: req.body.newDessertImage, description: 
-//     req.body.newDessertDescription, id: req.body._id,
-//     creator: {
-//                username: req.user.username,
-//                id: req.user.id
-//            }
-//    }, 
-//        //data that's saving in DB
-//	function(err, dessert){
-//		if(err){
-//			console.log(err);
-//		} else {
-////			 console.log("dessert creator is " + req.user.username);
-//			res.redirect('/desserts'); //redirect is also a GET request!
-//		}
-//	})
-//})
-
-
-
-
-
 
 
 app.listen(3000);
