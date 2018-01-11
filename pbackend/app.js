@@ -11,7 +11,7 @@ mongoose.connect('mongodb://localhost/test');
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
+db.once('openUri', function() {
  console.log("connected to mongoose");
 });
 
@@ -28,6 +28,10 @@ app.get('/', function(req, res) {
     res.render('home');
 });
 
+app.get('/results', function(req, res) {
+    res.render('results.ejs');
+});
+
 	
 
 
@@ -38,12 +42,15 @@ app.use(bodyParser.urlencoded({
 /**bodyParser.json(options)
  * Parses the text as JSON and exposes the resulting object on req.body.
  */
-app.use(bodyParser.json());
+
 
 app.post('/', function(req, res){
         Pirate.create(
     {link: req.body.newInput, id: req.body._id,})
-console.log(req.body.newInput + " entry was created")
+console.log(req.body.newInput + " entry was created");
+    res.redirect('/results');
+    console.log('redirect worked');
+
 //Pirate.find({}, function(err, docs) {
 //    if (!err){ 
 //        console.log(docs);
@@ -54,7 +61,7 @@ console.log(req.body.newInput + " entry was created")
 
 
 
-
+//
 //router.post('/', function(req, res){
 ////    console.log("posting new dessert")
 //	Dessert.create( //.create = .new and .save
