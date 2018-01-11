@@ -18,7 +18,7 @@ db.once('open', function() {
 var pirateSchema = mongoose.Schema({
     link: String
 });
-var pirate = mongoose.model('pirate', pirateSchema);
+var Pirate = mongoose.model('Pirate', pirateSchema);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -40,9 +40,41 @@ app.use(bodyParser.urlencoded({
  */
 app.use(bodyParser.json());
 
-app.post("/", function (req, res) {
-    console.log(req.body.user.name)
-});
+app.post('/', function(req, res){
+        Pirate.create(
+    {link: req.body.newInput, id: req.body._id,})
+console.log(req.body.newInput + " entry was created")
+//Pirate.find({}, function(err, docs) {
+//    if (!err){ 
+//        console.log(docs);
+//        process.exit();
+//    } else {throw err;}
+//});
+})
+
+
+
+
+//router.post('/', function(req, res){
+////    console.log("posting new dessert")
+//	Dessert.create( //.create = .new and .save
+//	{ name: req.body.newDessertName, image: req.body.newDessertImage, description: 
+//     req.body.newDessertDescription, id: req.body._id,
+//     creator: {
+//                username: req.user.username,
+//                id: req.user.id
+//            }
+//    }, 
+//        //data that's saving in DB
+//	function(err, dessert){
+//		if(err){
+//			console.log(err);
+//		} else {
+////			 console.log("dessert creator is " + req.user.username);
+//			res.redirect('/desserts'); //redirect is also a GET request!
+//		}
+//	})
+//})
 
 
 
