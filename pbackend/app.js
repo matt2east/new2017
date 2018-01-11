@@ -41,13 +41,9 @@ app.post('/', function(req, res){
 console.log(req.body.newInput + " entry was created");
     res.redirect('/results');
     console.log('redirect worked');
-
-//Pirate.find({}, function(err, docs) {
-//    if (!err){ 
-//        console.log(docs);
-//        process.exit();
-//    } else {throw err;}
-//});
+Pirate.find({}, function(err, docs) {
+console.log(docs);
+});
 })
 
 
