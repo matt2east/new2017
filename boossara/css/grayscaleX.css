@@ -11,8 +11,13 @@ font-family: 'Adamina', serif;
   height: 100%;
   color: #ba444a;
   background-color: black; }
+
+
+
+
 img{
     filter: grayscale(75%);
+    max-width:  width:100%;
 }
 
 html {
@@ -97,6 +102,13 @@ font-family: 'Adamina', serif;
       outline: none;
       background-color: transparent; }
   @media (min-width: 992px) {
+      @media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .masthead, .download-section {
+    width:100%;
+    background: none;  
+  }
+}
     #mainNav {
       padding-top: 10px;
       padding-bottom: 20px;
@@ -116,7 +128,7 @@ font-family: 'Adamina', serif;
         background-color: rgba(255, 255, 255, 0.3); }
         #mainNav .nav-link.active:hover {
           color: #ba444a; } }
-#thankyou{}
+
 
 .masthead {
   display: table;
@@ -130,12 +142,25 @@ font-family: 'Adamina', serif;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; }
+  background-size: cover; 
+}
+
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .masthead{
+/*    width:100%;*/
+    display: none;  
+  }
+    #listen{
+    display:none;}
+}
+
   .masthead .intro-body {
     display: table-cell;
     vertical-align: middle; }
     .masthead .intro-body .brand-heading {
-      font-size: 50px; }
+      font-size: 50px;
+    }
     .masthead .intro-body .intro-text {
       font-size: 18px; }
   @media (min-width: 768px) {
@@ -186,9 +211,7 @@ font-family: 'Adamina', serif;
 @media (min-width: 992px) {
   .content-section {
     padding-top: 200px;
-    padding-bottom: 200px; }
-  #map {
-    height: 350px; } }
+    padding-bottom: 200px; } }
 
 #about,#music, #contact {
     padding-top:40px}
@@ -247,5 +270,23 @@ img::selection {
 img::-moz-selection {
   background: transparent; }
 
+
+
 body {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2); }
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .masthead{
+/*    width:100%;*/
+    display: none;  
+  }
+      .download-section{
+/*    width:100%;*/
+    background-image: none;  
+  }
+    h2{
+    display:none;}
+}
+
+
+
