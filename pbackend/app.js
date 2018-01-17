@@ -27,8 +27,14 @@ app.get('/', function(req, res) {
 });
 
 app.get('/results', function(req, res) {
-    res.render('results.ejs');
+    Pirate.find(function(err, arg){
+    res.render('results.ejs',{obj: arg})})
+    
+//    res.render('results.ejs');
 });
+
+
+
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -39,10 +45,11 @@ app.post('/', function(req, res){
         Pirate.create(
     {link: req.body.newInput, id: req.body._id,})
 console.log(req.body.newInput + " entry was created");
-    res.redirect('/results');
     console.log('redirect worked');
 Pirate.find({}, function(err, docs) {
 console.log(docs);
+        res.redirect('/results');
+ 
 });
 })
 
