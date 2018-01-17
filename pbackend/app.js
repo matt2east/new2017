@@ -29,11 +29,7 @@ app.get('/', function(req, res) {
 app.get('/results', function(req, res) {
     Pirate.find(function(err, arg){
     res.render('results.ejs',{obj: arg})})
-    
-//    res.render('results.ejs');
 });
-
-
 
 
 app.use(bodyParser.urlencoded({
@@ -52,7 +48,6 @@ console.log(docs);
  
 });
 })
-
 
 app.listen(3000);
 console.log('Listening on port 3000');
