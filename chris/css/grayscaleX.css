@@ -1,0 +1,292 @@
+/*!
+ * Start Bootstrap - Grayscale v4.0.0-beta.2 (https://startbootstrap.com/template-overviews/grayscale)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
+ */
+body {
+  font-family: 'Didact Gothic', sans-serif;
+font-family: 'Didact Gothic', sans-serif;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #D3D3D3 ;
+  background-color: black; }
+
+
+
+
+img{
+    filter: grayscale(75%);
+    max-width:  width:100%;
+}
+
+html {
+  width: 100%;
+  height: 100%; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+font-family: 'Didact Gothic', sans-serif;
+font-family: 'Didact Gothic', sans-serif;
+    
+  font-weight: 700;
+  margin: 0 0 35px;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 25px; }
+  @media (min-width: 768px) {
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 0 0 35px; } }
+
+a {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: whitesmoke; }
+  a:focus, a:hover {
+    text-decoration: none;
+    color: #1d9b6c; }
+
+/*
+#emailHelp {
+color: whitesmoke;}
+*/
+
+ul, li{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+
+.btn-danger{
+    background-color: #D3D3D3 ;
+    border-color: whitesmoke
+}
+
+#mainNav {
+ font-family: 'Didact Gothic', sans-serif;
+font-family: 'Didact Gothic', sans-serif;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: black; }
+  #mainNav .navbar-toggler {
+    font-size: 14px;
+    padding: 11px;
+    color: #D3D3D3 ;
+    border: 1px solid #D3D3D3 ; }
+  #mainNav .navbar-brand {
+    font-weight: 700;
+    font-size:22px}
+  #mainNav a {
+    color: #D3D3D3 ; }
+  #mainNav .navbar-nav .nav-item {
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out; }
+    #mainNav .navbar-nav .nav-item:hover {
+      color: fade(#D3D3D3 , 80%);
+      outline: none;
+      background-color: transparent; }
+    #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
+      outline: none;
+      background-color: transparent; }
+  @media (min-width: 992px) {
+      @media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .masthead, .download-section {
+    width:100%;
+    background: none;  
+  }
+}
+    #mainNav {
+      padding-top: 10px;
+      padding-bottom: 20px;
+      -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+      -moz-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+      transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+      letter-spacing: 1px;
+      border-bottom: none;
+      background: transparent; }
+      #mainNav.navbar-shrink {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        background: black; }
+      #mainNav .nav-link.active {
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.3); }
+        #mainNav .nav-link.active:hover {
+          color: #D3D3D3 ; } }
+
+
+.masthead {
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 200px;
+  text-align: center;
+  color: #D3D3D3 ;
+  background: url("../img/top.jpg") no-repeat bottom center scroll;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+}
+
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .masthead{
+/*    width:100%;*/
+    display: none;  
+  }
+}
+
+  .masthead .intro-body {
+    display: table-cell;
+    vertical-align: middle; }
+    .masthead .intro-body .brand-heading {
+      font-size: 150px;
+         text-shadow: 2px 2px #FF0000;
+    }
+    .masthead .intro-body .intro-text {
+      font-size: 18px; }
+  @media (min-width: 768px) {
+    .masthead {
+      height: 100%;
+      padding: 0; }
+      .masthead .intro-body .brand-heading {
+        font-size: 150px;
+       text-shadow: 2px 2px #FF0000;}
+      .masthead .intro-body .intro-text {
+        font-size: 22px; } }
+
+.btn-circle {
+  font-size: 26px;
+  width: 55px;
+  height: 55px;
+  margin-top: 15px;
+  line-height: 45px;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  color: #D3D3D3;
+  border: 2px solid #D3D3D3;
+  border-radius: 100% !important;
+  background: transparent; }
+  .btn-circle:focus, .btn-circle:hover {
+    color: #D3D3D3;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1); }
+
+.content-section {
+  padding-top: 50px;
+  padding-bottom: 150px;
+
+}
+#connect{
+/* background: url("../img/3.jpg") no-repeat center center scroll;*/
+width: 100%;    
+}
+
+.download-section {
+  color: #D3D3D3 ;
+  background: url("../img/square.jpg") no-repeat center center scroll;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+
+#about,#music, #contact {
+    padding-top:40px}
+
+.btn {
+  font-family: 'Lato';
+  font-weight: 400;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  border-radius: 0; }
+
+.btn-default {
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+  background-color: transparent; }
+  .btn-default:focus, .btn-default:hover {
+    color: black;
+    border: 1px solid whitesmoke;
+    outline: none;
+    background-color: whitesmoke; }
+
+ul.banner-social-buttons {
+  margin-top: 0; }
+  @media (max-width: 1199px) {
+    ul.banner-social-buttons {
+      margin-top: 15px; } }
+  @media (max-width: 767px) {
+    ul.banner-social-buttons li {
+      display: block;
+      margin-bottom: 20px;
+      padding: 0; }
+      ul.banner-social-buttons li:last-child {
+        margin-bottom: 0; } }
+
+footer {
+  padding: 50px 0; }
+  footer p {
+    font-size: 14px;
+    margin: 0; }
+
+::-moz-selection {
+  background: #fcfcfc;
+  background: rgba(255, 255, 255, 0.2);
+  text-shadow: none; }
+
+::selection {
+  background: #fcfcfc;
+  background: rgba(255, 255, 255, 0.2);
+  text-shadow: none; }
+
+img::selection {
+  background: transparent; }
+
+img::-moz-selection {
+  background: transparent; }
+
+
+
+body {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2); }
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .masthead{
+/*    width:100%;*/
+    display: none;  
+  }
+      .download-section{
+/*    width:100%;*/
+    background-image: none;  
+  }
+    #listen{
+    padding-top: 30px;}
+}
+
+
+
