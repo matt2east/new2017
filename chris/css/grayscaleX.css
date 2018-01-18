@@ -9,7 +9,7 @@ font-family: 'Didact Gothic', sans-serif;
   position: relative;
   width: 100%;
   height: 100%;
-  color: #D3D3D3 ;
+  color: #F46E14 ;
   background-color: black; }
 
 
@@ -36,7 +36,8 @@ font-family: 'Didact Gothic', sans-serif;
   font-weight: 700;
   margin: 0 0 35px;
   letter-spacing: 1px;
-  text-transform: uppercase; }
+/*  text-transform: uppercase;*/
+}
 
 p {
   font-size: 16px;
@@ -52,7 +53,7 @@ a {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  color: whitesmoke; }
+  color: #F46E14; }
   a:focus, a:hover {
     text-decoration: none;
     color: #1d9b6c; }
@@ -69,7 +70,7 @@ ul, li{
 
 
 .btn-danger{
-    background-color: #D3D3D3 ;
+    background-color: #F46E14 ;
     border-color: whitesmoke
 }
 
@@ -77,25 +78,25 @@ ul, li{
  font-family: 'Didact Gothic', sans-serif;
 font-family: 'Didact Gothic', sans-serif;
   margin-bottom: 0;
-  text-transform: uppercase;
+/*  text-transform: uppercase;*/
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   background-color: black; }
   #mainNav .navbar-toggler {
     font-size: 14px;
     padding: 11px;
-    color: #D3D3D3 ;
-    border: 1px solid #D3D3D3 ; }
+    color: #F46E14 ;
+    border: 1px solid #F46E14 ; }
   #mainNav .navbar-brand {
     font-weight: 700;
     font-size:22px}
   #mainNav a {
-    color: #D3D3D3 ; }
+    color: #F46E14 ; }
   #mainNav .navbar-nav .nav-item {
     -webkit-transition: background 0.3s ease-in-out;
     -moz-transition: background 0.3s ease-in-out;
     transition: background 0.3s ease-in-out; }
     #mainNav .navbar-nav .nav-item:hover {
-      color: fade(#D3D3D3 , 80%);
+      color: fade(#F46E14 , 80%);
       outline: none;
       background-color: transparent; }
     #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
@@ -127,7 +128,7 @@ font-family: 'Didact Gothic', sans-serif;
         outline: none;
         background-color: rgba(255, 255, 255, 0.3); }
         #mainNav .nav-link.active:hover {
-          color: #D3D3D3 ; } }
+          color: #F46E14 ; } }
 
 
 .masthead {
@@ -136,8 +137,8 @@ font-family: 'Didact Gothic', sans-serif;
   height: auto;
   padding: 200px;
   text-align: center;
-  color: #D3D3D3 ;
-  background: url("../img/top.jpg") no-repeat bottom center scroll;
+  color: #F46E14 ;
+  background: url("../img/topbw.jpg") no-repeat bottom center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -158,7 +159,7 @@ font-family: 'Didact Gothic', sans-serif;
     vertical-align: middle; }
     .masthead .intro-body .brand-heading {
       font-size: 150px;
-         text-shadow: 2px 2px #FF0000;
+/*         text-shadow: 2px 2px #FF0000;*/
     }
     .masthead .intro-body .intro-text {
       font-size: 18px; }
@@ -168,7 +169,8 @@ font-family: 'Didact Gothic', sans-serif;
       padding: 0; }
       .masthead .intro-body .brand-heading {
         font-size: 150px;
-       text-shadow: 2px 2px #FF0000;}
+/*       text-shadow: 2px 2px #FF0000;*/
+      }
       .masthead .intro-body .intro-text {
         font-size: 22px; } }
 
@@ -181,12 +183,12 @@ font-family: 'Didact Gothic', sans-serif;
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
-  color: #D3D3D3;
-  border: 2px solid #D3D3D3;
+  color: #F46E14;
+  border: 2px solid #F46E14;
   border-radius: 100% !important;
   background: transparent; }
   .btn-circle:focus, .btn-circle:hover {
-    color: #D3D3D3;
+    color: #F46E14;
     outline: none;
     background: rgba(255, 255, 255, 0.1); }
 
@@ -201,8 +203,8 @@ width: 100%;
 }
 
 .download-section {
-  color: #D3D3D3 ;
-  background: url("../img/square.jpg") no-repeat center center scroll;
+  color: #F46E14 ;
+  background: url("../img/2BW.jpg") no-repeat center center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -214,7 +216,8 @@ width: 100%;
 
 
 #about,#music, #contact {
-    padding-top:40px}
+    padding-top:40px;
+padding-bottom:40px}
 
 .btn {
   font-family: 'Lato';
@@ -222,7 +225,7 @@ width: 100%;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  text-transform: uppercase;
+/*  text-transform: uppercase;*/
   border-radius: 0; }
 
 .btn-default {
@@ -270,6 +273,9 @@ img::selection {
 img::-moz-selection {
   background: transparent; }
 
+    #listen{
+    color: black}
+
 
 
 body {
@@ -285,7 +291,8 @@ body {
     background-image: none;  
   }
     #listen{
-    padding-top: 30px;}
+    padding-top: 30px;
+    color: black}
 }
 
 
