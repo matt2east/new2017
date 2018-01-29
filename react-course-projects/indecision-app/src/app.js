@@ -87,7 +87,6 @@ const onFormSubmit = (e) => {
     }
 };
 const onFormRemoveSubmit = (e) => {
-     e.preventDefault();
     app.options = [];
     console.log(app.options)
 }
@@ -98,11 +97,14 @@ const renderApp = () =>{
         <h1>{app.title}</h1>
             <p>{app.options.length > 0 ? 'Here are your options:' : 'No options.'}</p>
             <p>{app.options.length}</p>
-   {
+   <ol>
+    {
        app.options.map((option)=>{
-           return <p key={option}> Options: {option}</p>;
+           return <li key={option}> Options: {option}</li>;
        })
    }
+   </ol>
+ 
         <form onSubmit={onFormSubmit}>
       <input type="text" name="option"/>
           <button>add option</button>

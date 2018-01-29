@@ -88,7 +88,6 @@ var onFormSubmit = function onFormSubmit(e) {
     }
 };
 var onFormRemoveSubmit = function onFormRemoveSubmit(e) {
-    e.preventDefault();
     app.options = [];
     console.log(app.options);
 };
@@ -112,14 +111,18 @@ var renderApp = function renderApp() {
             null,
             app.options.length
         ),
-        app.options.map(function (option) {
-            return React.createElement(
-                'p',
-                { key: option },
-                ' Options: ',
-                option
-            );
-        }),
+        React.createElement(
+            'ol',
+            null,
+            app.options.map(function (option) {
+                return React.createElement(
+                    'li',
+                    { key: option },
+                    ' Options: ',
+                    option
+                );
+            })
+        ),
         React.createElement(
             'form',
             { onSubmit: onFormSubmit },
