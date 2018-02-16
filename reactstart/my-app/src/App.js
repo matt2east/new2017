@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 //import logo from './logo.svg';
 //import './App.css';
 
-class IndeciionApp extends Component {
+class IndecisionApp extends Component {
     render() {
         return <div>
              <Header />
