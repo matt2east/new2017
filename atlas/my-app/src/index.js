@@ -33,6 +33,8 @@ class Display3 extends React.Component {
     counterTwo() {
     this.setState({counter: 2});
   }
+    
+
 
   render() {
     const counter = this.state.counter;
@@ -42,19 +44,19 @@ class Display3 extends React.Component {
     return (
       <div className="w3-container">
         <div className="w3-bar w3-black">
-  <button className="w3-bar-item w3-button" onClick={this.counterZero}>{data.Items[0].Track.Description}</button>
-  <button className="w3-bar-item w3-button" onClick={this.counterOne}>{data.Items[1].Track.Description}</button>
-  <button className="w3-bar-item w3-button" onClick={this.counterTwo}>{data.Items[2].Track.Description}</button>
-<button className="w3-bar-item w3-button" onClick={this.counterTwo}>{data.Items[3].Track.Description}</button>
-<button className="w3-bar-item w3-button" onClick={this.counterTwo}>{data.Items[6].Track.Description}</button>
-<button className="w3-bar-item w3-button" onClick={this.counterTwo}>{data.Items[7].Track.Description}</button>
-<button className="w3-bar-item w3-button" onClick={this.counterTwo}>{data.Items[15].Track.Description}</button>
-<button className="w3-bar-item w3-button" onClick={this.counterTwo}>General</button>    
+  <button className="w3-bar-item w3-button">{data.Items[0].Track.Description}</button>
+    <button className="w3-bar-item w3-button">{data.Items[1].Track.Description}</button>
+  <button className="w3-bar-item w3-button">{data.Items[2].Track.Description}</button>
+<button className="w3-bar-item w3-button">{data.Items[3].Track.Description}</button>
+<button className="w3-bar-item w3-button">{data.Items[6].Track.Description}</button>
+<button className="w3-bar-item w3-button">{data.Items[7].Track.Description}</button>
+<button className="w3-bar-item w3-button">{data.Items[15].Track.Description}</button>
+<button className="w3-bar-item w3-button">General</button>    
 </div>
         <div className="tab">
-  <button className="tablinks" id="defaultOpen">{data.Items[0].Title}</button>
-  <button className="tablinks" >{data.Items[1].Title}</button>
-  <button className="tablinks" >{data.Items[2].Title}</button>        
+  <button className="tablinks" onClick={this.counterZero}>{data.Items[0].Title}</button>
+  <button className="tablinks" onClick={this.counterOne}>{data.Items[1].Title}</button>
+  <button className="tablinks" onClick={this.counterTwo}>{data.Items[2].Title}</button>        
 </div>
 
 
@@ -109,6 +111,7 @@ function GetCounter(props) {
 }
 
 }
+
 
 
 
