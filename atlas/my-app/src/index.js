@@ -5,6 +5,7 @@ import './index.css';
 var data = require('./sessions.json'); 
 console.log(data.Items[0].Speakers[0].FirstName + " " + data.Items[0].Speakers[0].LastName);
 console.log(data.Items[2])
+console.log(data.Items[0].Track.Description)
 
 
 for(var i = 0; i < data.length; i++) {
@@ -39,10 +40,21 @@ class Display3 extends React.Component {
 
 
     return (
-      <div>
-        <h1 onClick={this.counterZero}>Make 0</h1>
-        <h1 onClick={this.counterOne}>Make 1</h1>
-        <h1 onClick={this.counterTwo}>Make 2</h1>
+      <div className="w3-container">
+        <div className="w3-bar w3-black">
+  <button className="w3-bar-item w3-button" onClick={this.counterZero}>{data.Items[0].Track.Description}</button>
+  <button className="w3-bar-item w3-button" onClick={this.counterOne}>{data.Items[1].Track.Description}</button>
+  <button className="w3-bar-item w3-button" onClick={this.counterTwo}>{data.Items[2].Track.Description}</button>
+<button className="w3-bar-item w3-button" onClick={this.counterTwo}>{data.Items[3].Track.Description}</button>
+<button className="w3-bar-item w3-button" onClick={this.counterTwo}>{data.Items[6].Track.Description}</button>
+<button className="w3-bar-item w3-button" onClick={this.counterTwo}>{data.Items[7].Track.Description}</button>
+<button className="w3-bar-item w3-button" onClick={this.counterTwo}>{data.Items[15].Track.Description}</button>
+<button className="w3-bar-item w3-button" onClick={this.counterTwo}>General</button>
+        
+</div>
+
+
+       
         <GetCounter counter={counter} />
       </div>
     );
@@ -50,7 +62,7 @@ class Display3 extends React.Component {
 }
 
 function CounterIsZero(props) {
-  return <div>
+  return <div className="w3-container">
       <h3>{data.Items[0].Title}</h3>
       <p>{data.Items[0].Description}</p>
       <h3>About the Speaker</h3>
@@ -61,7 +73,7 @@ function CounterIsZero(props) {
 }
 
 function CounterIsOne(props) {
-  return <div>
+  return <div className="w3-container">
       <h3>{data.Items[1].Title}</h3>
       <p>{data.Items[1].Description}</p>
       <h3>About the Speaker</h3>
@@ -72,7 +84,7 @@ function CounterIsOne(props) {
 }
 
 function CounterIsTwo(props) {
-  return <div>
+  return <div className="w3-container">
       <h3>{data.Items[2].Title}</h3>
       <p>{data.Items[2].Description}</p>
       <p>{data.Items[2].Speakers[2]}</p>
