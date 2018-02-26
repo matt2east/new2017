@@ -14,7 +14,7 @@ for(var i = 0; i < data.length; i++) {
     console.log(obj.title);
 }
 
-class Display3 extends React.Component {
+class Atlassian extends React.Component {
   constructor(props) {
     super(props);
     this.counterZero = this.counterZero.bind(this);
@@ -43,17 +43,8 @@ class Display3 extends React.Component {
 
     return (
       <div className="w3-container">
-        <div className="w3-bar w3-black">
-  <button className="w3-bar-item w3-button">{data.Items[0].Track.Description}</button>
-    <button className="w3-bar-item w3-button">{data.Items[1].Track.Description}</button>
-  <button className="w3-bar-item w3-button">{data.Items[2].Track.Description}</button>
-<button className="w3-bar-item w3-button">{data.Items[3].Track.Description}</button>
-<button className="w3-bar-item w3-button">{data.Items[6].Track.Description}</button>
-<button className="w3-bar-item w3-button">{data.Items[7].Track.Description}</button>
-<button className="w3-bar-item w3-button">{data.Items[15].Track.Description}</button>
-<button className="w3-bar-item w3-button">General</button>    
-</div>
-        <div className="tab">
+<HorizontalTab/>
+                <div className="tab">
   <button className="tablinks" onClick={this.counterZero}>{data.Items[0].Title}</button>
   <button className="tablinks" onClick={this.counterOne}>{data.Items[1].Title}</button>
   <button className="tablinks" onClick={this.counterTwo}>{data.Items[2].Title}</button>        
@@ -112,10 +103,23 @@ function GetCounter(props) {
 
 }
 
+const HorizontalTab = () => (
+        <div className="w3-bar w3-black">
+  <button className="w3-bar-item w3-button">{data.Items[0].Track.Description}</button>
+    <button className="w3-bar-item w3-button">{data.Items[1].Track.Description}</button>
+  <button className="w3-bar-item w3-button">{data.Items[2].Track.Description}</button>
+<button className="w3-bar-item w3-button">{data.Items[3].Track.Description}</button>
+<button className="w3-bar-item w3-button">{data.Items[6].Track.Description}</button>
+<button className="w3-bar-item w3-button">{data.Items[7].Track.Description}</button>
+<button className="w3-bar-item w3-button">{data.Items[15].Track.Description}</button>
+<button className="w3-bar-item w3-button">General</button>    
+</div>
 
+    
+)
 
 
 ReactDOM.render(
-  <Display3 />,
+  <Atlassian />,
   document.getElementById('root')
 );
