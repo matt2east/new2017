@@ -48,35 +48,38 @@ class Display3 extends React.Component {
 }
 
 function CounterIsZero(props) {
-  return <div>
-        <h3>{data.Items[0].Title}</h3>
-  <p>{data.Items[0].Description}</p>
-     <h3>About the Speaker</h3>
-       <h3>{data.Items[0].Speakers[0].FirstName + " " + data.Items[0].Speakers[0].LastName + " "}
-     <i>
-     {data.Items[0].Speakers[0].Company}
-     </i></h3>
-      </div>;
+  return 
+      <div>
+      <h3>{data.Items[0].Title}</h3>
+      <p>{data.Items[0].Description}</p>
+      <h3>About the Speaker</h3>
+          <h3>{data.Items[0].Speakers[0].FirstName + " " + data.Items[0].Speakers[0].LastName + " "}
+          <i>
+          {data.Items[0].Speakers[0].Company}
+          </i></h3>
+              </div>;
 }
 
 function CounterIsOne(props) {
-  return <div>
-                    <h3>{data.Items[1].Title}</h3>
-  <p>{data.Items[1].Description}</p>
-     <h3>About the Speaker</h3>
-       <h3>{data.Items[1].Speakers[1].FirstName + " " + data.Items[1].Speakers[1].LastName + " "}
-     <i>
-     {data.Items[1].Speakers[1].Company}
-     </i></h3>
-      </div>;
+  return 
+      <div>
+      <h3>{data.Items[1].Title}</h3>
+      <p>{data.Items[1].Description}</p>
+      <h3>About the Speaker</h3>
+          <h3>{data.Items[1].Speakers[1].FirstName + " " + data.Items[1].Speakers[1].LastName + " "}
+          <i>
+          {data.Items[1].Speakers[1].Company}
+          </i></h3>
+              </div>;
 }
 
 function CounterIsTwo(props) {
-  return <div>
-              <h3>{data.Items[2].Title}</h3>
-  <p>{data.Items[2].Description}</p>
-  <p> {data.Items[2].Speakers[2]}</p>
-     </div>;
+  return 
+      <div>
+      <h3>{data.Items[2].Title}</h3>
+      <p>{data.Items[2].Description}</p>
+      <p>{data.Items[2].Speakers[2]}</p>
+      </div>;
 }
 
 function GetCounter(props) {
