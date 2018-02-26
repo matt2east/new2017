@@ -49,8 +49,12 @@ class Display3 extends React.Component {
 <button className="w3-bar-item w3-button" onClick={this.counterTwo}>{data.Items[6].Track.Description}</button>
 <button className="w3-bar-item w3-button" onClick={this.counterTwo}>{data.Items[7].Track.Description}</button>
 <button className="w3-bar-item w3-button" onClick={this.counterTwo}>{data.Items[15].Track.Description}</button>
-<button className="w3-bar-item w3-button" onClick={this.counterTwo}>General</button>
-        
+<button className="w3-bar-item w3-button" onClick={this.counterTwo}>General</button>    
+</div>
+        <div className="tab">
+  <button className="tablinks" id="defaultOpen">{data.Items[0].Title}</button>
+  <button className="tablinks" >{data.Items[1].Title}</button>
+  <button className="tablinks" >{data.Items[2].Title}</button>        
 </div>
 
 
@@ -62,7 +66,7 @@ class Display3 extends React.Component {
 }
 
 function CounterIsZero(props) {
-  return <div className="w3-container">
+  return <div className="tabcontent">
       <h3>{data.Items[0].Title}</h3>
       <p>{data.Items[0].Description}</p>
       <h3>About the Speaker</h3>
@@ -73,7 +77,7 @@ function CounterIsZero(props) {
 }
 
 function CounterIsOne(props) {
-  return <div className="w3-container">
+  return <div className="tabcontent">
       <h3>{data.Items[1].Title}</h3>
       <p>{data.Items[1].Description}</p>
       <h3>About the Speaker</h3>
@@ -84,7 +88,7 @@ function CounterIsOne(props) {
 }
 
 function CounterIsTwo(props) {
-  return <div className="w3-container">
+  return <div className="tabcontent">
       <h3>{data.Items[2].Title}</h3>
       <p>{data.Items[2].Description}</p>
       <p>{data.Items[2].Speakers[2]}</p>
