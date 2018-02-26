@@ -31,7 +31,7 @@ constructor(props) {
 }
   toggleHidden () {
     this.setState({
-      counter: 0,
+      isHidden: !this.state.isHidden
     })
   }
     
