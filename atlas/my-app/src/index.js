@@ -2,7 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 //import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+var data = require('./sessions.json'); 
+console.log(data.Items[0].Speakers[0].FirstName + " " + data.Items[0].Speakers[0].LastName);
+console.log(data.Items[2])
+
+
+for(var i = 0; i < data.length; i++) {
+    var obj = data[i];
+
+    console.log(obj.title);
+}
 
 class Display3 extends React.Component {
   constructor(props) {
@@ -26,37 +35,48 @@ class Display3 extends React.Component {
 
   render() {
     const counter = this.state.counter;
-    
-    let button = null;
-    if (counter===0) {
-      button = <Make1 onClick={this.counterOne} />;
-    } 
-      else if (counter===1) {
-      button = <Make2 onClick={this.counterTwo} />;
-    }
-      else if (counter===2) {
-      button = <Make0 onClick={this.counterZero} />;
-    }
 
     return (
       <div>
+        <h1 onClick={this.counterZero}>Make 0</h1>
+        <h1 onClick={this.counterOne}>Make 1</h1>
+        <h1 onClick={this.counterTwo}>Make 2</h1>
         <GetCounter counter={counter} />
-        {button}
       </div>
     );
   }
 }
 
 function CounterIsZero(props) {
-  return <h1>The counter is 0.</h1>;
+  return <div>
+        <h3>{data.Items[0].Title}</h3>
+  <p>{data.Items[0].Description}</p>
+     <h3>About the Speaker</h3>
+       <h3>{data.Items[0].Speakers[0].FirstName + " " + data.Items[0].Speakers[0].LastName + " "}
+     <i>
+     {data.Items[0].Speakers[0].Company}
+     </i></h3>
+      </div>;
 }
 
 function CounterIsOne(props) {
-  return <h1>The counter is 1.</h1>;
+  return <div>
+                    <h3>{data.Items[1].Title}</h3>
+  <p>{data.Items[1].Description}</p>
+     <h3>About the Speaker</h3>
+       <h3>{data.Items[1].Speakers[1].FirstName + " " + data.Items[1].Speakers[1].LastName + " "}
+     <i>
+     {data.Items[1].Speakers[1].Company}
+     </i></h3>
+      </div>;
 }
 
 function CounterIsTwo(props) {
-  return <h1>The counter is 2.</h1>;
+  return <div>
+              <h3>{data.Items[2].Title}</h3>
+  <p>{data.Items[2].Description}</p>
+  <p> {data.Items[2].Speakers[2]}</p>
+     </div>;
 }
 
 function GetCounter(props) {
@@ -74,30 +94,6 @@ function GetCounter(props) {
 
 }
 
-function Make1(props) {
-  return (
-    <button onClick={props.onClick}>
-      Make 1
-    </button>
-  );
-}
-
-function Make2(props) {
-  return (
-    <button onClick={props.onClick}>
-      Make 2
-    </button>
-  );
-}
-
-
-function Make0(props) {
-  return (
-    <button onClick={props.onClick}>
-      Make 0
-    </button>
-  );
-}
 
 ReactDOM.render(
   <Display3 />,
