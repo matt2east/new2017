@@ -23,7 +23,7 @@ constructor(props) {
   super(props);
 
   this.state = {
-      counter: 0,
+      isHidden: true,
      
 
 
