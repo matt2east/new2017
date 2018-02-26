@@ -4,7 +4,6 @@ import './index.css';
 //import App from './App';
 var data = require('./sessions.json'); 
 console.log(data.Items[0].Speakers[0].FirstName + " " + data.Items[0].Speakers[0].LastName);
-console.log(data.Items[2])
 console.log(data.Items[0].Track.Description)
 
 
@@ -48,6 +47,11 @@ class Atlassian extends React.Component {
   <button className="tablinks" onClick={this.counterZero}>{data.Items[0].Title}</button>
   <button className="tablinks" onClick={this.counterOne}>{data.Items[1].Title}</button>
   <button className="tablinks" onClick={this.counterTwo}>{data.Items[2].Title}</button>        
+</div>
+                        <div className="tab" >
+  <button className="tablinks" >test</button>
+  <button className="tablinks" >test</button>
+  <button className="tablinks" >test</button>        
 </div>
 
 
@@ -117,6 +121,7 @@ const HorizontalTab = () => (
 
     
 )
+
 
 
 ReactDOM.render(
