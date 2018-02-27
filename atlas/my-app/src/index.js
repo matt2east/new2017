@@ -19,7 +19,8 @@ class Atlassian extends React.Component {
     this.counterZero = this.counterZero.bind(this);
     this.counterOne = this.counterOne.bind(this);
     this.counterTwo = this.counterTwo.bind(this);  
-      this.handleChangeTab = this.handleChangeTab.bind(this);  
+    this.handleChangeTab = this.handleChangeTab.bind(this);
+    this.handleChangeTab1 = this.handleChangeTab1.bind(this);    
       
     this.state = {counter: 0,
                   display: 'none'
@@ -40,6 +41,9 @@ class Atlassian extends React.Component {
     handleChangeTab(){
 this.setState({display: 'block'});
 }
+        handleChangeTab1(){
+this.setState({display: 'none'});
+}
         
     
 
@@ -59,13 +63,13 @@ this.setState({display: 'block'});
         
         <div className="w3-bar w3-black">
   <button className="w3-bar-item w3-button" onClick={this.handleChangeTab}>{data.Items[0].Track.Description}</button>
-    <button className="w3-bar-item w3-button" onClick={this.handleChangeTab}>{data.Items[1].Track.Description}</button>
+    <button className="w3-bar-item w3-button" onClick={this.handleChangeTab1}>{data.Items[1].Track.Description}</button>
   <button className="w3-bar-item w3-button">{data.Items[2].Track.Description}</button>
-<button className="w3-bar-item w3-button" onClick={this.tabOne}>{data.Items[3].Track.Description}</button>
-<button className="w3-bar-item w3-button" onClick={this.tabOne}>{data.Items[6].Track.Description}</button>
-<button className="w3-bar-item w3-button" onClick={this.tabOne}>{data.Items[7].Track.Description}</button>
-<button className="w3-bar-item w3-button" onClick={this.tabOne}>{data.Items[15].Track.Description}</button>
-<button className="w3-bar-item w3-button" onClick={this.tabOne}>General</button>    
+<button className="w3-bar-item w3-button" onClick={this.handleChangeTab1}>{data.Items[3].Track.Description}</button>
+<button className="w3-bar-item w3-button" onClick={this.handleChangeTab1}>{data.Items[6].Track.Description}</button>
+<button className="w3-bar-item w3-button" onClick={this.handleChangeTab1}>{data.Items[7].Track.Description}</button>
+<button className="w3-bar-item w3-button" onClick={this.handleChangeTab1}>{data.Items[15].Track.Description}</button>
+<button className="w3-bar-item w3-button" onClick={this.handleChangeTab1}>General</button>    
 </div>
         
                 <div className="tab" style={{display:!this.state.display}}>
