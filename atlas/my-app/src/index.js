@@ -19,8 +19,11 @@ class Atlassian extends React.Component {
     this.counterZero = this.counterZero.bind(this);
     this.counterOne = this.counterOne.bind(this);
     this.counterTwo = this.counterTwo.bind(this);  
-    this.state = {counter: 0};
+      
+    this.state = {counter: 0,
+                 };
   }
+ 
 
   counterZero() {
     this.setState({counter: 0});
@@ -32,35 +35,64 @@ class Atlassian extends React.Component {
     counterTwo() {
     this.setState({counter: 2});
   }
+    handleChangeTab(){
+       var i;
+    var x = document.getElementsByClassName("hidetab");
+alert(x.length)
+}
+        
+    
+
     
 
 
   render() {
     const counter = this.state.counter;
+      const divStyle = {
+  display: 'none',
+};
     
 
 
     return (
       <div className="w3-container">
-<HorizontalTab/>
-                <div className="tab">
+        
+
+        
+        <div className="w3-bar w3-black">
+  <button className="w3-bar-item w3-button" onClick={this.handleChangeTab}>{data.Items[0].Track.Description}</button>
+    <button className="w3-bar-item w3-button" onClick={this.handleChangeTab}>{data.Items[1].Track.Description}</button>
+  <button className="w3-bar-item w3-button">{data.Items[2].Track.Description}</button>
+<button className="w3-bar-item w3-button" onClick={this.tabOne}>{data.Items[3].Track.Description}</button>
+<button className="w3-bar-item w3-button" onClick={this.tabOne}>{data.Items[6].Track.Description}</button>
+<button className="w3-bar-item w3-button" onClick={this.tabOne}>{data.Items[7].Track.Description}</button>
+<button className="w3-bar-item w3-button" onClick={this.tabOne}>{data.Items[15].Track.Description}</button>
+<button className="w3-bar-item w3-button" onClick={this.tabOne}>General</button>    
+</div>
+        
+                <div className="tab hidetab" >
   <button className="tablinks" onClick={this.counterZero}>{data.Items[0].Title}</button>
   <button className="tablinks" onClick={this.counterOne}>{data.Items[1].Title}</button>
   <button className="tablinks" onClick={this.counterTwo}>{data.Items[2].Title}</button>        
 </div>
-                        <div className="tab" >
+        
+         <div className="tab hidetab" style={divStyle} >
   <button className="tablinks" >test</button>
   <button className="tablinks" >test</button>
   <button className="tablinks" >test</button>        
 </div>
 
 
-       
+
+
+   
         <GetCounter counter={counter} />
       </div>
     );
   }
 }
+
+
 
 function CounterIsZero(props) {
   return <div className="tabcontent">
@@ -72,6 +104,7 @@ function CounterIsZero(props) {
           </h3>
           </div>;
 }
+
 
 function CounterIsOne(props) {
   return <div className="tabcontent">
@@ -92,6 +125,8 @@ function CounterIsTwo(props) {
       </div>;
 }
 
+
+
 function GetCounter(props) {
   const counter = props.counter;
   if (counter===0) {
@@ -107,20 +142,11 @@ function GetCounter(props) {
 
 }
 
-const HorizontalTab = () => (
-        <div className="w3-bar w3-black">
-  <button className="w3-bar-item w3-button">{data.Items[0].Track.Description}</button>
-    <button className="w3-bar-item w3-button">{data.Items[1].Track.Description}</button>
-  <button className="w3-bar-item w3-button">{data.Items[2].Track.Description}</button>
-<button className="w3-bar-item w3-button">{data.Items[3].Track.Description}</button>
-<button className="w3-bar-item w3-button">{data.Items[6].Track.Description}</button>
-<button className="w3-bar-item w3-button">{data.Items[7].Track.Description}</button>
-<button className="w3-bar-item w3-button">{data.Items[15].Track.Description}</button>
-<button className="w3-bar-item w3-button">General</button>    
-</div>
+
+
 
     
-)
+
 
 
 
