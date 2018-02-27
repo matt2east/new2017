@@ -21,6 +21,7 @@ class Atlassian extends React.Component {
     this.counterTwo = this.counterTwo.bind(this);  
       
     this.state = {counter: 0,
+                  display: 'none'
                  };
   }
  
@@ -39,6 +40,7 @@ class Atlassian extends React.Component {
        var i;
     var x = document.getElementsByClassName("hidetab");
 alert(x.length)
+//    document.getElementById("tab1").style={divHidden}
 }
         
     
@@ -48,8 +50,11 @@ alert(x.length)
 
   render() {
     const counter = this.state.counter;
-      const divStyle = {
+      const divHidden = {
   display: 'none',
+};
+            const divSeen = {
+  display: 'block',
 };
     
 
@@ -70,13 +75,13 @@ alert(x.length)
 <button className="w3-bar-item w3-button" onClick={this.tabOne}>General</button>    
 </div>
         
-                <div className="tab hidetab" >
+                <div className="tab" style={{display:this.state.display}}>
   <button className="tablinks" onClick={this.counterZero}>{data.Items[0].Title}</button>
   <button className="tablinks" onClick={this.counterOne}>{data.Items[1].Title}</button>
   <button className="tablinks" onClick={this.counterTwo}>{data.Items[2].Title}</button>        
 </div>
         
-         <div className="tab hidetab" style={divStyle} >
+         <div className="tab " style={{display:this.state.display}} >
   <button className="tablinks" >test</button>
   <button className="tablinks" >test</button>
   <button className="tablinks" >test</button>        
