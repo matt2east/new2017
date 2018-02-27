@@ -48,12 +48,7 @@ this.setState({display: 'block'});
 
   render() {
     const counter = this.state.counter;
-      const divHidden = {
-  display: 'none',
-};
-            const divSeen = {
-  display: 'block',
-};
+
     
 
 
