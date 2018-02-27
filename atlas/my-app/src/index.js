@@ -19,6 +19,7 @@ class Atlassian extends React.Component {
     this.counterZero = this.counterZero.bind(this);
     this.counterOne = this.counterOne.bind(this);
     this.counterTwo = this.counterTwo.bind(this);  
+      this.handleChangeTab = this.handleChangeTab.bind(this);  
       
     this.state = {counter: 0,
                   display: 'none'
@@ -37,10 +38,7 @@ class Atlassian extends React.Component {
     this.setState({counter: 2});
   }
     handleChangeTab(){
-       var i;
-    var x = document.getElementsByClassName("hidetab");
-alert(x.length)
-//    document.getElementById("tab1").style={divHidden}
+this.setState({display: 'block'});
 }
         
     
@@ -75,7 +73,7 @@ alert(x.length)
 <button className="w3-bar-item w3-button" onClick={this.tabOne}>General</button>    
 </div>
         
-                <div className="tab" style={{display:this.state.display}}>
+                <div className="tab" style={{display:!this.state.display}}>
   <button className="tablinks" onClick={this.counterZero}>{data.Items[0].Title}</button>
   <button className="tablinks" onClick={this.counterOne}>{data.Items[1].Title}</button>
   <button className="tablinks" onClick={this.counterTwo}>{data.Items[2].Title}</button>        
