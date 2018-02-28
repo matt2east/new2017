@@ -18,7 +18,8 @@ class Atlassian extends React.Component {
     super(props);
     this.counterZero = this.counterZero.bind(this);
     this.counterOne = this.counterOne.bind(this);
-    this.counterTwo = this.counterTwo.bind(this);  
+    this.counterTwo = this.counterTwo.bind(this); 
+    this.counterThree = this.counterThree.bind(this);    
     this.handleChangeTab1 = this.handleChangeTab1.bind(this);
     this.handleChangeTab2 = this.handleChangeTab2.bind(this); 
     this.handleChangeTab3 = this.handleChangeTab3.bind(this);   
@@ -40,6 +41,9 @@ class Atlassian extends React.Component {
   }
     counterTwo() {
     this.setState({counter: 2});
+  }
+        counterThree() {
+    this.setState({counter: 3});
   }
     handleChangeTab1(cityName){
 this.setState({display1: 'block',
@@ -90,7 +94,9 @@ this.setState({display1: 'none',
                 <div className="tab " style={{display:this.state.display1}}>
   <button className="tablinks" onClick={this.counterZero}>{data.Items[0].Title}</button>
   <button className="tablinks" onClick={this.counterOne}>{data.Items[1].Title}</button>
-  <button className="tablinks" onClick={this.counterTwo}>{data.Items[2].Title}</button>        
+  <button className="tablinks" onClick={this.counterTwo}>{data.Items[2].Title}</button>
+    <button className="tablinks" onClick={this.counterThree}>{data.Items[3].Title}</button>  
+ 
 </div>
         
          <div className="tab " style={{display:this.state.display2}} >
@@ -147,6 +153,13 @@ function CounterIsTwo(props) {
       <p>{data.Items[2].Speakers[2]}</p>
       </div>;
 }
+function CounterIsThree(props) {
+  return <div className="tabcontent">
+      <h3>{data.Items[3].Title}</h3>
+      <p>{data.Items[3].Description}</p>
+      <p>{data.Items[3].Speakers[2]}</p>
+      </div>;
+}
 function DisplayIsTwo(props) {
   return <div className="tabcontent">
   
@@ -167,6 +180,9 @@ const display1=props.display1;
     }
         else if (counter===2 && display1 =='block') {
   return <CounterIsTwo />;
+}
+            else if (counter===3 && display1 =='block') {
+  return <CounterIsThree />;
 }
     else if (display1=='none'){
         return<DisplayIsTwo />;
