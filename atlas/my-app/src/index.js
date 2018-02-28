@@ -19,11 +19,14 @@ class Atlassian extends React.Component {
     this.counterZero = this.counterZero.bind(this);
     this.counterOne = this.counterOne.bind(this);
     this.counterTwo = this.counterTwo.bind(this);  
-    this.handleChangeTab = this.handleChangeTab.bind(this);
-    this.handleChangeTab1 = this.handleChangeTab1.bind(this);    
+    this.handleChangeTab1 = this.handleChangeTab1.bind(this);
+    this.handleChangeTab2 = this.handleChangeTab2.bind(this); 
+    this.handleChangeTab3 = this.handleChangeTab3.bind(this);   
       
     this.state = {counter: 0,
-                  display: 'none'
+                  display1: 'block',
+                  display2: 'none',
+                  display3: 'none'
                  };
   }
  
@@ -38,11 +41,22 @@ class Atlassian extends React.Component {
     counterTwo() {
     this.setState({counter: 2});
   }
-    handleChangeTab(){
-this.setState({display: 'block'});
+    handleChangeTab1(cityName){
+this.setState({display1: 'block',
+              display2: 'none',
+              display3: 'none'});
+    
+
 }
-        handleChangeTab1(){
-this.setState({display: 'none'});
+        handleChangeTab2(){
+this.setState({display1: 'none',
+              display2: 'block',
+              display3: 'none'});
+}
+            handleChangeTab3(){
+this.setState({display1: 'none',
+              display2: 'none',
+              display3: 'block'});
 }
         
     
@@ -62,26 +76,32 @@ this.setState({display: 'none'});
 
         
         <div className="w3-bar w3-black">
-  <button className="w3-bar-item w3-button" onClick={this.handleChangeTab}>{data.Items[0].Track.Description}</button>
-    <button className="w3-bar-item w3-button" onClick={this.handleChangeTab1}>{data.Items[1].Track.Description}</button>
-  <button className="w3-bar-item w3-button">{data.Items[2].Track.Description}</button>
-<button className="w3-bar-item w3-button" onClick={this.handleChangeTab1}>{data.Items[3].Track.Description}</button>
-<button className="w3-bar-item w3-button" onClick={this.handleChangeTab1}>{data.Items[6].Track.Description}</button>
-<button className="w3-bar-item w3-button" onClick={this.handleChangeTab1}>{data.Items[7].Track.Description}</button>
-<button className="w3-bar-item w3-button" onClick={this.handleChangeTab1}>{data.Items[15].Track.Description}</button>
-<button className="w3-bar-item w3-button" onClick={this.handleChangeTab1}>General</button>    
+  <button className="w3-bar-item w3-button" onClick={this.handleChangeTab1}>{data.Items[0].Track.Description}</button>
+    <button className="w3-bar-item w3-button" onClick={this.handleChangeTab2}>{data.Items[1].Track.Description}</button>
+  <button className="w3-bar-item w3-button" onClick={this.handleChangeTab3}>{data.Items[2].Track.Description}</button>
+<button className="w3-bar-item w3-button" onClick={this.handleChangeTab3}>{data.Items[3].Track.Description}</button>
+<button className="w3-bar-item w3-button" onClick={this.handleChangeTab3}>{data.Items[6].Track.Description}</button>
+<button className="w3-bar-item w3-button" onClick={this.handleChangeTab3}>{data.Items[7].Track.Description}</button>
+<button className="w3-bar-item w3-button" onClick={this.handleChangeTab3}>{data.Items[15].Track.Description}</button>
+<button className="w3-bar-item w3-button" onClick={this.handleChangeTab3}>General</button>    
 </div>
         
-                <div className="tab" style={{display:!this.state.display}}>
+                <div className="tab " style={{display:this.state.display1}}>
   <button className="tablinks" onClick={this.counterZero}>{data.Items[0].Title}</button>
   <button className="tablinks" onClick={this.counterOne}>{data.Items[1].Title}</button>
   <button className="tablinks" onClick={this.counterTwo}>{data.Items[2].Title}</button>        
 </div>
         
-         <div className="tab " style={{display:this.state.display}} >
+         <div className="tab " style={{display:this.state.display2}} >
   <button className="tablinks" >test</button>
   <button className="tablinks" >test</button>
   <button className="tablinks" >test</button>        
+</div>
+        
+                 <div className="tab " style={{display:this.state.display3}} >
+  <button className="tablinks" >another tab</button>
+  <button className="tablinks" >another tab</button>
+  <button className="tablinks" >another tab</button>        
 </div>
 
 
