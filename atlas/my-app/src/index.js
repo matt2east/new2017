@@ -66,6 +66,7 @@ this.setState({display1: 'none',
 
   render() {
     const counter = this.state.counter;
+    const display1 = this.state.display1;  
 
     
 
@@ -108,7 +109,7 @@ this.setState({display1: 'none',
 
 
    
-        <GetCounter counter={counter} />
+        <GetCounter counter={counter} display1={display1} />
       </div>
     );
   }
@@ -146,21 +147,30 @@ function CounterIsTwo(props) {
       <p>{data.Items[2].Speakers[2]}</p>
       </div>;
 }
+function DisplayIsTwo(props) {
+  return <div className="tabcontent">
+  
+      </div>;
+}
 
 
 
 function GetCounter(props) {
   const counter = props.counter;
-  if (counter===0) {
+const display1=props.display1;    
+  if (counter===0 && display1 =='block') {
     return <CounterIsZero />;
   }
-    else if (counter===1){
+    else if (counter===1 && display1 =='block'){
     return <CounterIsOne />;
         
     }
-        else if (counter===2) {
+        else if (counter===2 && display1 =='block') {
   return <CounterIsTwo />;
 }
+    else if (display1=='none'){
+        return<DisplayIsTwo />;
+    }
 
 }
 
