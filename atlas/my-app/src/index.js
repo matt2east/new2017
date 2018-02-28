@@ -63,12 +63,7 @@ this.setState({display1: 'none',
               display3: 'block'});
 }
         
-    
-
-    
-
-
-  render() {
+render() {
     const counter = this.state.counter;
     const display1 = this.state.display1;  
 
@@ -78,38 +73,35 @@ this.setState({display1: 'none',
     return (
       <div className="w3-container">
         
-
-        
         <div className="w3-bar w3-black">
-  <button className="w3-bar-item w3-button" onClick={this.handleChangeTab1}>{data.Items[0].Track.Description}</button>
-    <button className="w3-bar-item w3-button" onClick={this.handleChangeTab2}>{data.Items[1].Track.Description}</button>
-  <button className="w3-bar-item w3-button" onClick={this.handleChangeTab3}>{data.Items[2].Track.Description}</button>
-<button className="w3-bar-item w3-button" onClick={this.handleChangeTab3}>{data.Items[3].Track.Description}</button>
-<button className="w3-bar-item w3-button" onClick={this.handleChangeTab3}>{data.Items[6].Track.Description}</button>
-<button className="w3-bar-item w3-button" onClick={this.handleChangeTab3}>{data.Items[7].Track.Description}</button>
-<button className="w3-bar-item w3-button" onClick={this.handleChangeTab3}>{data.Items[15].Track.Description}</button>
-<button className="w3-bar-item w3-button" onClick={this.handleChangeTab3}>General</button>    
-</div>
+        <button className="w3-bar-item w3-button" onClick={this.handleChangeTab1}>{data.Items[0].Track.Description}</button>
+        <button className="w3-bar-item w3-button" onClick={this.handleChangeTab2}>{data.Items[1].Track.Description}</button>
+        <button className="w3-bar-item w3-button" onClick={this.handleChangeTab3}>{data.Items[2].Track.Description}</button>
+        <button className="w3-bar-item w3-button" onClick={this.handleChangeTab3}>{data.Items[3].Track.Description}</button>
+        <button className="w3-bar-item w3-button" onClick={this.handleChangeTab3}>{data.Items[6].Track.Description}</button>
+        <button className="w3-bar-item w3-button" onClick={this.handleChangeTab3}>{data.Items[7].Track.Description}</button>
+        <button className="w3-bar-item w3-button" onClick={this.handleChangeTab3}>{data.Items[15].Track.Description}</button>
+        <button className="w3-bar-item w3-button" onClick={this.handleChangeTab3}>General</button>    
+        </div>
         
-                <div className="tab " style={{display:this.state.display1}}>
-  <button className="tablinks" onClick={this.counterZero}>{data.Items[0].Title}</button>
-  <button className="tablinks" onClick={this.counterOne}>{data.Items[1].Title}</button>
-  <button className="tablinks" onClick={this.counterTwo}>{data.Items[2].Title}</button>
-    <button className="tablinks" onClick={this.counterThree}>{data.Items[3].Title}</button>  
- 
-</div>
+        <div className="tab " style={{display:this.state.display1}}>
+        <button className="tablinks" onClick={this.counterZero}>{data.Items[0].Title}</button>
+        <button className="tablinks" onClick={this.counterOne}>{data.Items[1].Title}</button>
+        <button className="tablinks" onClick={this.counterTwo}>{data.Items[2].Title}</button>
+        <button className="tablinks" onClick={this.counterThree}>{data.Items[3].Title}</button>  
+        </div>
         
-         <div className="tab " style={{display:this.state.display2}} >
-  <button className="tablinks" >test</button>
-  <button className="tablinks" >test</button>
-  <button className="tablinks" >test</button>        
-</div>
+        <div className="tab " style={{display:this.state.display2}} >
+        <button className="tablinks" >test</button>
+        <button className="tablinks" >test</button>
+        <button className="tablinks" >test</button>       
+        </div>
         
-                 <div className="tab " style={{display:this.state.display3}} >
-  <button className="tablinks" >another tab</button>
-  <button className="tablinks" >another tab</button>
-  <button className="tablinks" >another tab</button>        
-</div>
+        <div className="tab " style={{display:this.state.display3}} >
+        <button className="tablinks" >another tab</button>
+        <button className="tablinks" >another tab</button>
+        <button className="tablinks" >another tab</button>        
+        </div>
 
 
 
@@ -124,26 +116,25 @@ this.setState({display1: 'none',
 
 
 function CounterIsZero(props) {
-  return <div className="tabcontent">
-      <h3>{data.Items[0].Title}</h3>
-      <p>{data.Items[0].Description}</p>
-      <h3>About the Speaker</h3>
-          <h3>{data.Items[0].Speakers[0].FirstName + " " + data.Items[0].Speakers[0].LastName + " "}
-          <i>{data.Items[0].Speakers[0].Company}</i>
-          </h3>
-          </div>;
+    return <div className="tabcontent">
+        <h3>{data.Items[0].Title}</h3>
+        <p>{data.Items[0].Description}</p>
+        <h3>About the Speaker</h3>
+            <h3>{data.Items[0].Speakers[0].FirstName + " " + data.Items[0].Speakers[0].LastName + " "}
+            <i>{data.Items[0].Speakers[0].Company}</i>
+            </h3>
+            </div>;
 }
 
 
 function CounterIsOne(props) {
-  return <div className="tabcontent">
-      <h3>{data.Items[1].Title}</h3>
+  return <div className="tabcontent"><h3>{data.Items[1].Title}</h3>
       <p>{data.Items[1].Description}</p>
       <h3>About the Speaker</h3>
           <h3>{data.Items[1].Speakers[1].FirstName + " " + data.Items[1].Speakers[1].LastName + " "}
-     <i>{data.Items[1].Speakers[1].Company}</i>
-         </h3>
-         </div>;
+          <i>{data.Items[1].Speakers[1].Company}</i>
+          </h3>
+          </div>;
 }
 
 function CounterIsTwo(props) {
@@ -162,32 +153,30 @@ function CounterIsThree(props) {
 }
 function DisplayIsTwo(props) {
   return <div className="tabcontent">
-  
       </div>;
 }
 
 
 
 function GetCounter(props) {
-  const counter = props.counter;
-const display1=props.display1;    
-  if (counter===0 && display1 =='block') {
-    return <CounterIsZero />;
-  }
+    const counter = props.counter;
+    const display1=props.display1;    
+    if (counter===0 && display1 =='block') {
+        return <CounterIsZero />;
+    }
     else if (counter===1 && display1 =='block'){
-    return <CounterIsOne />;
+        return <CounterIsOne />;
         
     }
-        else if (counter===2 && display1 =='block') {
-  return <CounterIsTwo />;
-}
-            else if (counter===3 && display1 =='block') {
-  return <CounterIsThree />;
-}
+    else if (counter===2 && display1 =='block') {
+        return <CounterIsTwo />;
+    }
+    else if (counter===3 && display1 =='block') {
+        return <CounterIsThree />;
+    }
     else if (display1=='none'){
         return<DisplayIsTwo />;
     }
-
 }
 
 
@@ -199,6 +188,6 @@ const display1=props.display1;
 
 
 ReactDOM.render(
-  <Atlassian />,
-  document.getElementById('root')
+    <Atlassian />,
+    document.getElementById('root')
 );
