@@ -1,10 +1,11 @@
+//Matthew Myers
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-//import App from './App';
 var data = require('./sessions.json'); 
-console.log(data.Items[0].Speakers[0].FirstName + " " + data.Items[0].Speakers[0].LastName);
-console.log(data.Items[0].Track.Description)
+//console.log(data.Items[0].Speakers[0].FirstName + " " + data.Items[0].Speakers[0].LastName);
+//console.log(data.Items[0].Track.Description)
 
 
 for(var i = 0; i < data.length; i++) {
@@ -92,15 +93,15 @@ render() {
         </div>
         
         <div className="tab " style={{display:this.state.display2}} >
-        <button className="tablinks" >test</button>
-        <button className="tablinks" >test</button>
-        <button className="tablinks" >test</button>       
+        <button className="tablinks" >{data.Items[4].Title}</button>
+        <button className="tablinks" >{data.Items[5].Title}</button>
+        <button className="tablinks" >{data.Items[6].Title}</button>       
         </div>
         
         <div className="tab " style={{display:this.state.display3}} >
-        <button className="tablinks" >another tab</button>
-        <button className="tablinks" >another tab</button>
-        <button className="tablinks" >another tab</button>        
+        <button className="tablinks" >{data.Items[7].Title}</button>
+        <button className="tablinks" >{data.Items[8].Title}</button>
+        <button className="tablinks" >{data.Items[9].Title}</button>        
         </div>
 
 
