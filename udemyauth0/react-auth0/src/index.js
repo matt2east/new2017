@@ -16,7 +16,7 @@ window.setState = (changes) => {
 /* eslint no-restricted-globals:0*/
 
 //displays username
-let username = auth.getProfile().iss || "Matthew";
+let username = auth.getProfile().iss || "anonymous";
 
 let initialState = {
     name: username,
