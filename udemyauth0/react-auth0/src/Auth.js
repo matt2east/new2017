@@ -1,6 +1,7 @@
 /* eslint no-restricted-globals: 0 */
 
 import auth0 from 'auth0-js';
+import jwDtecode from 'jwt-decode';
 
 const LOGIN_SUCCESS_PAGE = "/secret";
 const LOGIN_FAILURE_PAGE = "/";
@@ -51,6 +52,14 @@ export default class Auth {
             let expiresAt = JSON.parse(localStorage.getItem("expires_at"));
             return new Date().getTime() < expiresAt;
 
+        }
+        getProfile(){
+            // Returns the Auth0 profile.
+            if (localStorage.getItem("id_token")){
+               return jwDtecode(localStorage.getItem("id_token"));
+            } else {
+                return {};
+            }
         }
      
     }

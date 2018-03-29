@@ -14,8 +14,12 @@ window.setState = (changes) => {
 };
 
 /* eslint no-restricted-globals:0*/
+
+//displays username
+let username = auth.getProfile().iss || "Matthew";
+
 let initialState = {
-    name: "Matthew",
+    name: username,
     location: location.pathname.replace(/^\/?|\/$/g, ""),
     auth
 };
