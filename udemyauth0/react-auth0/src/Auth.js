@@ -4,6 +4,7 @@ import auth0 from 'auth0-js';
 
 const LOGIN_SUCCESS_PAGE = "/secret";
 const LOGIN_FAILURE_PAGE = "/";
+const LOGOUT_PAGE = "/";
 
 export default class Auth {
     auth0 = new auth0.WebAuth({
@@ -38,9 +39,18 @@ export default class Auth {
             })
 
         }
+
+        logout(){
+            localStorage.removeItem("access_token");
+            localStorage.removeItem("id_token");
+            localStorage.removeItem("expires_at");
+            location.pathname = LOGIN_FAILURE_PAGE;
+        
+}
         isAuthenticated(){
             let expiresAt = JSON.parse(localStorage.getItem("expires_at"));
             return new Date().getTime() < expiresAt;
 
         }
+     
     }

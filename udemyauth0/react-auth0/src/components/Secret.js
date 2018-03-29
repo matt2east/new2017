@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
 export default class Secret extends Component {
-    render(){
+    render() {
+        const {logout} = this.props.auth;
+
         return (
             <div>
-                <p>
-                This is a secret area.
-                </p>
-                <br/>
-                <button>logout</button>
-        </div>
+                This is a super secret area!<br/>
+                Back to <a href="/">Home</a><br/>
+                Or <button onClick={logout}>Logout</button>
+            </div>
         )
     }
 }
