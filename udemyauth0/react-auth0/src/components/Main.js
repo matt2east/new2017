@@ -2,8 +2,8 @@ import React, {Component} from "react";
 
 export default class Main extends Component {
     render() {
-        const {isAuthenticated, login} = this.props.auth;
-        const {logout} = this.props.auth;
+        const {isAuthenticated, login, logout} = this.props.auth;
+       
         return(
             <div>
                 Hello {this.props.name}<br/>

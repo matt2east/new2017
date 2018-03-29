@@ -21,7 +21,6 @@ class App extends Component {
       break;
       default: 
       mainComponent = <NotFound />;
- 
     }
     return (
       <div className="App">
