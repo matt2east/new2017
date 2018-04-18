@@ -1,0 +1,18 @@
+body{
+    background-color: cadetblue
+}
+
+.jumbotron{
+    text-align: center;
+}
+
+.emailform{
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+#thesteves{
+    height: 30%;
+    width: 30%;
+}
+
