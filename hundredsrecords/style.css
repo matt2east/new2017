@@ -14,5 +14,10 @@ body{
 #thesteves{
     height: 30%;
     width: 30%;
+    /* border-radius: 2em; */
 }
-
+#stevepeisch{
+    border-radius: 2em;
+    height: 20%;
+    width: 20%;  
+}
