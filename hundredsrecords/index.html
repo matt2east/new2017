@@ -14,7 +14,12 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="style.css">
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>   
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  
+<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+
 
 
 
@@ -33,7 +38,7 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="music.html">HUNDREDS RECORDS</a>
+                    <a class="navbar-brand" href="music.html"><strong>H U N D R E D S R E C O R D S</strong></a>
                   </div>
               
                   <!-- Collect the nav links, forms, and other content for toggling -->
@@ -84,23 +89,24 @@
 
 <!-- jumbotron -->
               <div class="jumbotron">
-                    <h1>HUNDREDS RECORDS</h1>
+                    <h1 class="hundreds">H U N D R E D S R E C O R D S</h1>
                     <h2>The music of Steve Peisch</h2>
-                    <p><a class="btn btn-primary btn-lg" href="music.html" role="button">Listen</a></p>
+                    <!-- <p><a class="btn btn-primary btn-lg" href="music.html" role="button">Listen</a></p> -->
                     <div><img id="stevepeisch" src="images/stevepeisch.gif"></div>
 
                     </div>
 
 
-                  <div class="emailform">
-                    <form>
-                      <div class="input-group input-group-sm">
-                        <span class="input-group-addon" id="basic-addon1">Join Mailing List</span>
-                        <input type="text" class="form-control" placeholder="Email Address" aria-describedby="basic-addon1">
-                      </div><br>       
-                      <p><a class="btn btn-primary btn-sm" href="#" role="button">Sign Up</a></p>
-                    </form>
-                  </div>        
+                    <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbw18fOyfDX5BNcgz8U6wO_86DSw7m1OaV4b5ncwouXYynpIkPM/exec">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Join Mailing List</label>
+                        <input type="email" class="form-control" id="email" name="email" type="email" value=""
+                          required placeholder="Enter email." aria-describedby="emailHelp">
+                          
+                      </div>
+                    
+                      <button type="submit" class="btn btn-sm btn-primary" onclick="sendForm()">Subscribe</button>
+                    </form>   
 
 
 <!--[ footer ] -->
@@ -110,6 +116,8 @@
         </div>
       </nav>
 
-
+      <script src="script.js"></script>
+      <script data-cfasync="false" type="text/javascript"
+src="https://cdn.rawgit.com/dwyl/learn-to-send-email-via-google-script-html-no-server/master/form-submission-handler.js"></script>
 </body>
 </html>

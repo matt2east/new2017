@@ -6,10 +6,6 @@ body{
     text-align: center;
 }
 
-.emailform{
-    padding-left: 2em;
-    padding-right: 2em;
-}
 
 #thesteves{
     height: 30%;
@@ -20,4 +16,18 @@ body{
     border-radius: 2em;
     height: 20%;
     width: 20%;  
+}
+#gform{
+    padding-bottom: 6em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+h1{
+    font-family: 'Anton', sans-serif;
+}
+.navbar-brand{
+    font-family: 'Anton', sans-serif;
+}
+body{
+    font-family: 'Questrial', sans-serif;
 }
