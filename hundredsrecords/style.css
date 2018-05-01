@@ -8,8 +8,8 @@ body{
 
 
 #thesteves{
-    height: 30%;
-    width: 30%;
+    height: 50%;
+    width: 50%;
     /* border-radius: 2em; */
 }
 #stevepeisch{
@@ -30,4 +30,9 @@ h1{
 }
 body{
     font-family: 'Questrial', sans-serif;
+}
+b{font-weight: 1000}
+#timetravelerposter{
+    height: 50%;
+    width: 50%
 }
