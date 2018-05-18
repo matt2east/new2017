@@ -23,7 +23,7 @@
      <p></p>
      <!-- 4) Search any image on Google and output it here by binding the "src" attribute -->
      <div>
-         <img style="width:100px;height:100px">
+         <img v-bind:src="imageLink" style="width:100px;height:100px">
      </div>
      <!-- 5) Pre-Populate this input with your name (set the "value" attribute) -->
      <div>
@@ -37,6 +37,7 @@ new Vue({
     title: 'Hello Vue.js!',
     link: 'http://google.com',
     finishedLink:'<a href="http://leetmusic.com">Leet Music</a>',
+    imageLink: "http://3.bp.blogspot.com/-z8kzafZYkfQ/UERf6IbjJJI/AAAAAAAAALE/qaAxqqawXpM/s1600/Cat+Pictures+1.jpg",
     name: 'Matthew',
     age: 35
   },
