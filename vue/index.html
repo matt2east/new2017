@@ -20,7 +20,7 @@
      <!-- 2) Output your age, multiplied by 3 -->
      <p>{{ TimesThree() }}</p>
      <!-- 3) Call a function to output a random float between 0 and 1 (Math.random()) -->
-     <p></p>
+     <p>{{ Random() }}</p>
      <!-- 4) Search any image on Google and output it here by binding the "src" attribute -->
      <div>
          <img v-bind:src="imageLink" style="width:100px;height:100px">
@@ -48,6 +48,10 @@ new Vue({
     // }
     TimesThree: function(){
       return this.age*3;
+    },
+    Random: function(){
+      return Math.random();
+
     }
   }
 
