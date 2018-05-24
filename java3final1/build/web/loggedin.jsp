@@ -38,5 +38,10 @@
 
             <input type="submit" value="Log out">
         </form>
+                <form action="/java3final/FinalServlet" method="post">
+            <input type="hidden" name="crash" value="crash">
+
+            <input type="submit" value="crash">
+        </form>
     </body>
 </html>
