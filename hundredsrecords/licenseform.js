@@ -75,6 +75,6 @@ function loaded() {
   form.addEventListener("submit", handleFormSubmit, false); 
 };
 function sendForm() {
-  alert("Thank you for subscribing to HUNDREDS RECORDS!");
+  alert("Thank you for your interest in licensing our music. We will be in touch soon!");
 }
 document.addEventListener('DOMContentLoaded', loaded, false);

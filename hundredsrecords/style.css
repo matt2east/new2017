@@ -7,15 +7,20 @@ body{
 }
 
 
-#thesteves{
-    height: 50%;
-    width: 50%;
-    /* border-radius: 2em; */
+#aboutsteve{
+    height: 75%;
+    width: 75%;
+    border-radius: 1em;
+    /* border: 1px solid; */
+    box-shadow: 2px 3px; 
 }
 #stevepeisch{
     border-radius: 2em;
     height: 20%;
-    width: 20%;  
+    width: 20%; 
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px; 
 }
 #gform{
     padding-bottom: 6em;
@@ -24,6 +29,8 @@ body{
 }
 h1{
     font-family: 'Anton', sans-serif;
+    text-shadow: 2px 2px white;
+
 }
 .navbar-brand{
     font-family: 'Anton', sans-serif;
@@ -35,4 +42,10 @@ b{font-weight: 1000}
 #timetravelerposter{
     height: 50%;
     width: 50%
+}
+#timetravelerposter{
+    border-radius: 1em;
+
+    box-shadow: 2px 3px; 
+
 }
