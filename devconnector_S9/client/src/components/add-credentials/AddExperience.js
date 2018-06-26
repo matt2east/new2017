@@ -4,6 +4,7 @@ import TextFieldGroup  from "../common/TextFieldGroup";
 import TextAreaFieldGroup from "../common/TextAreaFieldGroup";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import { addExperience } from "../../actions/profileActions";
 
 class AddExperience extends Component {
   constructor(props) {
@@ -23,9 +24,28 @@ class AddExperience extends Component {
     this.onSubmit = this.onSubmit.bind(this);
     this.onCheck = this.onCheck.bind(this);
   }
+  componentWillReceiveProps(nextProps){
+    if (nextProps.errors){
+      this.setState({
+        errors: nextProps.errors
+      })
+    }
+
+  }
+
+
 onSubmit(e){
   e.preventDefault();
-  console.log('submit')
+  const expData = {
+    company: this.state.company,
+    title: this.state.title,
+    location: this.state.location,
+    from: this.state.from,
+    to: this.state.to,
+    current: this.state.current,
+    description: this.state.description
+  }
+  this.props.addExperience(expData, this.props.history)
 }
 onChange(e){
   this.setState({
@@ -65,12 +85,19 @@ onCheck(e){
                   onChange={this.onChange}
                   error={errors.company}
                 />
+                                <TextFieldGroup
+                  placeholder="* Title"
+                  name="title"
+                  value={this.state.title}
+                  onChange={this.onChange}
+                  error={errors.title}
+                />
                 <TextFieldGroup
                   placeholder="Location"
                   name="location"
                   value={this.state.location}
                   onChange={this.onChange}
-                  error={errors.title}
+                  error={errors.location}
                 />
                 <h6>From Date</h6>
                 <TextFieldGroup
@@ -122,7 +149,8 @@ onCheck(e){
   }
 }
 
-AddExperience.PropTypes = {
+AddExperience.propTypes = {
+  addExperience: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired,
   errors: PropTypes.object
 };
@@ -132,4 +160,4 @@ const mapStateToProps = state => ({
   errors: state.errors
 });
 
-export default connect(mapStateToProps)(withRouter(AddExperience));
+export default connect(mapStateToProps, {addExperience})(withRouter(AddExperience));
