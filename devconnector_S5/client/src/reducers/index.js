@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
-import { authReducer } from './authReducer';
+// import { authReducer } from './authReducer';
 
-export default combineReducers({
-  auth: authReducer
-  //use this.props.auth
-});
+// export default combineReducers({
+//   auth: authReducer
+//   //use this.props.auth
+// });

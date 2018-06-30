@@ -1,17 +1,17 @@
-console.log("app.js is running");
+console.log("app.js is running 333");
 
 const userName = 'Fred';
 const age = '3';
 let nameLet = "Joe";
 nameLet = "Bob";
 //console.log(nameLet);
-const fullName = 'Matthew Myers';
+
 //const first, let if we need it, var never
 //let firstName;
 
 //const firstName2 = (y) => y.split(' ')[0];
 //console.log("test " +firstName2(fullName));
-//if (fullName){
+//if (fullName)
 //    const firstName = fullName.split(' ')[0];
 //    console.log(firstName + " inside the scope");
  
@@ -70,10 +70,9 @@ const fullName = 'Matthew Myers';
 //}
 
 const app = {
-    title: 'app',
+    title: 'Indecision App',
     options: [],
 };
-const tempNumbers = [12, 46, 666];
 
 const onFormSubmit = (e) => {
     e.preventDefault();
@@ -85,18 +84,28 @@ const onFormSubmit = (e) => {
         console.log(app.options)
         
     }
+    
+ 
 };
 const onFormRemoveSubmit = (e) => {
     app.options = [];
+
+    
     console.log(app.options)
 }
+const onMakeDecision = () => {
+const randomNum = Math.floor(Math.random() * app.options.length);
+const option = app.options[randomNum];
+     alert(option);
+}
+
 const approot = document.getElementById("app");
 const renderApp = () =>{
    const template = 
     <div>
         <h1>{app.title}</h1>
             <p>{app.options.length > 0 ? 'Here are your options:' : 'No options.'}</p>
-            <p>{app.options.length}</p>
+
    <ol>
     {
        app.options.map((option)=>{
@@ -111,8 +120,14 @@ const renderApp = () =>{
         </form>
                <form onSubmit={onFormRemoveSubmit}>
     
-          <button name="remove">remove all</button>
+          <button disabled={app.options.length===0} name="remove">remove all</button>
         </form>
+          
+                         <form onSubmit={onMakeDecision}>
+    
+          <button disabled={app.options.length===0} name="decide">What should I pick?</button>
+        </form>
+          
 
             </div>; 
               ReactDOM.render(template, approot);  

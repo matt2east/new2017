@@ -151,8 +151,6 @@ font-family: 'Adamina', serif;
 /*    width:100%;*/
     display: none;  
   }
-    #listen{
-    display:none;}
 }
 
   .masthead .intro-body {
@@ -284,8 +282,8 @@ body {
 /*    width:100%;*/
     background-image: none;  
   }
-    h2{
-    display:none;}
+    #listen{
+    padding-top: 30px;}
 }
 
 

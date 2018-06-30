@@ -102,7 +102,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     document.getElementById('email-invalid').style.display = 'block';
     return false;
   } else { 
-    alert("Thank you for subscribing!");  
+    console.log("Thank you for subscribing!");  
     var url = event.target.action;  //
     var xhr = new XMLHttpRequest();
     xhr.open('POST', url);
@@ -127,4 +127,7 @@ function loaded() {
   var form = document.getElementById('gform');
   form.addEventListener("submit", handleFormSubmit, false); 
 };
+function sendForm() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
 document.addEventListener('DOMContentLoaded', loaded, false);

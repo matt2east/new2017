@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import jsonData from './sessions.json';
+
 //console.log(jsonData.title);
 var data = require('./sessions.json'); 
 console.log(data.Items[0].Speakers[0].FirstName + " " + data.Items[0].Speakers[0].LastName);

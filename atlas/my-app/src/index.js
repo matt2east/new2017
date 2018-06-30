@@ -68,9 +68,6 @@ render() {
     const counter = this.state.counter;
     const display1 = this.state.display1;  
 
-    
-
-
     return (
       <div className="w3-container">
         
@@ -104,17 +101,11 @@ render() {
         <button className="tablinks" >{data.Items[9].Title}</button>        
         </div>
 
-
-
-
-   
         <GetCounter counter={counter} display1={display1} />
       </div>
     );
   }
 }
-
-
 
 function CounterIsZero(props) {
     return <div className="tabcontent">
@@ -126,7 +117,6 @@ function CounterIsZero(props) {
             </h3>
             </div>;
 }
-
 
 function CounterIsOne(props) {
   return <div className="tabcontent"><h3>{data.Items[1].Title}</h3>
@@ -179,14 +169,6 @@ function GetCounter(props) {
         return<DisplayIsTwo />;
     }
 }
-
-
-
-
-    
-
-
-
 
 ReactDOM.render(
     <Atlassian />,

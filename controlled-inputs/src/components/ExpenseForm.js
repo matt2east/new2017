@@ -21,6 +21,7 @@ export default class ExpenseForm extends React.Component {
     this.setState(() => ({ note }));
   };
   onAmountChange = (e) => {
+    console.log("onAmountChange")
     const amount = e.target.value;
 
     if (!amount || amount.match(/^\d{1,}(\.\d{0,2})?$/)) {

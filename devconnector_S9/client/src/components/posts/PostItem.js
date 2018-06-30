@@ -18,7 +18,7 @@ class PostItem extends Component {
   }
 
   findUserLike(likes) {
-    const { auth } = this.props;
+    const { auth } = this.props.post;
     if (likes.filter(like => like.user === auth.user.id).length > 0) {
       return true;
     } else {
@@ -27,7 +27,7 @@ class PostItem extends Component {
   }
 
   render() {
-    const { post, auth } = this.props;
+    const { post, auth, showActions } = this.props;
     return (
       <div className="card card-body mb-3">
         <div className="row">
@@ -44,7 +44,8 @@ class PostItem extends Component {
           </div>
           <div className="col-md-10">
             <p className="lead">{post.text}</p>
-            <button
+            {showActions ? (
+<span>            <button
               onClick={this.onLikeClick.bind(this, post._id)}
               type="button"
               className="btn btn-light mr-1"
@@ -72,12 +73,17 @@ class PostItem extends Component {
               >
                 <i className="fas fa-times" />
               </button>
+            ) : null}</span>
             ) : null}
           </div>
         </div>
       </div>
     );
   }
+}
+
+PostItem.defaultProps = {
+ showActions: true 
 }
 
 PostItem.propTypes = {

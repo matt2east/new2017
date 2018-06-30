@@ -4,6 +4,18 @@ var ejs = require('ejs');
 var path = require('path');
 var request = require('request');
 app.set('view engine', 'ejs');
+var mysql = require('mysql');
+
+//var con = mysql.createConnection({
+//  host: "localhost",
+//  user: "yourusername",
+//  password: "yourpassword"
+//});
+//
+//con.connect(function(err) {
+//  if (err) throw err;
+//  console.log("Connected!");
+//});
 
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -44,6 +56,8 @@ app.get('/results', function(req, res) {
 //Customer key =2df3a8
 
 //http://api.screenshotmachine.com/?key=12345&dimension=1024xfull&format=png&url=http://google.com
+
+
 
 
 

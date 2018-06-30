@@ -11,8 +11,8 @@ function sendForm(){
     x.style.display = 'none';
     var node = document.createElement("h3");
     var refresh = document.createElement("button");
-    var buttontext = document.createTextNode("report more");
-     refresh.onclick = function(){
+    var buttontext = document.createTextNode("Report more");
+    refresh.onclick = function(){
     location.reload()
   };
     var linebreak = document.createElement("br")
@@ -93,8 +93,8 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     xhr.onreadystatechange = function() {
         console.log( xhr.status, xhr.statusText )
         console.log(xhr.responseText);
-        document.getElementById('gform').style.display = 'none'; // hide form
-//        document.getElementById('thankyou_message').style.display = 'block';
+        document.getElementById('gform').style.display = 'none';
+        // hide form
         return;
     };
     // url encode form data for sending as post data
