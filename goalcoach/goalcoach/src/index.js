@@ -1,10 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {firebaseApp} from './firebase';
+import {Router, Route, browserHistory} from 'react-router'
 import App from './components/App';
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
-import {Router, Route, browserHistory} from 'react-router'
 
+firebaseApp.auth().onAuthStateChanged( user => {
+  if (user){
+    console.log('there is a user', user)
+  }
+  else {
+    console.log('no user')
+  }
+})
 
 ReactDOM.render(
   <Router path="/"
