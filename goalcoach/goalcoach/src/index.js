@@ -1,22 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {firebaseApp} from './firebase';
-import {Router, Route, browserHistory} from 'react-router'
+import {createStore} from 'redux';
+import {Router, Route, browserHistory} from 'react-router';
+import {Provider} from 'react-redux';
+import reducer from './reducers'
+
 import App from './components/App';
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
 
+const store = createStore(reducer);
+
 firebaseApp.auth().onAuthStateChanged( user => {
   if (user){
     console.log('there is a user', user)
+    browserHistory.push('/app');
   }
   else {
     console.log('no user')
+    browserHistory.replace('/signin');
   }
 })
 
 ReactDOM.render(
-  <Router path="/"
+  <Provider store={store}>
+      <Router path="/"
   history={browserHistory}>
   <Route path="/app" 
  component={App} />
@@ -24,7 +33,6 @@ ReactDOM.render(
  component={SignIn} />
    <Route path="/signup" 
  component={SignUp} />
-
-
-  </Router>, document.getElementById('root')
+  </Router>
+    </Provider>, document.getElementById('root')
 )
