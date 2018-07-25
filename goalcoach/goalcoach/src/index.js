@@ -4,6 +4,7 @@ import {firebaseApp} from './firebase';
 import {createStore} from 'redux';
 import {Router, Route, browserHistory} from 'react-router';
 import {Provider} from 'react-redux';
+import {logUser} from './actions';
 import reducer from './reducers'
 
 import App from './components/App';
@@ -14,7 +15,9 @@ const store = createStore(reducer);
 
 firebaseApp.auth().onAuthStateChanged( user => {
   if (user){
+    const {email} = user;
     console.log('there is a user', user)
+    store.dispatch(logUser(email))
     browserHistory.push('/app');
   }
   else {
