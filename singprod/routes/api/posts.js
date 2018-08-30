@@ -1,7 +1,7 @@
-const express = require('express');
-const router = express.Router();
-const mongoose = require('mongoose');
-const passport = require('passport');
+// const express = require('express');
+// const router = express.Router();
+// const mongoose = require('mongoose');
+// const passport = require('passport');
 
 // // Post model
 // // const Post = require('../../models/Post');
@@ -220,4 +220,4 @@ const passport = require('passport');
 //   }
 // );
 
-module.exports = router;
+// module.exports = router;
