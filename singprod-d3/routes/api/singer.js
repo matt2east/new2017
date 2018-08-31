@@ -63,9 +63,9 @@ router.post(
     // Get fields
     const singerFields = {};
     singerFields.user = req.user.id;
-    if (req.body.moniker) singerFields.handlemoniker = req.body.moniker;
+    if (req.body.moniker) singerFields.moniker = req.body.moniker;
     if (req.body.bio) singerFields.bio = req.body.bio;
-    if (req.body.email) singerFields.bio = req.body.email;
+    if (req.body.email) singerFields.email = req.body.email;
     if (req.body.website) singerFields.website = req.body.website;
     if (req.body.pic) singerFields.pic = req.body.pic;
     if (req.body.demo1) singerFields.demo1 = req.body.demo1;

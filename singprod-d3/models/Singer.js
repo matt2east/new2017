@@ -18,6 +18,7 @@ const SingerSchema = new Schema({
   },
   bio: {
     type: String,
+    required: true
     // max: 2000
   },
   pic: {
