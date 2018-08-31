@@ -15,7 +15,7 @@ const Producer = require('../../models/Producer');
 // router.get('/test', (req, res) => res.json({ msg: 'Singer test Works' }));
 
 //@route GET /api/singer/
-//@desc GET current singer profile
+//@desc get current singer profile
 // @access  Private
 // @route   GET api/profile
 // @desc    Get current users profile
@@ -38,5 +38,7 @@ router.get(
       .catch(err => res.status(404).json(err));
   }
 );
+
+
 
 module.exports = router;

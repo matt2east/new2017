@@ -10,7 +10,7 @@ const SingerSchema = new Schema({
   moniker: {
     type: String,
     required: true,
-    max: 40
+    // max: 40
   },
   email: {
     type: String,
@@ -18,18 +18,18 @@ const SingerSchema = new Schema({
   },
   bio: {
     type: String,
-    required: true,
-    max: 2000
+    // max: 2000
   },
   pic: {
     type: String
   },
   website: {
-    type: String
+    type: String,
+    required: true
   },
-  location: {
-    type: String
-  },
+  // location: {
+  //   type: String
+  // },
   demo1: {
     type: String,
     required: true
@@ -45,16 +45,13 @@ const SingerSchema = new Schema({
   //   required: true
   // },
   songwriter: {
-    type: String,
-    required: true
+    type: String
   },
   collab: {
-    type: String,
-    required: true
+    type: String
   },
   paid: {
-    type: String,
-    required: true
+    type: String
   }
 });
 

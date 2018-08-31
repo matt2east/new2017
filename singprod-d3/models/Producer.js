@@ -27,9 +27,9 @@ const ProducerSchema = new Schema({
   website: {
     type: String
   },
-  location: {
-    type: String
-  },
+  // location: {
+  //   type: String
+  // },
   demo1: {
     type: String,
     required: true
@@ -45,16 +45,13 @@ const ProducerSchema = new Schema({
   //   required: true
   // },
   songwriter: {
-    type: String,
-    required: true
+    type: String
   },
   collab: {
-    type: String,
-    required: true
+    type: String
   },
   paid: {
-    type: String,
-    required: true
+    type: String
   }
 });
 
