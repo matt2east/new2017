@@ -30,7 +30,7 @@ router.get(
     const errors = {};
 
     Producer.findOne({ user: req.user.id })
-      // .populate('user', ['name', 'avatar'])
+      .populate('user', 'name')
       .then(producer => {
         if (!producer) {
           errors.noproducer = 'User has not set up a Producer Profile.';
@@ -75,18 +75,6 @@ router.post(
     if (req.body.paid) producerFields.paid = req.body.paid;
     if (req.body.songwriter)
       producerFields.songwriter = req.body.songwriter;
-    // Skills - Spilt into array
-    // if (typeof req.body.skills !== 'undefined') {
-    //   profileFields.skills = req.body.skills.split(',');
-    // }
-
-    // Social
-    // profileFields.social = {};
-    // if (req.body.youtube) profileFields.social.youtube = req.body.youtube;
-    // if (req.body.twitter) profileFields.social.twitter = req.body.twitter;
-    // if (req.body.facebook) profileFields.social.facebook = req.body.facebook;
-    // if (req.body.linkedin) profileFields.social.linkedin = req.body.linkedin;
-    // if (req.body.instagram) profileFields.social.instagram = req.body.instagram;
 
     Producer.findOne({ user: req.user.id }).then(producer => {
       if (producer) {
