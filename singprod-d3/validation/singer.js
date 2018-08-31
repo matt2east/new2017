@@ -9,6 +9,7 @@ module.exports = function validateSingerInput(data) {
   data.demo1 = !isEmpty(data.demo1) ? data.demo1 : '';
   data.bio = !isEmpty(data.bio) ? data.bio : '';
   data.email = !isEmpty(data.email) ? data.email : '';
+  data.recording = !isEmpty(data.recording) ? data.recording : '';
 
   if (!Validator.isEmail(data.email)) {
     errors.email = 'Email is invalid';
@@ -26,6 +27,10 @@ module.exports = function validateSingerInput(data) {
 
   if (Validator.isEmpty(data.bio)) {
     errors.bio = 'Bio is required.';
+  }
+
+  if (Validator.isEmpty(data.recording)) {
+    errors.recording = 'Recording is required.';
   }
 
   if (!isEmpty(data.website)) {

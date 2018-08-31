@@ -40,10 +40,10 @@ const ProducerSchema = new Schema({
   demo3: {
     type: String
   },
-  // recording: {
-  //   type: String,
-  //   required: true
-  // },
+  recording: {
+    type: String,
+    required: true
+  },
   songwriter: {
     type: String
   },

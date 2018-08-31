@@ -72,6 +72,7 @@ router.post(
     if (req.body.demo2) singerFields.demo2 = req.body.demo2;
     if (req.body.demo3) singerFields.demo3 = req.body.demo3;
     if (req.body.collab) singerFields.collab = req.body.collab;
+    if (req.body.recording) singerFields.recording = req.body.recording;
     if (req.body.paid) singerFields.paid = req.body.paid;
     if (req.body.songwriter)
       singerFields.songwriter = req.body.songwriter;
