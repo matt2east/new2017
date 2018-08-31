@@ -1,7 +1,7 @@
 const Validator = require('validator');
 const isEmpty = require('./is-empty');
 
-module.exports = function validateSingerInput(data) {
+module.exports = function validateProducerInput(data) {
   let errors = {};
 
   data.moniker = !isEmpty(data.moniker) ? data.moniker : '';
