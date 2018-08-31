@@ -30,7 +30,7 @@ router.get(
     const errors = {};
 
     Producer.findOne({ user: req.user.id })
-      .populate('user', 'name')
+      .populate('user', ['name'])
       .then(producer => {
         if (!producer) {
           errors.noproducer = 'User has not set up a Producer Profile.';

@@ -30,7 +30,7 @@ router.get(
     const errors = {};
 
     Singer.findOne({ user: req.user.id })
-      // .populate('user', ['name', 'avatar'])
+      .populate('user', ['name'])
       .then(singer => {
         if (!singer) {
           errors.nosinger = 'User has not set up a Singer Profile.';
