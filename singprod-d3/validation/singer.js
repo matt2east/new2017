@@ -11,17 +11,20 @@ module.exports = function validateSingerInput(data) {
   data.email = !isEmpty(data.email) ? data.email : '';
   data.recording = !isEmpty(data.recording) ? data.recording : '';
 
+  if (!isEmpty(data.email)) {
   if (!Validator.isEmail(data.email)) {
     errors.email = 'Email is invalid';
   }
-  
+}
+if (!isEmpty(data.moniker)) {
   if (!Validator.isLength(data.moniker, { min: 0, max: 40 })) {
     errors.moniker = 'Moniker must be less than 40 characters.';
   }
+}
 
   if (!isEmpty(data.demo1)) {
     if (!Validator.isURL(data.demo1)) {
-      errors.demo1 = 'Not a valid URL.';
+      errors.demo1 = 'Need to have a demo link.';
     }
   }
 

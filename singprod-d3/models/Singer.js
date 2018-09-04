@@ -28,9 +28,9 @@ const SingerSchema = new Schema({
     type: String,
     required: true
   },
-  // location: {
-  //   type: String
-  // },
+  location: {
+    type: String
+  },
   demo1: {
     type: String,
     required: true

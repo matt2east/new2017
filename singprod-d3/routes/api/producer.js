@@ -20,9 +20,6 @@ const validateProducerInput = require('../../validation/producer');
 //@route GET /api/producer/
 //@desc get current producer profile
 // @access  Private
-// @route   GET api/profile
-// @desc    Get current users profile
-// @access  Private
 router.get(
   '/',
   passport.authenticate('jwt', { session: false }),
@@ -42,11 +39,61 @@ router.get(
   }
 );
 
+//@route GET /api/producer/user/:user_id
+//@desc get producer by ID
+// @access  Public
+router.get("/user/:user_id", (req, res) => {
+  const errors = {};
+Producer.findOne({user: req.params.user_id})
+.populate("user", ["name"])
+.then(producer => {
+  if (!producer) {
+    errors.producer = "User has not set up a Producer Profile.";
+    return res.status(404).json(errors);
+  }
+  res.json(producer);
+})
+.catch(err => res.status(404).json({profile: 'no profile for this user' }));
+});
+
+// @route   GET api/producers/all
+// @desc    Get all producers
+// @access  Public
+router.get('/all', (req, res) => {
+  const errors = {};
+
+ Producer.find()
+    .populate('user', ['name'])
+    .then(producers => {
+      if (!producers) {
+        errors.noproducer = 'There are no producer profiles';
+        return res.status(404).json(errors);
+      }
+
+      res.json(producers);
+    })
+    .catch(err => res.status(404).json({ profile: 'There are no producer profiles' }));
+});
+
+//@route GET /api/singer/handle/:handle
+//@desc get singer by handle
+// @access  Public
+// router.get("/handle/:handle", (req, res) => {
+//   const errors = {};
+// Singer.findOne({handle: req.params.handle})
+// .populate("user", ["name"])
+// .then(singer => {
+//   if (!singer) {
+//     errors.nosinger = "User has not set up a Singer Profile.";
+//     return res.status(404).json(errors);
+//   }
+//   res.json(singer);
+// })
+// .catch(err => res.status(404).json(err));
+// });
+
 //@route POST /api/producer/
-//@desc create current producer profile
-// @access  Private
-// @route   POST api/profile
-// @desc    Get current producer profile
+//@desc create  or edit current producer profile
 // @access  Private
 router.post(
   '/',
@@ -67,6 +114,7 @@ router.post(
     if (req.body.bio) producerFields.bio = req.body.bio;
     if (req.body.email) producerFields.email = req.body.email;
     if (req.body.website) producerFields.website = req.body.website;
+    if (req.body.location) producerFields.location = req.body.loction;
     if (req.body.pic) producerFields.pic = req.body.pic;
     if (req.body.demo1) producerFields.demo1 = req.body.demo1;
     if (req.body.demo2) producerFields.demo2 = req.body.demo2;
@@ -99,6 +147,21 @@ router.post(
           new Producer(producerFields).save().then(producer => res.json(producer));
         });
       }
+    });
+  }
+);
+
+// @route   DELETE api/producer
+// @desc    Delete user and producer profile
+// @access  Private
+router.delete(
+  '/',
+  passport.authenticate('jwt', { session: false }),
+  (req, res) => {
+    Producer.findOneAndRemove({ user: req.user.id }).then(() => {
+      User.findOneAndRemove({ _id: req.user.id }).then(() =>
+        res.json({ success: true })
+      );
     });
   }
 );

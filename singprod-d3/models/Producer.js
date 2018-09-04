@@ -27,9 +27,9 @@ const ProducerSchema = new Schema({
   website: {
     type: String
   },
-  // location: {
-  //   type: String
-  // },
+  location: {
+    type: String
+  },
   demo1: {
     type: String,
     required: true
