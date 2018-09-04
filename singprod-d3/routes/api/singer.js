@@ -115,7 +115,7 @@ router.post(
     if (req.body.bio) singerFields.bio = req.body.bio;
     if (req.body.email) singerFields.email = req.body.email;
     if (req.body.website) singerFields.website = req.body.website;
-    if (req.body.location) singerFields.location = req.body.loction;
+    if (req.body.location) singerFields.location = req.body.location;
     if (req.body.pic) singerFields.pic = req.body.pic;
     if (req.body.demo1) singerFields.demo1 = req.body.demo1;
     if (req.body.demo2) singerFields.demo2 = req.body.demo2;
