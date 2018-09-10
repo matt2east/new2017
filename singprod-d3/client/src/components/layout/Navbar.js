@@ -23,16 +23,12 @@ class Navbar extends Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="profiles.html">Resources
-                </a>
+                <Link className="nav-link" to="/resources">Resources
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="profiles.html">About
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="profiles.html">Contact
-                </a>
+                <Link className="nav-link" to="/about">About
+                </Link>
               </li>
             </ul>
     
@@ -42,6 +38,10 @@ class Navbar extends Component {
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/login">Login</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/contact">Contact
+                </Link>
               </li>
             </ul>
           </div>
