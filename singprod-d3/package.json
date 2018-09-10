@@ -1,7 +1,7 @@
 {
-  "name": "devconnector",
+  "name": "singprod",
   "version": "1.0.0",
-  "description": "Social network for developers",
+  "description": "connecting singers and producers",
   "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",
@@ -10,14 +10,13 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "author": "Brad Traversy",
+  "author": "Matthew Myers",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
     "concurrently": "^4.0.1",
     "express": "^4.16.3",
-    "gravatar": "^1.6.0",
     "jsonwebtoken": "^8.2.0",
     "mongoose": "^5.0.12",
     "passport": "^0.4.0",
