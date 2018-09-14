@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { getCurrentProfile, deleteAccount } from '../../actions/profileActions';
+import { getCurrentProfile} from '../../actions/profileActions';
+import { getCurrentSinger} from '../../actions/singerActions';
 import Spinner from '../common/Spinner';
 // import ProfileActions from './ProfileActions';
 // import Experience from './Experience';
@@ -13,13 +14,14 @@ class Dashboard extends Component {
     this.props.getCurrentProfile();
   }
 
-  onDeleteClick(e) {
-    this.props.deleteAccount();
-  }
+  // onDeleteClick(e) {
+  //   this.props.deleteAccount();
+  // }
 
   render() {
     const { user } = this.props.auth;
     const { profile, loading } = this.props.profile;
+    const { singer, loadingX } = this.props.singer;
 
     let dashboardContent;
 
@@ -52,9 +54,9 @@ class Dashboard extends Component {
         dashboardContent = (
           <div>
             <p className="lead text-muted">Welcome {user.name}</p>
-            <p>You have not yet setup a profile, please add some info</p>
+            <p>You have not yet setup a singer profile, please add some info</p>
             <Link to="/create-profile" className="btn btn-lg btn-info">
-              Create Profile
+              Create Singer Profile
             </Link>
           </div>
         );
@@ -78,17 +80,20 @@ class Dashboard extends Component {
 
 Dashboard.propTypes = {
   getCurrentProfile: PropTypes.func.isRequired,
+  getCurrentSinger: PropTypes.func.isRequired,
   // deleteAccount: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  profile: PropTypes.object.isRequired
+  profile: PropTypes.object.isRequired,
+  singer: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
   profile: state.profile,
+  singer: state.singer,
   auth: state.auth
 });
 
-export default connect(mapStateToProps, { getCurrentProfile, 
+export default connect(mapStateToProps, { getCurrentProfile, getCurrentSinger
   // deleteAccount
  })(
   Dashboard
