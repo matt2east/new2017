@@ -3,13 +3,17 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
- import { getCurrentProfile
+import { getCurrentProfile
   // deleteAccount 
 } from '../../actions/profileActions';
+import { getCurrentSinger
+  // deleteAccount 
+} from '../../actions/singerActions';
 
 class Dashboard extends Component {
   componentDidMount() {
     this.props.getCurrentProfile();
+    this.props.getCurrentSinger();
   }
   render() {
     return (
@@ -25,7 +29,7 @@ class Dashboard extends Component {
 export default connect(
   // mapStateToProps, 
   null,
-  { getCurrentProfile
+  { getCurrentProfile, getCurrentSinger
   // deleteAccount 
 })(
   Dashboard

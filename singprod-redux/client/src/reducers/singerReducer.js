@@ -1,8 +1,7 @@
-
 import {
-  GET_singer,
+  GET_SINGER,
   GET_SINGERS,
-  singer_LOADING,
+  SINGER_LOADING,
   CLEAR_CURRENT_SINGER
 } from '../actions/types';
 
@@ -14,28 +13,28 @@ const initialState = {
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    // case SINGER_LOADING:
-    //   return {
-    //     ...state,
-    //     loading: true
-    //   };
-    // case GET_SINGER:
-    //   return {
-    //     ...state,
-    //     singer: action.payload,
-    //     loading: false
-    //   };
-    // case GET_SINGERS:
+    case SINGER_LOADING:
+      return {
+        ...state,
+        loading: true
+      };
+    case GET_SINGER:
+      return {
+        ...state,
+        singer: action.payload,
+        loading: false
+      };
+    // case GET_singerS:
     //   return {
     //     ...state,
     //     singers: action.payload,
     //     loading: false
     //   };
-    // case CLEAR_CURRENT_SINGER:
-    //   return {
-    //     ...state,
-    //     singer: null
-    //   };
+    case CLEAR_CURRENT_SINGER:
+      return {
+        ...state,
+        singer: null
+      };
     default:
       return state;
   }
