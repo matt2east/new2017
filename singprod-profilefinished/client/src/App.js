@@ -24,6 +24,15 @@ import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
 import NotFound from './components/not-found/NotFound';
 
+//singer
+import { clearCurrentSinger } from './actions/singerActions';
+import CreateSinger from './components/create-singer/CreateSinger';
+import EditSinger from './components/edit-singer/EditSinger';
+// import AddExperience from './components/add-credentials/AddExperience';
+// import AddEducation from './components/add-credentials/AddEducation';
+import Singers from './components/singers/Singers';
+import Singer from './components/singer/Singer';
+
 import './App.css';
 
 // Check for token
@@ -41,7 +50,7 @@ if (localStorage.jwtToken) {
     // Logout user
     store.dispatch(logoutUser());
     // Clear current Profile
-    store.dispatch(clearCurrentProfile());
+    store.dispatch(clearCurrentSinger());
     // Redirect to login
     window.location.href = '/login';
   }
@@ -58,39 +67,39 @@ class App extends Component {
             <div className="container">
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
-              <Route exact path="/profiles" component={Profiles} />
-              <Route exact path="/profile/:handle" component={Profile} />
+              <Route exact path="/singers" component={Singers} />
+              <Route exact path="/singer/:moniker" component={Singer} />
               <Switch>
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
               </Switch>
               <Switch>
                 <PrivateRoute
                   exact
-                  path="/create-profile"
-                  component={CreateProfile}
+                  path="/create-singer"
+                  component={CreateSinger}
                 />
               </Switch>
               <Switch>
                 <PrivateRoute
                   exact
-                  path="/edit-profile"
-                  component={EditProfile}
+                  path="/edit-singer"
+                  component={EditSinger}
                 />
               </Switch>
-              <Switch>
+              {/* <Switch>
                 <PrivateRoute
                   exact
                   path="/add-experience"
                   component={AddExperience}
                 />
-              </Switch>
-              <Switch>
+              </Switch> */}
+              {/* <Switch>
                 <PrivateRoute
                   exact
                   path="/add-education"
                   component={AddEducation}
                 />
-              </Switch>
+              </Switch> */}
               <Route exact path="/not-found" component={NotFound} />
             </div>
             <Footer />

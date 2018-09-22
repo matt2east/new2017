@@ -80,19 +80,19 @@ router.get('/all', (req, res) => {
 //@route GET /api/singer/handle/:handle
 //@desc get singer by handle
 // @access  Public
-// router.get("/handle/:handle", (req, res) => {
-//   const errors = {};
-// Singer.findOne({handle: req.params.handle})
-// .populate("user", ["name"])
-// .then(singer => {
-//   if (!singer) {
-//     errors.nosinger = "User has not set up a Singer Profile.";
-//     return res.status(404).json(errors);
-//   }
-//   res.json(singer);
-// })
-// .catch(err => res.status(404).json(err));
-// });
+router.get("/moniker/:moniker", (req, res) => {
+  const errors = {};
+Singer.findOne({moniker: req.params.moniker})
+.populate("user", ["name"])
+.then(singer => {
+  if (!singer) {
+    errors.nosinger = "User has not set up a Singer Profile.";
+    return res.status(404).json(errors);
+  }
+  res.json(singer);
+})
+.catch(err => res.status(404).json(err));
+});
 
 //@route POST /api/singer/
 //@desc create or edit current singer profile

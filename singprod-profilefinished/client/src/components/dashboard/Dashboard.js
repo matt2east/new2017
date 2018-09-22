@@ -8,34 +8,40 @@ import ProfileActions from './ProfileActions';
 import Experience from './Experience';
 import Education from './Education';
 
+//singer
+import { getCurrentSinger, deleteSinger } from '../../actions/singerActions';
+import SingerActions from './SingerActions';
+
 class Dashboard extends Component {
   componentDidMount() {
-    this.props.getCurrentProfile();
+    // this.props.getCurrentProfile();
+    this.props.getCurrentSinger();
   }
 
   onDeleteClick(e) {
-    this.props.deleteAccount();
+    // this.props.deleteAccount();
+    this.props.deleteSinger();
   }
 
   render() {
     const { user } = this.props.auth;
-    const { profile, loading } = this.props.profile;
+    const { singer, loading } = this.props.singer;
 
     let dashboardContent;
 
-    if (profile === null || loading) {
+    if (singer === null || loading) {
       dashboardContent = <Spinner />;
     } else {
       // Check if logged in user has profile data
-      if (Object.keys(profile).length > 0) {
+      if (Object.keys(singer).length > 0) {
         dashboardContent = (
           <div>
             <p className="lead text-muted">
-              Welcome <Link to={`/profile/${profile.handle}`}>{user.name}</Link>
+              Welcome <Link to={`/singer/${singer.moniker}`}>{user.name}</Link>
             </p>
-            <ProfileActions />
-            <Experience experience={profile.experience} />
-            <Education education={profile.education} />
+            <SingerActions />
+            {/* <Experience experience={profile.experience} />
+            <Education education={profile.education} /> */}
             <div style={{ marginBottom: '60px' }} />
             <button
               onClick={this.onDeleteClick.bind(this)}
@@ -50,9 +56,9 @@ class Dashboard extends Component {
         dashboardContent = (
           <div>
             <p className="lead text-muted">Welcome {user.name}</p>
-            <p>You have not yet setup a profile, please add some info</p>
-            <Link to="/create-profile" className="btn btn-lg btn-info">
-              Create Profile
+            <p>You have not yet setup a singer profile, please add some info</p>
+            <Link to="/create-singer" className="btn btn-lg btn-info">
+              Create Singer Profile
             </Link>
           </div>
         );
@@ -75,17 +81,17 @@ class Dashboard extends Component {
 }
 
 Dashboard.propTypes = {
-  getCurrentProfile: PropTypes.func.isRequired,
-  deleteAccount: PropTypes.func.isRequired,
+  getCurrentSinger: PropTypes.func.isRequired,
+  deleteSinger: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  profile: PropTypes.object.isRequired
+  singer: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  profile: state.profile,
+  singer: state.singer,
   auth: state.auth
 });
 
-export default connect(mapStateToProps, { getCurrentProfile, deleteAccount })(
+export default connect(mapStateToProps, { getCurrentSinger, deleteSinger })(
   Dashboard
 );
