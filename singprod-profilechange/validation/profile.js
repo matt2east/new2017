@@ -5,7 +5,7 @@ module.exports = function validateProfileInput(data) {
   let errors = {};
 
   data.handle = !isEmpty(data.handle) ? data.handle : '';
-  data.locatin = !isEmpty(data.location) ? data.loction : '';
+  data.location = !isEmpty(data.location) ? data.location : '';
   // data.status = !isEmpty(data.status) ? data.status : '';
   // data.skills = !isEmpty(data.skills) ? data.skills : '';
 
@@ -17,9 +17,9 @@ module.exports = function validateProfileInput(data) {
     errors.handle = 'Profile handle is required';
   }
 
-  if (Validator.isEmpty(data.location)) {
-    errors.location = 'Location field is required';
-  }
+  // if (Validator.isEmpty(data.location)) {
+  //   errors.location = 'Location field is required';
+  // }
 
   // if (Validator.isEmpty(data.skills)) {
   //   errors.skills = 'Skills field is required';
