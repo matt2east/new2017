@@ -5,6 +5,8 @@ import setAuthToken from './utils/setAuthToken';
 import { setCurrentUser, logoutUser } from './actions/authActions';
 import { clearCurrentProfile } from './actions/profileActions';
 
+import { clearCurrentSinger } from './actions/singerActions';
+
 import { Provider } from 'react-redux';
 import store from './store';
 
@@ -16,12 +18,21 @@ import Landing from './components/layout/Landing';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Dashboard from './components/dashboard/Dashboard';
+
 import CreateProfile from './components/create-profile/CreateProfile';
+import CreateSinger from './components/create-singer/CreateSinger';
+
 import EditProfile from './components/edit-profile/EditProfile';
+import EditSinger from './components/edit-singer/EditSinger';
+
 import AddExperience from './components/add-credentials/AddExperience';
 import AddEducation from './components/add-credentials/AddEducation';
 import Profiles from './components/profiles/Profiles';
+import Singers from './components/singers/Singers';
+
 import Profile from './components/profile/Profile';
+import Singer from './components/singer/Singer';
+
 import NotFound from './components/not-found/NotFound';
 
 import './App.css';
@@ -42,6 +53,7 @@ if (localStorage.jwtToken) {
     store.dispatch(logoutUser());
     // Clear current Profile
     store.dispatch(clearCurrentProfile());
+    store.dispatch(clearCurrentSinger());
     // Redirect to login
     window.location.href = '/login';
   }
@@ -59,7 +71,9 @@ class App extends Component {
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/profiles" component={Profiles} />
+              <Route exact path="/singers" component={Singers} />
               <Route exact path="/profile/:handle" component={Profile} />
+              <Route exact path="/singer/:handle" component={Singer} />
               <Switch>
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
               </Switch>
@@ -73,8 +87,22 @@ class App extends Component {
               <Switch>
                 <PrivateRoute
                   exact
+                  path="/create-singer"
+                  component={CreateSinger}
+                />
+              </Switch>
+              <Switch>
+                <PrivateRoute
+                  exact
                   path="/edit-profile"
                   component={EditProfile}
+                />
+              </Switch>
+              <Switch>
+                <PrivateRoute
+                  exact
+                  path="/edit-singer"
+                  component={EditSinger}
                 />
               </Switch>
               <Switch>

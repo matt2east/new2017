@@ -4,11 +4,13 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
 import { clearCurrentProfile } from '../../actions/profileActions';
+import { clearCurrentSinger } from '../../actions/singerActions';
 
 class Navbar extends Component {
   onLogoutClick(e) {
     e.preventDefault();
     this.props.clearCurrentProfile();
+    this.props.clearCurrentSinger();
     this.props.logoutUser();
   }
 
@@ -60,7 +62,7 @@ class Navbar extends Component {
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
         <div className="container">
           <Link className="navbar-brand" to="/">
-            DevConnector
+            SingProd
           </Link>
           <button
             className="navbar-toggler"
@@ -77,6 +79,12 @@ class Navbar extends Component {
                 <Link className="nav-link" to="/profiles">
                   {' '}
                   Developers
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/singers">
+                  {' '}
+                  Singers
                 </Link>
               </li>
             </ul>
@@ -97,6 +105,6 @@ const mapStateToProps = state => ({
   auth: state.auth
 });
 
-export default connect(mapStateToProps, { logoutUser, clearCurrentProfile })(
+export default connect(mapStateToProps, { logoutUser, clearCurrentProfile, clearCurrentSinger })(
   Navbar
 );
