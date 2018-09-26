@@ -25,8 +25,6 @@ import CreateSinger from './components/create-singer/CreateSinger';
 import EditProfile from './components/edit-profile/EditProfile';
 import EditSinger from './components/edit-singer/EditSinger';
 
-import AddExperience from './components/add-credentials/AddExperience';
-import AddEducation from './components/add-credentials/AddEducation';
 import Profiles from './components/profiles/Profiles';
 import Singers from './components/singers/Singers';
 
@@ -103,20 +101,6 @@ class App extends Component {
                   exact
                   path="/edit-singer"
                   component={EditSinger}
-                />
-              </Switch>
-              <Switch>
-                <PrivateRoute
-                  exact
-                  path="/add-experience"
-                  component={AddExperience}
-                />
-              </Switch>
-              <Switch>
-                <PrivateRoute
-                  exact
-                  path="/add-education"
-                  component={AddEducation}
                 />
               </Switch>
               <Route exact path="/not-found" component={NotFound} />
