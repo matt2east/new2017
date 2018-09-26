@@ -30,7 +30,7 @@ class Dashboard extends Component {
     console.log(this.props)
     const { user } = this.props.auth;
     const { profile, loading } = this.props.profile;
-    // const { singer } = this.props.singer;
+    const { singer } = this.props.singer;
 
     let dashboardContent;
 
