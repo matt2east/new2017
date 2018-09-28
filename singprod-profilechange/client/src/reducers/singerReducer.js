@@ -8,7 +8,7 @@ import {
 const initialState = {
   singer: null,
   singers: null,
-  loading2: false
+  loading: false
 };
 
 export default function(state = initialState, action) {
@@ -16,19 +16,19 @@ export default function(state = initialState, action) {
     case SINGER_LOADING:
       return {
         ...state,
-        loading2: true
+        loading: true
       };
     case GET_SINGER:
       return {
         ...state,
         SINGER: action.payload,
-        loading2: false
+        loading: false
       };
     case GET_SINGERS:
       return {
         ...state,
         SINGERS: action.payload,
-        loading2: false
+        loading: false
       };
     case CLEAR_CURRENT_SINGER:
       return {

@@ -12,10 +12,10 @@ class Singers extends Component {
 
   render() {
     console.log(this.props)
-    const { singers, loading2 } = this.props.singer;
+    const { singers, loading } = this.props.singer;
     let singerItems;
 
-    if (singers === null || loading2) {
+    if (singers === null || loading) {
       singerItems = <Spinner />;
     } else {
       if (singers.length > 0) {
