@@ -44,19 +44,19 @@ class Dashboard extends Component {
         dashboardContent = (
           <div>
             <p className="lead text-muted">
-              Welcome <Link to={`/profile/${profile.handle}`}>{user.name}</Link>
+              Producer: <Link to={`/profile/${profile.handle}`}>{profile.handle}</Link>
             </p>
             {<ProfileActions />}
             {/* <SingerActions /> */}
             {/* <Experience experience={profile.experience} />
             <Education education={profile.education} /> */}
-            <div style={{ marginBottom: '60px' }} />
+            {/* <div style={{ marginBottom: '60px' }} />
             <button
               onClick={this.onDeleteClick.bind(this)}
               className="btn btn-danger"
             >
               Delete My Account
-            </button>
+            </button> */}
           </div>
         );
       } else {
@@ -81,19 +81,19 @@ if (singer === null || loading2) {
     singerContent = (
       <div>
         <p className="lead text-muted">
-          Welcome <Link to={`/singer/${singer.handle}`}>{user.name}</Link>
+          Singer: <Link to={`/singer/${singer.handle}`}>{singer.handle}</Link>
         </p>
         {/* <ProfileActions /> */}
         <SingerActions />
         {/* <Experience experience={profile.experience} />
         <Education education={profile.education} /> */}
-        <div style={{ marginBottom: '60px' }} />
+        {/* <div style={{ marginBottom: '60px' }} />
         <button
           onClick={this.onDeleteClick.bind(this)}
           className="btn btn-danger"
         >
           Delete My Account
-        </button>
+        </button> */}
       </div>
     );
   } else {

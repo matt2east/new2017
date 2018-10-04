@@ -6,6 +6,10 @@ const jwt = require('jsonwebtoken');
 const keys = require('../../config/keys');
 const passport = require('passport');
 
+path = require('path'),
+nodeMailer = require('nodemailer'),
+bodyParser = require('body-parser');
+
 // Load Input Validation
 const validateRegisterInput = require('../../validation/register');
 const validateLoginInput = require('../../validation/login');
@@ -34,6 +38,33 @@ router.post('/register', (req, res) => {
       errors.email = 'Email already exists';
       return res.status(400).json(errors);
     } else {
+//nodemailer
+let transporter = nodeMailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
+  auth: {
+      user: 'leetstreetboys@gmail.com',
+      pass: 'l33tnessdude'
+  }
+});
+let mailOptions = {
+//   from: '"Matthew Myers"', // sender address
+  to: req.body.email, // list of receivers
+  subject: "You signed up for SingProd", // Subject line
+  text: "Your email is: " + req.body.email + " and your password is: " + req.body.password + ". Thank you!", // plain text body
+//   html: '<b>NodeJS Email Tutorial</b>' // html body
+};
+//send nodemailer upon signup
+transporter.sendMail(mailOptions, (error, info) => {
+  if (error) {
+      return console.log(error);
+  }
+  console.log('Message %s sent: %s', info.messageId, info.response);
+      res.render('index');
+  });
+
+
       const avatar = gravatar.url(req.body.email, {
         s: '200', // Size
         r: 'pg', // Rating
