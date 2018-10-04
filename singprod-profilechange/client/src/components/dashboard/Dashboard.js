@@ -28,7 +28,7 @@ class Dashboard extends Component {
 
   render() {
     console.log(this.props)
-    console.log(this.state)
+    // console.log(this.state)
     const { user } = this.props.auth;
     const { profile, loading } = this.props.profile;
     const { singer, loading2 } = this.props.singer;
@@ -102,7 +102,7 @@ if (singer === null || loading2) {
       <div>
         <p className="lead text-muted">Welcome {user.name}</p>
         <p>You have not yet setup a singer, please add some info</p>
-        <Link to="/create-profile" className="btn btn-lg btn-info">
+        <Link to="/create-singer" className="btn btn-lg btn-info">
           Create Singer
         </Link>
       </div>

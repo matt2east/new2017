@@ -58,7 +58,7 @@ class CreateSinger extends Component {
       // instagram: this.state.instagram
     };
 
-    this.props.createsinger(singerData, this.props.history);
+    this.props.createSinger(singerData, this.props.history);
   }
 
   onChange(e) {
