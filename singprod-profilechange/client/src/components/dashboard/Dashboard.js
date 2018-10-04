@@ -17,61 +17,100 @@ class Dashboard extends Component {
     this.props.getCurrentSinger();
   }
 
-  // onDeleteClick(e) {
-  //   this.props.deleteAccount();
-  // }
+  onDeleteClick(e) {
+    this.props.deleteAccount();
+  }
 
 
-  // onDeleteClick2(e) {
-  //   this.props.deleteSinger();
-  // }
+  onDeleteClick2(e) {
+    this.props.deleteSinger();
+  }
 
   render() {
     console.log(this.props)
     console.log(this.state)
     const { user } = this.props.auth;
     const { profile, loading } = this.props.profile;
-    const { singer } = this.props.singer;
+    const { singer, loading2 } = this.props.singer;
 
     let dashboardContent;
+    let singerContent;
 
-    // if (profile === null || loading) {
-    //   dashboardContent = <Spinner />;
-    // } else {
-      // Check if logged in user has profile data
-    //   if (Object.keys(profile).length > 0) {
-    //     dashboardContent = (
-    //       <div>
-    //         <p className="lead text-muted">
-    //           Welcome <Link to={`/profile/${profile.handle}`}>{user.name}</Link>
-    //         </p>
-    //         <ProfileActions />
-    //         <SingerActions />
-    //         {/* <Experience experience={profile.experience} />
-    //         <Education education={profile.education} /> */}
-    //         <div style={{ marginBottom: '60px' }} />
-    //         <button
-    //           onClick={this.onDeleteClick.bind(this)}
-    //           className="btn btn-danger"
-    //         >
-    //           Delete My Account
-    //         </button>
-    //       </div>
-    //     );
-    //   } else {
-    //     // User is logged in but has no profile
-    //     dashboardContent = (
-    //       <div>
-    //         <p className="lead text-muted">Welcome {user.name}</p>
-    //         <p>You have not yet setup a profile, please add some info</p>
-    //         <Link to="/create-profile" className="btn btn-lg btn-info">
-    //           Create Profile
-    //         </Link>
-    //       </div>
-    //     );
-    //   }
-    // }
-    dashboardContent = <div>test</div>;
+    if (profile === null || loading) {
+      dashboardContent = <Spinner />;
+    } else {
+      //Check if logged in user has profile data
+      if (Object.keys(profile).length > 0) {
+        dashboardContent = (
+          <div>
+            <p className="lead text-muted">
+              Welcome <Link to={`/profile/${profile.handle}`}>{user.name}</Link>
+            </p>
+            {<ProfileActions />}
+            {/* <SingerActions /> */}
+            {/* <Experience experience={profile.experience} />
+            <Education education={profile.education} /> */}
+            <div style={{ marginBottom: '60px' }} />
+            <button
+              onClick={this.onDeleteClick.bind(this)}
+              className="btn btn-danger"
+            >
+              Delete My Account
+            </button>
+          </div>
+        );
+      } else {
+        // User is logged in but has no profile
+        dashboardContent = (
+          <div>
+            <p className="lead text-muted">Welcome {user.name}</p>
+            <p>You have not yet setup a profile, please add some info</p>
+            <Link to="/create-profile" className="btn btn-lg btn-info">
+              Create Profile
+            </Link>
+          </div>
+        );
+      }
+    }
+//singer dashboard
+if (singer === null || loading2) {
+  singerContent = <Spinner />;
+} else {
+  //Check if logged in user has profile data
+  if (Object.keys(singer).length > 0) {
+    singerContent = (
+      <div>
+        <p className="lead text-muted">
+          Welcome <Link to={`/singer/${singer.handle}`}>{user.name}</Link>
+        </p>
+        {/* <ProfileActions /> */}
+        <SingerActions />
+        {/* <Experience experience={profile.experience} />
+        <Education education={profile.education} /> */}
+        <div style={{ marginBottom: '60px' }} />
+        <button
+          onClick={this.onDeleteClick.bind(this)}
+          className="btn btn-danger"
+        >
+          Delete My Account
+        </button>
+      </div>
+    );
+  } else {
+    // User is logged in but has no profile
+    singerContent = (
+      <div>
+        <p className="lead text-muted">Welcome {user.name}</p>
+        <p>You have not yet setup a singer, please add some info</p>
+        <Link to="/create-profile" className="btn btn-lg btn-info">
+          Create Singer
+        </Link>
+      </div>
+    );
+  }
+}
+
+
   
     return (
       <div className="dashboard">
@@ -80,6 +119,7 @@ class Dashboard extends Component {
             <div className="col-md-12">
               <h1 className="display-4">Dashboard</h1>
               {dashboardContent}
+              {singerContent}
             </div>
           </div>
         </div>

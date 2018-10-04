@@ -21,19 +21,19 @@ export default function(state = initialState, action) {
     case GET_SINGER:
       return {
         ...state,
-        SINGER: action.payload,
+        singer: action.payload,
         loading: false
       };
     case GET_SINGERS:
       return {
         ...state,
-        SINGERS: action.payload,
+        singers: action.payload,
         loading: false
       };
     case CLEAR_CURRENT_SINGER:
       return {
         ...state,
-        SINGER: null
+        singer: null
       };
     default:
       return state;
