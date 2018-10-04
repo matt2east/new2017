@@ -10,13 +10,13 @@ class ProfileHeader extends Component {
         <div className="col-md-12">
           <div className="card card-body bg-info text-white mb-3">
             <div className="row">
-              <div className="col-4 col-md-3 m-auto">
+              {/* <div className="col-4 col-md-3 m-auto">
                 <img
                   className="rounded-circle"
                   src={profile.user.avatar}
                   alt=""
                 />
-              </div>
+              </div> */}
             </div>
             <div className="text-center">
               <h1 className="display-4 text-center">{profile.handle}</h1>
@@ -26,7 +26,7 @@ class ProfileHeader extends Component {
                   <span>at {profile.company}</span>
                 )}
               </p> */}
-              {isEmpty(profile.location) ? null : <p>{profile.location}</p>}
+              {isEmpty(profile.location) ? null : <p>Location: {profile.location}</p>}
               {/* <p>
                 {isEmpty(profile.website) ? null : (
                   <a

@@ -44,7 +44,7 @@ class Dashboard extends Component {
         dashboardContent = (
           <div>
             <p className="lead text-muted">
-              Producer: <Link to={`/profile/${profile.handle}`}>{profile.handle}</Link>
+              Producer moniker: <Link to={`/profile/${profile.handle}`}>{profile.handle}</Link>
             </p>
             {<ProfileActions />}
             {/* <SingerActions /> */}
@@ -64,9 +64,9 @@ class Dashboard extends Component {
         dashboardContent = (
           <div>
             <p className="lead text-muted">Welcome {user.name}</p>
-            <p>You have not yet setup a profile, please add some info</p>
+            <p>You have not yet setup a producer profile, please add some info</p>
             <Link to="/create-profile" className="btn btn-lg btn-info">
-              Create Profile
+              Create Producer 
             </Link>
           </div>
         );
@@ -81,7 +81,7 @@ if (singer === null || loading2) {
     singerContent = (
       <div>
         <p className="lead text-muted">
-          Singer: <Link to={`/singer/${singer.handle}`}>{singer.handle}</Link>
+          Singer moniker: <Link to={`/singer/${singer.handle}`}>{singer.handle}</Link>
         </p>
         {/* <ProfileActions /> */}
         <SingerActions />
@@ -101,7 +101,7 @@ if (singer === null || loading2) {
     singerContent = (
       <div>
         <p className="lead text-muted">Welcome {user.name}</p>
-        <p>You have not yet setup a singer, please add some info</p>
+        <p>You have not yet setup a singer profile, please add some info</p>
         <Link to="/create-singer" className="btn btn-lg btn-info">
           Create Singer
         </Link>
