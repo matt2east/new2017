@@ -13,19 +13,18 @@ class CreateProfile extends Component {
     super(props);
     this.state = {
       // displaySocialInputs: false,
-      handle: '',
-      // company: '',
-      // website: '',
-      location: '',
-      // status: '',
-      // skills: '',
-      // githubusername: '',
-      // bio: '',
-      // twitter: '',
-      // facebook: '',
-      // linkedin: '',
-      // youtube: '',
-      // instagram: '',
+      handle: "",
+      email: "",
+      website: "",
+      location: "",
+      demo1: "",
+      demo2: "",
+      demo3: "",
+      bio: "",
+      canwrite: "",
+      canrecord: "",
+      commission: "",
+      collab: "",
       errors: {}
     };
 
@@ -44,18 +43,17 @@ class CreateProfile extends Component {
 
     const profileData = {
       handle: this.state.handle,
-      // company: this.state.company,
-      // website: this.state.website,
+      email: this.state.email,
+      website: this.state.website,
       location: this.state.location,
-      // status: this.state.status,
-      // skills: this.state.skills,
-      // githubusername: this.state.githubusername,
-      // bio: this.state.bio,
-      // twitter: this.state.twitter,
-      // facebook: this.state.facebook,
-      // linkedin: this.state.linkedin,
-      // youtube: this.state.youtube,
-      // instagram: this.state.instagram
+      demo1: this.state.demo1,
+      demo2: this.state.demo2,
+      demo3: this.state.demo3,
+      bio: this.state.bio,
+      canwrite: this.state.canwrite,
+      canrecord: this.state.canrecord,
+      commission: this.state.commission,
+      collab: this.state.collab
     };
 
     this.props.createProfile(profileData, this.props.history);
@@ -147,72 +145,102 @@ class CreateProfile extends Component {
               </p>
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
-                <TextFieldGroup
-                  placeholder="* Profile Handle"
+              <TextFieldGroup
+                  placeholder="* producer moniker"
                   name="handle"
                   value={this.state.handle}
                   onChange={this.onChange}
                   error={errors.handle}
-                  info="A unique handle for your profile URL. Your full name, company name, nickname"
+                  info="Your producer moniker or artist name, such as: Butch Vig, Skrillex, etc."
                 />
-                {/* <SelectListGroup
-                  placeholder="Status"
-                  name="status"
-                  value={this.state.status}
+                <TextFieldGroup
+                  placeholder="* Email"
+                  name="email"
+                  value={this.state.email}
                   onChange={this.onChange}
-                  options={options}
-                  error={errors.status}
-                  info="Give us an idea of where you are at in your career"
-                /> */}
-                {/* <TextFieldGroup
-                  placeholder="Company"
-                  name="company"
-                  value={this.state.company}
+                  error={errors.email}
+                  info="How do we contact you?"
+                />
+                <TextFieldGroup
+                  placeholder="* Producer bio"
+                  name="bio"
+                  value={this.state.bio}
                   onChange={this.onChange}
-                  error={errors.company}
-                  info="Could be your own company or one you work for"
-                /> */}
-                {/* <TextFieldGroup
+                  error={errors.bio}
+                  info="Tell us about yourself."
+                />
+                <TextFieldGroup
                   placeholder="Website"
                   name="website"
                   value={this.state.website}
                   onChange={this.onChange}
                   error={errors.website}
-                  info="Could be your own website or a company one"
-                /> */}
+                  info="Music producer website."
+                />
+                <TextFieldGroup
+                  placeholder="* Producer demo"
+                  name="demo1"
+                  value={this.state.demo1}
+                  onChange={this.onChange}
+                  error={errors.demo1}
+                  info="Music producer demo / portfolio link."
+                />
+                <TextFieldGroup
+                  placeholder="Additional demo"
+                  name="demo2"
+                  value={this.state.demo2}
+                  onChange={this.onChange}
+                  error={errors.demo2}
+                  info="Additional demo (if needed)."
+                />
+                <TextFieldGroup
+                  placeholder="Another additional demo"
+                  name="demo3"
+                  value={this.state.demo3}
+                  onChange={this.onChange}
+                  error={errors.demo3}
+                  info="aAnother additional demo (if needed)."
+                />
                 <TextFieldGroup
                   placeholder="Location"
                   name="location"
                   value={this.state.location}
                   onChange={this.onChange}
                   error={errors.location}
-                  info="City or city & state suggested (eg. Boston, MA)"
+                  info="Your geographical location. Such as: Austin, Texas"
                 />
-                {/* <TextFieldGroup
-                  placeholder="* Skills"
-                  name="skills"
-                  value={this.state.skills}
+                <TextFieldGroup
+                  placeholder="Do you write songs?"
+                  name="canwrite"
+                  value={this.state.canwrite}
                   onChange={this.onChange}
-                  error={errors.skills}
-                  info="Please use comma separated values (eg.
-                    HTML,CSS,JavaScript,PHP"
-                /> */}
-                {/* <TextFieldGroup
-                  placeholder="Github Username"
-                  name="githubusername"
-                  value={this.state.githubusername}
+                  error={errors.canwrite}
+                  info="Songwriter info."
+                />
+                <TextFieldGroup
+                  placeholder="Can you record where you are?"
+                  name="canrecord"
+                  value={this.state.canrecord}
                   onChange={this.onChange}
-                  error={errors.githubusername}
-                  info="If you want your latest repos and a Github link, include your username"
-                /> */}
-                {/* <TextAreaFieldGroup
-                  placeholder="Short Bio"
-                  name="bio"
-                  value={this.state.bio}
+                  error={errors.canrecord}
+                  info="Recording info."
+                />
+                <TextFieldGroup
+                  placeholder="Do you offer paid commissions?"
+                  name="commission"
+                  value={this.state.commission}
                   onChange={this.onChange}
-                  error={errors.bio}
-                  info="Tell us a little about yourself"
-                /> */}
+                  error={errors.commission}
+                  info="Will you take my money?"
+                />
+                <TextFieldGroup
+                  placeholder="Do you offer unpaid collaboration (for royalties, equity, etc.)?"
+                  name="collab"
+                  value={this.state.collab}
+                  onChange={this.onChange}
+                  error={errors.collab}
+                  info="Will you collaborate with me as a team?"
+                />
 
                 {/* <div className="mb-3">
                   <button
