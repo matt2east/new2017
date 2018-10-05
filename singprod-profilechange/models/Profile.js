@@ -10,28 +10,44 @@ const ProfileSchema = new Schema({
   handle: {
     type: String,
     required: true,
-    // max: 40
   },
-  // company: {
-  //   type: String
-  // },
-  // website: {
-  //   type: String
-  // },
-  location: {
+  bio: {
     type: String
   },
-  // status: {
-  //   type: String,
-  //   required: true
-  // },
-  // skills: {
-  //   type: [String],
-  //   required: true
-  // },
-  // bio: {
-  //   type: String
-  // },
+  demo1: {
+    type: String,
+    required: true,
+  },
+  demo2: {
+    type: String
+  },
+  demo3: {
+    type: String
+  },
+  email: {
+    type: String,
+    required: true,
+  }, 
+  website: {
+    type: String
+  },  
+  location: {
+    type: String,
+  },
+  canwrite: {
+    type: String,
+  },
+  canrecord: {
+    type: String,
+  },
+ commission: {
+    type: String,
+  },
+  collab: {
+    type: String,
+  },
+
+
   // githubusername: {
   //   type: String
   // },

@@ -5,7 +5,9 @@ module.exports = function validateProfileInput(data) {
   let errors = {};
 
   data.handle = !isEmpty(data.handle) ? data.handle : '';
-  data.location = !isEmpty(data.location) ? data.location : '';
+  data.bio = !isEmpty(data.bio) ? data.bio : '';
+  data.demo1 = !isEmpty(data.demo1) ? data.demo1 : '';
+  data.email = !isEmpty(data.email) ? data.email : '';
   // data.status = !isEmpty(data.status) ? data.status : '';
   // data.skills = !isEmpty(data.skills) ? data.skills : '';
 
@@ -14,11 +16,29 @@ module.exports = function validateProfileInput(data) {
   // }
 
   if (Validator.isEmpty(data.handle)) {
-    errors.handle = 'Profile handle is required';
+    errors.handle = 'Producer moniker is required';
   }
 
-  if (Validator.isEmpty(data.location)) {
-    errors.location = 'Location field is required';
+  if (Validator.isEmpty(data.bio)) {
+    errors.bio = 'Bio is required';
+  }
+
+  if (Validator.isEmpty(data.demo1)) {
+    errors.demo1 = 'Link to hosted demo is required';
+  }
+
+  // if (!isEmpty(data.demo1)) {
+    if (!Validator.isURL(data.demo1)) {
+      errors.demo1 = 'Demo link is not valid';
+    }
+  // }
+
+  if (!Validator.isEmail(data.email)) {
+    errors.email = 'Email is invalid';
+  }
+
+  if (Validator.isEmpty(data.email)) {
+    errors.email = 'Contact email is required';
   }
 
   // if (Validator.isEmpty(data.skills)) {
