@@ -20,13 +20,17 @@ class ProfileHeader extends Component {
             </div>
             <div className="text-center">
               <h1 className="display-4 text-center">{profile.handle}</h1>
-              {/* <p className="lead text-center">
-                {profile.status}{' '}
-                {isEmpty(profile.company) ? null : (
-                  <span>at {profile.company}</span>
-                )}
-              </p> */}
+              {isEmpty(profile.demo1) ? null : <p>Producr Demo: {profile.demo1}</p>}
+              {isEmpty(profile.demo2) ? null : <p>Demo #2: {profile.demo2}</p>}
+              {isEmpty(profile.demo3) ? null : <p>Demo #3: {profile.demo3}</p>}
+              {isEmpty(profile.website) ? null : <p>Website: {profile.email}</p>}
+              {isEmpty(profile.email) ? null : <p>Contact: {profile.email}</p>}
               {isEmpty(profile.location) ? null : <p>Location: {profile.location}</p>}
+              {isEmpty(profile.canwrite) ? null : <p>Songwriter? {profile.canwrite}</p>}
+              {isEmpty(profile.canrecord) ? null : <p>Can record? {profile.record}</p>}
+              {isEmpty(profile.commission) ? null : <p>Accepts commissions? {profile.commission}</p>}
+              {isEmpty(profile.collab) ? null : <p>Interested in collaboration? {profile.collab}</p>}
+              {isEmpty(profile.bio) ? null : <p>Biography: {profile.bio}</p>}
               {/* <p>
                 {isEmpty(profile.website) ? null : (
                   <a

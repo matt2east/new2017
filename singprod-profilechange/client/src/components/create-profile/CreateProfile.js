@@ -119,18 +119,11 @@ class CreateProfile extends Component {
     //   );
     // }
 
-    // Select options for status
-    // const options = [
-    //   { label: '* Select Professional Status', value: 0 },
-    //   { label: 'Developer', value: 'Developer' },
-    //   { label: 'Junior Developer', value: 'Junior Developer' },
-    //   { label: 'Senior Developer', value: 'Senior Developer' },
-    //   { label: 'Manager', value: 'Manager' },
-    //   { label: 'Student or Learning', value: 'Student or Learning' },
-    //   { label: 'Instructor or Teacher', value: 'Instructor or Teacher' },
-    //   { label: 'Intern', value: 'Intern' },
-    //   { label: 'Other', value: 'Other' }
-    // ];
+    const options = [
+      { label: "Yes or No?", value: 0 },
+      { label: "Yes", value: "Yes" },
+      { label: "No", value: "No" }
+    ];
 
     return (
       <div className="create-profile">
@@ -144,7 +137,7 @@ class CreateProfile extends Component {
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
-                  placeholder="* producer moniker"
+                  placeholder="* Producer moniker"
                   name="handle"
                   value={this.state.handle}
                   onChange={this.onChange}
@@ -159,13 +152,13 @@ class CreateProfile extends Component {
                   error={errors.email}
                   info="How do we contact you?"
                 />
-                <TextFieldGroup
-                  placeholder="* Producer bio"
+                <TextAreaFieldGroup
+                  placeholder="My music producer bio"
                   name="bio"
                   value={this.state.bio}
                   onChange={this.onChange}
                   error={errors.bio}
-                  info="Tell us about yourself."
+                  info="Tell us a about yourself."
                 />
                 <TextFieldGroup
                   placeholder="Website"
@@ -207,37 +200,37 @@ class CreateProfile extends Component {
                   error={errors.location}
                   info="Your geographical location. Such as: Austin, Texas"
                 />
-                <TextFieldGroup
-                  placeholder="Do you write songs?"
+                <SelectListGroup
                   name="canwrite"
                   value={this.state.canwrite}
                   onChange={this.onChange}
+                  options={options}
                   error={errors.canwrite}
-                  info="Songwriter info."
+                  info="Do you write songs?"
                 />
-                <TextFieldGroup
-                  placeholder="Can you record where you are?"
+                <SelectListGroup
                   name="canrecord"
                   value={this.state.canrecord}
                   onChange={this.onChange}
+                  options={options}
                   error={errors.canrecord}
-                  info="Recording info."
+                  info="Can you do live recording where you are?"
                 />
-                <TextFieldGroup
-                  placeholder="Do you offer paid commissions?"
+                <SelectListGroup
                   name="commission"
                   value={this.state.commission}
                   onChange={this.onChange}
+                  options={options}
                   error={errors.commission}
-                  info="Will you take my money?"
+                  info="Are you looking to be paid up-front?"
                 />
-                <TextFieldGroup
-                  placeholder="Do you offer unpaid collaboration (for royalties, equity, etc.)?"
+                <SelectListGroup
                   name="collab"
                   value={this.state.collab}
                   onChange={this.onChange}
+                  options={options}
                   error={errors.collab}
-                  info="Will you collaborate with me as a team?"
+                  info="Are you looking for a collaboration?"
                 />
                 {/* <div className="mb-3">
                   <button

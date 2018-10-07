@@ -146,7 +146,7 @@ class CreateProfile extends Component {
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
               <TextFieldGroup
-                  placeholder="* producer moniker"
+                  placeholder="* Producer moniker"
                   name="handle"
                   value={this.state.handle}
                   onChange={this.onChange}
