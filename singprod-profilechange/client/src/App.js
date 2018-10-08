@@ -103,7 +103,7 @@ class App extends Component {
                   component={EditSinger}
                 />
               </Switch>
-              <Route exact path="/not-found" component={NotFound} />
+              <Route component={NotFound} />
             </div>
             <Footer />
           </div>
