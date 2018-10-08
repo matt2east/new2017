@@ -7,7 +7,7 @@ class SingerAbout extends Component {
     const { singer } = this.props;
 
     // Get first name
-    const firstName = singer.user.name.trim().split(' ')[0];
+    // const firstName = singer.user.name.trim().split(' ')[0];
 
     // Skill List
     // const skills = profile.skills.map((skill, index) => (
@@ -21,13 +21,13 @@ class SingerAbout extends Component {
         <div className="col-md-12">
           <div className="card card-body bg-light mb-3">
             {/* <h3 className="text-center text-info">{firstName}'s Bio</h3> */}
-            {/* <p className="lead">
-              {isEmpty(profile.bio) ? (
-                <span>{firstName} does not have a bio</span>
+            <p className="lead">
+              {isEmpty(singer.bio) ? (
+                <span>{singer.handle} does not have a bio</span>
               ) : (
-                <span>{profile.bio}</span>
+                <span>{singer.bio}</span>
               )}
-            </p> */}
+            </p>
             {/* <hr />
             <h3 className="text-center text-info">Skill Set</h3>
             <div className="row">

@@ -11,11 +11,11 @@ class SingerHeader extends Component {
           <div className="card card-body bg-info text-white mb-3">
             <div className="row">
               <div className="col-4 col-md-3 m-auto">
-                <img
+                {/* <img
                   className="rounded-circle"
                   src={singer.user.avatar}
                   alt=""
-                />
+                /> */}
               </div>
             </div>
             <div className="text-center">
@@ -26,7 +26,7 @@ class SingerHeader extends Component {
                   <span>at {profile.company}</span>
                 )}
               </p> */}
-              {isEmpty(singer.location) ? null : <p>{singer.location}</p>}
+              {/* {isEmpty(singer.location) ? null : <p>{singer.location}</p>} */}
               {/* <p>
                 {isEmpty(profile.website) ? null : (
                   <a

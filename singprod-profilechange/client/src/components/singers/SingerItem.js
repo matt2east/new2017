@@ -22,8 +22,8 @@ class SingerItem extends Component {
               )}
             </p> */}
             <p>
-              {isEmpty(singer.location) ? null : (
-                <span>{singer.location}</span>
+              {isEmpty(singer.demo1) ? null : (
+                <span>{singer.demo1}</span>
               )}
             </p>
             <Link to={`/singer/${singer.handle}`} className="btn btn-info">

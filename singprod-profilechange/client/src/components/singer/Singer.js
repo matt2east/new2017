@@ -34,7 +34,7 @@ class Singer extends Component {
           <div className="row">
             <div className="col-md-6">
               <Link to="/singers" className="btn btn-light mb-3 float-left">
-                Back To singers
+                Back To Singers
               </Link>
             </div>
             <div className="col-md-6" />
