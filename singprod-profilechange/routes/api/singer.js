@@ -120,26 +120,18 @@ router.post(
     const singerFields = {};
     singerFields.user = req.user.id;
     if (req.body.handle) singerFields.handle = req.body.handle;
-    // if (req.body.company) profileFields.company = req.body.company;
-    // if (req.body.website) profileFields.website = req.body.website;
+    if (req.body.bio) singerFields.bio = req.body.bio;
+    if (req.body.website) singerFields.website = req.body.website;
+    if (req.body.email) singerFields.email = req.body.email;
     if (req.body.location) singerFields.location = req.body.location;
-    // if (req.body.bio) profileFields.bio = req.body.bio;
-    // if (req.body.status) profileFields.status = req.body.status;
-    // if (req.body.githubusername)
-    //   profileFields.githubusername = req.body.githubusername;
-    // Skills - Spilt into array
-    // if (typeof req.body.skills !== 'undefined') {
-    //   profileFields.skills = req.body.skills.split(',');
-    // }
-
-    // Social
-    // profileFields.social = {};
-    // if (req.body.youtube) profileFields.social.youtube = req.body.youtube;
-    // if (req.body.twitter) profileFields.social.twitter = req.body.twitter;
-    // if (req.body.facebook) profileFields.social.facebook = req.body.facebook;
-    // if (req.body.linkedin) profileFields.social.linkedin = req.body.linkedin;
-    // if (req.body.instagram) profileFields.social.instagram = req.body.instagram;
-
+    if (req.body.demo1) singerFields.demo1 = req.body.demo1;
+    if (req.body.demo2) singerFields.demo2 = req.body.demo2;
+    if (req.body.demo3) singerFields.demo3 = req.body.demo3;
+    if (req.body.canwrite) singerFields.canwrite = req.body.canwrite;
+    if (req.body.canrecord) singerFields.canrecord = req.body.canrecord;
+    if (req.body.commission) singerFields.commission = req.body.commission;
+    if (req.body.collab) singerFields.collab = req.body.collab;
+ 
     Singer.findOne({ user: req.user.id }).then(singer => {
       if (singer) {
         // Update

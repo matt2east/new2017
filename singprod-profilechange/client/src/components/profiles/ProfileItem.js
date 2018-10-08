@@ -22,12 +22,12 @@ class ProfileItem extends Component {
               )}
             </p> */}
             <p>
-              {isEmpty(profile.location) ? null : (
-                <span>{profile.location}</span>
+              {isEmpty(profile.demo1) ? null : (
+                <span>{profile.demo1}</span>
               )}
             </p>
             <Link to={`/profile/${profile.handle}`} className="btn btn-info">
-              View Profile
+              View Producer
             </Link>
           </div>
           {/* <div className="col-md-4 d-none d-md-block">

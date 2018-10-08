@@ -17,10 +17,10 @@ class Landing extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-12 text-center">
-                <h1 className="display-3 mb-4">SingProd</h1>
+                <h1 className="display-3 mb-4">V O X : M I X</h1>
                 <p className="lead">
                   {' '}
-                  Create a singer or producer profile and find talent
+                  Connect with the most ambitious singers and music producers online. Find your dream talent.
                 </p>
                 <hr />
                 <Link to="/register" className="btn btn-lg btn-info mr-2">

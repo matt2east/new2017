@@ -45,8 +45,9 @@ class Dashboard extends Component {
         dashboardContent = (
           <div>
             <p className="lead text-muted">
-              Producer moniker: <Link to={`/profile/${profile.handle}`}>{profile.handle}</Link>
+              Producer profile: <Link to={`/profile/${profile.handle}`}>{profile.handle}</Link>
             </p>
+            {/* <p>{profile.demo1}</p> */}
             {<ProfileActions />}
             {/* <SingerActions /> */}
             {/* <Experience experience={profile.experience} />
@@ -82,7 +83,7 @@ if (singer === null || loading2) {
     singerContent = (
       <div>
         <p className="lead text-muted">
-          Singer moniker: <Link to={`/singer/${singer.handle}`}>{singer.handle}</Link>
+          Singer profile: <Link to={`/singer/${singer.handle}`}>{singer.handle}</Link>
         </p>
         {/* <ProfileActions /> */}
         <SingerActions />
@@ -119,7 +120,9 @@ if (singer === null || loading2) {
           <div className="row">
             <div className="col-md-12">
               <h1 className="display-4">Dashboard</h1>
+              
               {dashboardContent}
+              <br/>
               {singerContent}
             </div>
           </div>
