@@ -143,7 +143,7 @@ export const getProfiles = () => dispatch => {
 
 // Delete account & profile
 export const deleteAccount = () => dispatch => {
-  if (window.confirm('Delete producer information?')) {
+  if (window.confirm('Delete producer profile?')) {
     axios
       .delete('/api/profile')
       // .then(res =>

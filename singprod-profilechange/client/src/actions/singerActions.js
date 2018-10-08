@@ -144,7 +144,7 @@ export const getSingers = () => dispatch => {
 
 // Delete account & singer
 export const deleteSinger = () => dispatch => {
-  if (window.confirm('Are you sure? This can NOT be undone!')) {
+  if (window.confirm('Delete singer profile?')) {
     axios
       .delete('/api/singer')
       .then(res =>

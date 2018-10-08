@@ -192,7 +192,7 @@ class CreateProfile extends Component {
                   value={this.state.demo3}
                   onChange={this.onChange}
                   error={errors.demo3}
-                  info="aAnother additional demo (if needed)."
+                  info="Another additional demo (if needed)."
                 />
                 <TextFieldGroup
                   placeholder="Location"
