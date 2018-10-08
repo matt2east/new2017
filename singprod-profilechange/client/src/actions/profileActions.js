@@ -143,21 +143,21 @@ export const getProfiles = () => dispatch => {
 
 // Delete account & profile
 export const deleteAccount = () => dispatch => {
-  if (window.confirm('Are you sure? This can NOT be undone!')) {
+  if (window.confirm('Delete producer information?')) {
     axios
       .delete('/api/profile')
-      .then(res =>
-        dispatch({
-          type: SET_CURRENT_USER,
-          payload: {}
-        })
-      )
-      .catch(err =>
-        dispatch({
-          type: GET_ERRORS,
-          payload: err.response.data
-        })
-      );
+      // .then(res =>
+      //   // dispatch({
+      //   //   type: SET_CURRENT_USER,
+      //   //   payload: {}
+      //   // })
+      // // )
+      // // .catch(err =>
+      //   dispatch({
+      //     type: GET_ERRORS,
+      //     payload: err.response.data
+      //   })
+      // );
   }
 };
 

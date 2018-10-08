@@ -153,7 +153,7 @@ class CreateProfile extends Component {
                   info="How do we contact you?"
                 />
                 <TextAreaFieldGroup
-                  placeholder="My music producer bio"
+                  placeholder="* My music producer bio"
                   name="bio"
                   value={this.state.bio}
                   onChange={this.onChange}

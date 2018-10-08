@@ -19,6 +19,7 @@ class Dashboard extends Component {
 
   onDeleteClick(e) {
     this.props.deleteAccount();
+    window.location.reload();
   }
 
 
@@ -50,13 +51,13 @@ class Dashboard extends Component {
             {/* <SingerActions /> */}
             {/* <Experience experience={profile.experience} />
             <Education education={profile.education} /> */}
-            {/* <div style={{ marginBottom: '60px' }} />
+            <div />
             <button
               onClick={this.onDeleteClick.bind(this)}
-              className="btn btn-danger"
+              className="btn btn-danger "
             >
-              Delete My Account
-            </button> */}
+              Delete Producer 
+            </button>
           </div>
         );
       } else {
@@ -64,7 +65,7 @@ class Dashboard extends Component {
         dashboardContent = (
           <div>
             <p className="lead text-muted">Welcome {user.name}</p>
-            <p>You have not yet setup a producer profile, please add some info</p>
+            {/* <p>You have not yet setup a producer profile, please add some info</p> */}
             <Link to="/create-profile" className="btn btn-lg btn-info">
               Create Producer 
             </Link>
@@ -101,7 +102,7 @@ if (singer === null || loading2) {
     singerContent = (
       <div>
         <p className="lead text-muted">Welcome {user.name}</p>
-        <p>You have not yet setup a singer profile, please add some info</p>
+        {/* <p>You have not yet setup a singer profile, please add some info</p> */}
         <Link to="/create-singer" className="btn btn-lg btn-info">
           Create Singer
         </Link>
