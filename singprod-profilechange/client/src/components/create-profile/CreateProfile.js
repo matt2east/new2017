@@ -161,20 +161,20 @@ class CreateProfile extends Component {
                   info="Tell us a about yourself."
                 />
                 <TextFieldGroup
-                  placeholder="Website"
-                  name="website"
-                  value={this.state.website}
-                  onChange={this.onChange}
-                  error={errors.website}
-                  info="Music producer website."
-                />
-                <TextFieldGroup
                   placeholder="* Producer demo"
                   name="demo1"
                   value={this.state.demo1}
                   onChange={this.onChange}
                   error={errors.demo1}
                   info="Music producer demo / portfolio link."
+                />
+                <TextFieldGroup
+                  placeholder="Website"
+                  name="website"
+                  value={this.state.website}
+                  onChange={this.onChange}
+                  error={errors.website}
+                  info="Music producer website."
                 />
                 <TextFieldGroup
                   placeholder="Additional demo"

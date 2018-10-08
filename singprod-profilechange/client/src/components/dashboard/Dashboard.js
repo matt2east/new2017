@@ -25,6 +25,7 @@ class Dashboard extends Component {
 
   onDeleteClick2(e) {
     this.props.deleteSinger();
+    window.location.reload();
   }
 
   render() {
@@ -48,7 +49,7 @@ class Dashboard extends Component {
               Producer profile: <Link to={`/profile/${profile.handle}`}>{profile.handle}</Link>
             </p>
             {/* <p>{profile.demo1}</p> */}
-            {<ProfileActions />}
+            <ProfileActions />
             {/* <SingerActions /> */}
             {/* <Experience experience={profile.experience} />
             <Education education={profile.education} /> */}
@@ -82,21 +83,22 @@ if (singer === null || loading2) {
   if (Object.keys(singer).length > 0) {
     singerContent = (
       <div>
-        <p className="lead text-muted">
-          Singer profile: <Link to={`/singer/${singer.handle}`}>{singer.handle}</Link>
-        </p>
-        {/* <ProfileActions /> */}
-        <SingerActions />
-        {/* <Experience experience={profile.experience} />
-        <Education education={profile.education} /> */}
-        {/* <div style={{ marginBottom: '60px' }} />
-        <button
-          onClick={this.onDeleteClick.bind(this)}
-          className="btn btn-danger"
-        >
-          Delete My Account
-        </button> */}
-      </div>
+      <p className="lead text-muted">
+        Singer profile: <Link to={`/profile/${singer.handle}`}>{singer.handle}</Link>
+      </p>
+      {/* <p>{profile.demo1}</p> */}
+      <SingerActions />
+      {/* <SingerActions /> */}
+      {/* <Experience experience={profile.experience} />
+      <Education education={profile.education} /> */}
+      <div />
+      <button
+        onClick={this.onDeleteClick2.bind(this)}
+        className="btn btn-danger "
+      >
+        Delete Singer
+      </button>
+    </div>
     );
   } else {
     // User is logged in but has no profile

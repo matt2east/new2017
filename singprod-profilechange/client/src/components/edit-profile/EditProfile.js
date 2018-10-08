@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import TextFieldGroup from '../common/TextFieldGroup';
-import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
-import InputGroup from '../common/InputGroup';
-import SelectListGroup from '../common/SelectListGroup';
-import { createProfile } from '../../actions/profileActions';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
+import TextFieldGroup from "../common/TextFieldGroup";
+import TextAreaFieldGroup from "../common/TextAreaFieldGroup";
+import InputGroup from "../common/InputGroup";
+import SelectListGroup from "../common/SelectListGroup";
+import { createProfile } from "../../actions/profileActions";
 
 class CreateProfile extends Component {
   constructor(props) {
@@ -64,9 +64,10 @@ class CreateProfile extends Component {
   }
 
   render() {
-    const { errors,
+    const {
+      errors
       //  displaySocialInputs
-     } = this.state;
+    } = this.state;
 
     // let socialInputs;
 
@@ -138,7 +139,7 @@ class CreateProfile extends Component {
               </p>
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
-              <TextFieldGroup
+                <TextFieldGroup
                   placeholder="* Producer moniker"
                   name="handle"
                   value={this.state.handle}
@@ -163,20 +164,20 @@ class CreateProfile extends Component {
                   info="Tell us a about yourself."
                 />
                 <TextFieldGroup
-                  placeholder="Website"
-                  name="website"
-                  value={this.state.website}
-                  onChange={this.onChange}
-                  error={errors.website}
-                  info="Music producer website."
-                />
-                <TextFieldGroup
                   placeholder="* Producer demo"
                   name="demo1"
                   value={this.state.demo1}
                   onChange={this.onChange}
                   error={errors.demo1}
                   info="Music producer demo / portfolio link."
+                />
+                <TextFieldGroup
+                  placeholder="Website"
+                  name="website"
+                  value={this.state.website}
+                  onChange={this.onChange}
+                  error={errors.website}
+                  info="Music producer website."
                 />
                 <TextFieldGroup
                   placeholder="Additional demo"
@@ -274,6 +275,7 @@ const mapStateToProps = state => ({
   errors: state.errors
 });
 
-export default connect(mapStateToProps, { createProfile })(
-  withRouter(CreateProfile)
-);
+export default connect(
+  mapStateToProps,
+  { createProfile }
+)(withRouter(CreateProfile));
