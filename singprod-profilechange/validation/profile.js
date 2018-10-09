@@ -1,5 +1,6 @@
 const Validator = require('validator');
 const isEmpty = require('./is-empty');
+const isImage = require('is-image');
 
 module.exports = function validateProfileInput(data) {
   let errors = {};
@@ -8,6 +9,7 @@ module.exports = function validateProfileInput(data) {
   data.bio = !isEmpty(data.bio) ? data.bio : '';
   data.demo1 = !isEmpty(data.demo1) ? data.demo1 : '';
   data.email = !isEmpty(data.email) ? data.email : '';
+  data.pic = !isEmpty(data.pic) ? data.pic : '';
   // data.status = !isEmpty(data.status) ? data.status : '';
   // data.skills = !isEmpty(data.skills) ? data.skills : '';
 
@@ -40,6 +42,10 @@ module.exports = function validateProfileInput(data) {
   if (Validator.isEmpty(data.email)) {
     errors.email = 'Contact email is required';
   }
+
+  // if (!isImage(data.pic)) {
+  //   errors.pic = 'Not an image.';
+  // }
 
   // if (Validator.isEmpty(data.skills)) {
   //   errors.skills = 'Skills field is required';

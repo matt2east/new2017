@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import isEmpty from "../../validation/is-empty";
+import { Link } from 'react-router-dom';
 import tempicon from "../../img/temp-icon.jpg";
 
 class ProfileHeader extends Component {
   render() {
     const { profile } = this.props;
-    const linky = 'www.google.com';
-    console.log(linky)
+    const siteUrl = 'https://' + profile.website;
     return (
       <div className="row">
         <div className="col-md-12">
@@ -25,14 +25,14 @@ class ProfileHeader extends Component {
               {/* {isEmpty(profile.email) ? null : <p>Contact: {profile.email}</p>} */}
               {isEmpty(profile.location) ? null : (
                 <p>
-                  <i className="fas fa-globe" /> {profile.location}
+                  <i className="fa fa-globe" /> {profile.location}
                 </p>
               )}
               <p>
-                {isEmpty(profile.demo1) ? null : (
+                {isEmpty(profile.website) ? null : (
                   <span>
                     <i className="fas fa-external-link-alt"></i>{" "}
-                    <a href={linky} target="_blank" className="text-white">
+                    <a target="_blank" href={siteUrl} className="text-white">
                       Website
                     </a>
                   </span>

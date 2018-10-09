@@ -131,6 +131,7 @@ router.post(
     if (req.body.canrecord) profileFields.canrecord = req.body.canrecord;
     if (req.body.commission) profileFields.commission = req.body.commission;
     if (req.body.collab) profileFields.collab = req.body.collab;
+    if (req.body.pic) profileFields.pic = req.body.pic;
    
    
     // if (req.body.status) profileFields.status = req.body.status;

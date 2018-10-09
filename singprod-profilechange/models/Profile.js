@@ -31,6 +31,9 @@ const ProfileSchema = new Schema({
   website: {
     type: String
   },  
+  pic: {
+    type: String
+  }, 
   location: {
     type: String,
   },

@@ -5,6 +5,9 @@ import isEmpty from "../../validation/is-empty";
 class ProfileAbout extends Component {
   render() {
     const { profile } = this.props;
+    const demo1Url = 'https://' + profile.demo1;
+    const demo2Url = 'https://' + profile.demo2;
+    const demo3Url = 'https://' + profile.demo3;
     return (
       <div className="row">
         <div className="col-md-12">
@@ -15,7 +18,7 @@ class ProfileAbout extends Component {
                   {isEmpty(profile.demo1) ? null : (
                     <span>
                       <i className="fas fa-music text-info" />{" "}
-                      <a href={profile.demo1} target="_blank">
+                      <a href={demo1Url} target="_blank">
                         Demo #1
                       </a>
                     </span>
@@ -25,7 +28,7 @@ class ProfileAbout extends Component {
                   {isEmpty(profile.demo2) ? null : (
                     <span>
                       <i className="fas fa-music text-info" />{" "}
-                      <a href={profile.demo2} target="_blank">
+                      <a href={demo2Url} target="_blank">
                         Demo #2
                       </a>
                     </span>
@@ -35,7 +38,7 @@ class ProfileAbout extends Component {
                   {isEmpty(profile.demo3) ? null : (
                     <span>
                       <i className="fas fa-music text-info" />{" "}
-                      <a href={profile.demo3} target="_blank">
+                      <a href={demo3Url} target="_blank">
                         Demo #3
                       </a>
                     </span>
