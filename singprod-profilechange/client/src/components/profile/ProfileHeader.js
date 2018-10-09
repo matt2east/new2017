@@ -1,32 +1,44 @@
-import React, { Component } from 'react';
-import isEmpty from '../../validation/is-empty';
+import React, { Component } from "react";
+import isEmpty from "../../validation/is-empty";
+import tempicon from "../../img/temp-icon.jpg";
 
 class ProfileHeader extends Component {
   render() {
     const { profile } = this.props;
-
+    const linky = 'www.google.com';
+    console.log(linky)
     return (
       <div className="row">
         <div className="col-md-12">
           <div className="card card-body bg-info text-white mb-3">
             <div className="row">
-              {/* <div className="col-4 col-md-3 m-auto">
-                <img
-                  className="rounded-circle"
-                  src={profile.user.avatar}
-                  alt=""
-                />
-              </div> */}
+              <div className="col-4 col-md-3 m-auto">
+                <img className="rounded-circle" src={tempicon} alt="" />
+              </div>
             </div>
             <div className="text-center">
               <h1 className="display-4 text-center">{profile.handle}</h1>
-              {isEmpty(profile.demo1) ? null : <p>Producr Demo: {profile.demo1}</p>}
+
+              {/* {isEmpty(profile.demo1) ? null : <p>Producr Demo: {profile.demo1}</p>}
               {isEmpty(profile.demo2) ? null : <p>Demo #2: {profile.demo2}</p>}
-              {isEmpty(profile.demo3) ? null : <p>Demo #3: {profile.demo3}</p>}
-              {isEmpty(profile.website) ? null : <p>Website: {profile.email}</p>}
-              {isEmpty(profile.email) ? null : <p>Contact: {profile.email}</p>}
-              {isEmpty(profile.location) ? null : <p>Location: {profile.location}</p>}
-              {isEmpty(profile.canwrite) ? null : <p>Songwriter? {profile.canwrite}</p>}
+              {isEmpty(profile.demo3) ? null : <p>Demo #3: {profile.demo3}</p>} */}
+              {/* {isEmpty(profile.email) ? null : <p>Contact: {profile.email}</p>} */}
+              {isEmpty(profile.location) ? null : (
+                <p>
+                  <i className="fas fa-globe" /> {profile.location}
+                </p>
+              )}
+              <p>
+                {isEmpty(profile.demo1) ? null : (
+                  <span>
+                    <i className="fas fa-external-link-alt"></i>{" "}
+                    <a href={linky} target="_blank" className="text-white">
+                      Website
+                    </a>
+                  </span>
+                )}
+              </p>
+              {/* {isEmpty(profile.canwrite) ? null : <p>Songwriter? {profile.canwrite}</p>}
               {isEmpty(profile.canrecord) ? null : <p>Can record? {profile.record}</p>}
               {isEmpty(profile.commission) ? null : <p>Accepts commissions? {profile.commission}</p>}
               {isEmpty(profile.collab) ? null : <p>Interested in collaboration? {profile.collab}</p>}

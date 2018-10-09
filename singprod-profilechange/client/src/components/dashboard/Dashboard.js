@@ -57,7 +57,7 @@ class Dashboard extends Component {
       //Check if logged in user has profile data
       if (Object.keys(profile).length > 0) {
         dashboardContent = (
-          <div>  
+          <div >  
             <p className="lead text-muted">
               Producer profile: <Link to={`/producer/${profile.handle}`}>{profile.handle}</Link>
             </p>
@@ -68,7 +68,7 @@ class Dashboard extends Component {
             <div />
             <button
               onClick={this.onDeleteClick.bind(this)}
-              className="btn btn-danger"
+              className="btn btn-dark"
             >
               Delete Producer 
             </button>
@@ -98,15 +98,11 @@ if (singer === null || loading2) {
       <p className="lead text-muted">
         Singer profile: <Link to={`/singer/${singer.handle}`}>{singer.handle}</Link>
       </p>
-      {/* <p>{profile.demo1}</p> */}
       <SingerActions />
-      {/* <SingerActions /> */}
-      {/* <Experience experience={profile.experience} />
-      <Education education={profile.education} /> */}
       <div />
       <button
         onClick={this.onDeleteClick2.bind(this)}
-        className="btn btn-danger "
+        className="btn btn-dark"
       >
         Delete Singer
       </button>
@@ -116,8 +112,6 @@ if (singer === null || loading2) {
     // User is logged in but has no profile
     singerContent = (
       <div>
-        {/* <p className="lead text-muted">Welcome {user.name}</p> */}
-        {/* <p>You have not yet setup a singer profile, please add some info</p> */}
         <Link to="/create-singer" className="btn btn-lg btn-info">
           Create Singer
         </Link>
