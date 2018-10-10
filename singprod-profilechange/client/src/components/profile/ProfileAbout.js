@@ -79,7 +79,6 @@ class ProfileAbout extends Component {
                 </p>
               </div>
             </div>
-            {/* <hr /> */}
             <h3 className="text-center">{profile.handle}{' '}Biography</h3>
             <div className="row">
               <div className="d-flex flex-wrap justify-content-center align-items-center">
