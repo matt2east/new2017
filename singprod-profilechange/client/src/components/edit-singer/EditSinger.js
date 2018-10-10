@@ -6,7 +6,7 @@ import TextFieldGroup from "../common/TextFieldGroup";
 import TextAreaFieldGroup from "../common/TextAreaFieldGroup";
 import InputGroup from "../common/InputGroup";
 import SelectListGroup from "../common/SelectListGroup";
-import { createSinger } from "../../actions/singerActions";
+import { createSinger} from "../../actions/singerActions";
 
 class CreateSinger extends Component {
   constructor(props) {

@@ -33,11 +33,11 @@ class CreateProfile extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
-  componentDidMount() {
-    console.log('component did mount')
-    console.log(this.props.getCurrentProfile())
-    this.props.getCurrentProfile();
-  }
+  // componentDidMount() {
+  //   console.log('component did mount')
+  //   console.log(this.props.getCurrentProfile())
+  //   this.props.getCurrentProfile();
+  // }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {

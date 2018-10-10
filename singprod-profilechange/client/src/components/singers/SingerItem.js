@@ -7,16 +7,13 @@ import tempicon from "../../img/temp-icon.jpg";
 class SingerItem extends Component {
   render() {
     const { singer } = this.props;
+    const demo1Url = "https://" + singer.demo1;
 
     return (
       <div className="card card-body bg-light mb-3">
         <div className="row">
           <div className="col-2">
-            <img
-              src={tempicon}
-              alt="singer icon"
-              className="rounded-circle"
-            />
+            <img src={tempicon} alt="singer icon" className="rounded-circle" />
           </div>
           <div className="col-lg-6 col-md-4 col-8">
             <h3>{singer.handle}</h3>
@@ -27,7 +24,12 @@ class SingerItem extends Component {
             </p>
             <p>
               {isEmpty(singer.demo1) ? null : (
-                <span>{singer.demo1}</span>
+                <span>
+                  <i className="fas fa-music text-info" />{" "}
+                  <a href={demo1Url} target="_blank">
+                    Demo #1
+                  </a>
+                </span>
               )}
             </p>
             <Link to={`/singer/${singer.handle}`} className="btn btn-info">
@@ -37,18 +39,26 @@ class SingerItem extends Component {
           <div className="col-md-4 d-none d-md-block">
             <p>
               {isEmpty(singer.canrecord) ? null : (
-                <span>Can record? <i>{singer.canrecord}</i></span>
-              )}{' '}
+                <span>
+                  Can record? <i>{singer.canrecord}</i>
+                </span>
+              )}{" "}
               {isEmpty(singer.canwrite) ? null : (
-                <span>Write songs? <i>{singer.canwrite}</i></span>
+                <span>
+                  Write songs? <i>{singer.canwrite}</i>
+                </span>
               )}
             </p>
             <p>
               {isEmpty(singer.commission) ? null : (
-                <span>Paid work? <i>{singer.commission}</i></span>
-              )}{' '}
+                <span>
+                  Paid work? <i>{singer.commission}</i>
+                </span>
+              )}{" "}
               {isEmpty(singer.collab) ? null : (
-                <span>Unpaid work? <i>{singer.collab}</i></span>
+                <span>
+                  Unpaid work? <i>{singer.collab}</i>
+                </span>
               )}
             </p>
           </div>
