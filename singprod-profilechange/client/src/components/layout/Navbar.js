@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { logoutUser } from '../../actions/authActions';
-import { clearCurrentProfile } from '../../actions/profileActions';
-import { clearCurrentSinger } from '../../actions/singerActions';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { logoutUser } from "../../actions/authActions";
+import { clearCurrentProfile } from "../../actions/profileActions";
+import { clearCurrentSinger } from "../../actions/singerActions";
 
 class Navbar extends Component {
   onLogoutClick(e) {
@@ -77,14 +77,20 @@ class Navbar extends Component {
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
                 <Link className="nav-link" to="/singers">
-                  {' '}
+                  {" "}
                   Singers
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/producers">
-                  {' '}
+                  {" "}
                   Producers
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/about">
+                  {" "}
+                  About
                 </Link>
               </li>
             </ul>
@@ -105,6 +111,7 @@ const mapStateToProps = state => ({
   auth: state.auth
 });
 
-export default connect(mapStateToProps, { logoutUser, clearCurrentProfile, clearCurrentSinger })(
-  Navbar
-);
+export default connect(
+  mapStateToProps,
+  { logoutUser, clearCurrentProfile, clearCurrentSinger }
+)(Navbar);
