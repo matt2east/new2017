@@ -19,7 +19,7 @@ class ProfileItem extends Component {
             />
           </div>
           <div className="col-lg-6 col-md-4 col-8">
-            <h3>{profile.handle}</h3>
+            <h3><i className="fas fa-headphones mr-1" /> {profile.handle}</h3>
             <p>
               {isEmpty(profile.location) ? null : (
                 <span>from: {profile.location}</span>

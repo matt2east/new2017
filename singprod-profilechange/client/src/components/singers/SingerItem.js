@@ -16,7 +16,7 @@ class SingerItem extends Component {
             <img src={tempicon} alt="singer icon" className="rounded-circle" />
           </div>
           <div className="col-lg-6 col-md-4 col-8">
-            <h3>{singer.handle}</h3>
+            <h3><i className="fas fa-microphone mr-1" /> {singer.handle}</h3>
             <p>
               {isEmpty(singer.location) ? null : (
                 <span>from: {singer.location}</span>

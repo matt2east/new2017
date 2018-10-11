@@ -16,7 +16,7 @@ class SingerHeader extends Component {
               </div>
             </div>
             <div className="text-center">
-              <h1 className="display-4 text-center"><i className="fas fa-microphone mr-1" />{singer.handle}</h1>
+              <h1 className="display-4 text-center"><i className="fas fa-microphone mr-1" /> {singer.handle}</h1>
               {isEmpty(singer.location) ? null : (
                 <p>
                   <i className="fa fa-globe" /> {singer.location}
