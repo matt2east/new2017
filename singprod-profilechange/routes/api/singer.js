@@ -118,6 +118,7 @@ router.post(
     const singerFields = {};
     singerFields.user = req.user.id;
     if (req.body.handle) singerFields.handle = req.body.handle;
+    if (req.body.pic) singerFields.pic = req.body.pic;
     if (req.body.bio) singerFields.bio = req.body.bio;
     if (req.body.website) singerFields.website = req.body.website;
     if (req.body.email) singerFields.email = req.body.email;

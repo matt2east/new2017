@@ -14,6 +14,7 @@ class CreateProfile extends Component {
     this.state = {
       // displaySocialInputs: false,
       handle: "",
+      pic: "",
       email: "",
       website: "",
       location: "",
@@ -43,6 +44,7 @@ class CreateProfile extends Component {
 
     const profileData = {
       handle: this.state.handle,
+      pic: this.state.pic,
       email: this.state.email,
       website: this.state.website,
       location: this.state.location,
@@ -143,6 +145,14 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   error={errors.handle}
                   info="Your producer moniker or artist name, such as: Butch Vig, Skrillex, etc."
+                />
+                <TextFieldGroup
+                  placeholder="* Image URL"
+                  name="pic"
+                  value={this.state.pic}
+                  onChange={this.onChange}
+                  error={errors.pic}
+                  info="Use an image hosted somewhere on the internet (for now)."
                 />
                 <TextFieldGroup
                   placeholder="* Email"

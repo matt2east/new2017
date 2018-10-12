@@ -1,5 +1,6 @@
 const Validator = require('validator');
 const isEmpty = require('./is-empty');
+const isImage = require('is-image');
 
 module.exports = function validateSingerInput(data) {
   let errors = {};
@@ -8,6 +9,7 @@ module.exports = function validateSingerInput(data) {
   data.bio = !isEmpty(data.bio) ? data.bio : '';
   data.demo1 = !isEmpty(data.demo1) ? data.demo1 : '';
   data.email = !isEmpty(data.email) ? data.email : '';
+  data.pic = !isEmpty(data.pic) ? data.pic : '';
 
   if (Validator.isEmpty(data.handle)) {
     errors.handle = 'Producer moniker is required';
@@ -31,6 +33,14 @@ module.exports = function validateSingerInput(data) {
 
   if (Validator.isEmpty(data.email)) {
     errors.email = 'Contact email is required';
+  }
+
+  if (!isImage(data.pic)) {
+    errors.pic = 'File type is not an image.';
+  }
+
+  if (Validator.isEmpty(data.pic)) {
+    errors.pic = 'Image URL is required.';
   }
 
   return {

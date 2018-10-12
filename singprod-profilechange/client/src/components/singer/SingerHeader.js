@@ -12,7 +12,19 @@ class SingerHeader extends Component {
           <div className="card card-body bg-info text-white mb-3">
             <div className="row">
               <div className="col-4 col-md-3 m-auto">
-                <img className="rounded-circle" src={tempicon} alt="" />
+              {isEmpty(singer.pic) ? (
+              <img
+                src={tempicon}
+                alt="singer icon"
+                className="rounded-circle"
+              />
+            ) : (
+              <img
+                src={singer.pic}
+                alt="singer icon"
+                className="rounded-circle"
+              />
+            )}
               </div>
             </div>
             <div className="text-center">

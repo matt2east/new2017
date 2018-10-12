@@ -11,6 +11,9 @@ const SingerSchema = new Schema({
     type: String,
     required: true,
   },
+  pic: {
+    type: String
+  },
   bio: {
     type: String
   },

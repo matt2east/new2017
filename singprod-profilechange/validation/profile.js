@@ -35,17 +35,21 @@ module.exports = function validateProfileInput(data) {
     }
   // }
 
-  if (!Validator.isEmail(data.email)) {
-    errors.email = 'Email is invalid';
-  }
-
   if (Validator.isEmpty(data.email)) {
     errors.email = 'Contact email is required';
   }
 
-  // if (!isImage(data.pic)) {
-  //   errors.pic = 'Not an image.';
-  // }
+  if (!Validator.isEmail(data.email)) {
+    errors.email = 'Email is invalid';
+  }
+
+  if (!isImage(data.pic)) {
+    errors.pic = 'File type is not an image.';
+  }
+
+  if (Validator.isEmpty(data.pic)) {
+    errors.pic = 'Image URL is required.';
+  }
 
   // if (Validator.isEmpty(data.skills)) {
   //   errors.skills = 'Skills field is required';

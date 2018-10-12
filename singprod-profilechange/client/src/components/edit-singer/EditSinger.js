@@ -6,13 +6,14 @@ import TextFieldGroup from "../common/TextFieldGroup";
 import TextAreaFieldGroup from "../common/TextAreaFieldGroup";
 import InputGroup from "../common/InputGroup";
 import SelectListGroup from "../common/SelectListGroup";
-import { createSinger} from "../../actions/singerActions";
+import { createSinger } from "../../actions/singerActions";
 
 class CreateSinger extends Component {
   constructor(props) {
     super(props);
     this.state = {
       handle: "",
+      pic: "",
       email: "",
       website: "",
       location: "",
@@ -42,6 +43,7 @@ class CreateSinger extends Component {
 
     const singerData = {
       handle: this.state.handle,
+      pic: this.state.pic,
       email: this.state.email,
       website: this.state.website,
       location: this.state.location,
@@ -89,6 +91,14 @@ class CreateSinger extends Component {
                   onChange={this.onChange}
                   error={errors.handle}
                   info="Your singer moniker or artist name, such as: Frank Sinatra, Madonna, etc."
+                />
+                <TextFieldGroup
+                  placeholder="* Image URL"
+                  name="pic"
+                  value={this.state.pic}
+                  onChange={this.onChange}
+                  error={errors.pic}
+                  info="Use an image hosted somewhere on the internet (for now)."
                 />
                 <TextFieldGroup
                   placeholder="* Email"

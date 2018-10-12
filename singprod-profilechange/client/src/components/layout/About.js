@@ -15,9 +15,9 @@ class About extends Component {
             </div>
           </div>
           <div className="card card-body bg-light mb-3">
-          <h3 className="text-center"><i class="fas fa-lightbulb"></i> Project Goals</h3>
+          <h3 className="text-center"><i className="fas fa-lightbulb"></i> Project Goals</h3>
           <p>Here is why I did this project. Bla bla bla.</p>
-          <h3 className="text-center"><i class="fas fa-laptop"></i> Technology</h3>
+          <h3 className="text-center"><i className="fas fa-laptop"></i> Technology</h3>
           <p>This is the technology I used to build this, and what I might do next. Bla bla bla</p>
             </div>
         </div>
