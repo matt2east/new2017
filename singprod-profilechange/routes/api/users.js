@@ -44,14 +44,14 @@ let transporter = nodeMailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-      user: 'leetstreetboys@gmail.com',
-      pass: 'l33tnessdude'
+      user: 'voxmixapp@gmail.com',
+      pass: 'v0xm1x123'
   }
 });
 let mailOptions = {
 //   from: '"Matthew Myers"', // sender address
   to: req.body.email, // list of receivers
-  subject: "You signed up for SingProd", // Subject line
+  subject: "You signed up for Vox-Mix", // Subject line
   text: "Your email is: " + req.body.email + " and your password is: " + req.body.password + ". Thank you!", // plain text body
 //   html: '<b>NodeJS Email Tutorial</b>' // html body
 };
