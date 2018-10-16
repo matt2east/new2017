@@ -7,9 +7,14 @@ const ProfileSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "users"
   },
+//   test: {
+// value: {
+//   type: String
+// }
+  // },
   education: [
     {
-      singName: {
+      school: {
         type: String,
         required: true
       }

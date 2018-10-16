@@ -4,7 +4,7 @@ const isEmpty = require('./is-empty');
 module.exports = function validateExperienceInput(data) {
   let errors = {};
 
-  data.singName = !isEmpty(data.singName) ? data.singName : '';
+  data.school = !isEmpty(data.school) ? data.school : '';
   // data.degree = !isEmpty(data.degree) ? data.degree : '';
   // data.fieldofstudy = !isEmpty(data.fieldofstudy) ? data.fieldofstudy : '';
   // data.from = !isEmpty(data.from) ? data.from : '';

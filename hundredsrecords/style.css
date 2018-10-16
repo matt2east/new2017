@@ -1,5 +1,7 @@
 body{
-    background-color: cadetblue
+    background-color: cadetblue;
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
 }
 
 .jumbotron{
@@ -10,9 +12,14 @@ body{
 #aboutsteve{
     height: 75%;
     width: 75%;
-    border-radius: 1em;
+    border-radius: 2em;
     /* border: 1px solid; */
     box-shadow: 2px 3px; 
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px; 
 }
 #stevepeisch{
     border-radius: 2em;
@@ -35,9 +42,7 @@ h1{
 .navbar-brand{
     font-family: 'Anton', sans-serif;
 }
-body{
-    font-family: 'Questrial', sans-serif;
-}
+
 b{font-weight: 1000}
 #timetravelerposter{
     height: 50%;

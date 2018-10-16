@@ -51,7 +51,7 @@ let transporter = nodeMailer.createTransport({
 let mailOptions = {
 //   from: '"Matthew Myers"', // sender address
   to: req.body.email, // list of receivers
-  subject: "You signed up for Vox-Mix", // Subject line
+  subject: "You signed up for Vox:Mix", // Subject line
   text: "Your email is: " + req.body.email + " and your password is: " + req.body.password + ". Thank you!", // plain text body
 //   html: '<b>NodeJS Email Tutorial</b>' // html body
 };

@@ -87,12 +87,12 @@ class Navbar extends Component {
                   Producers
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" to="/about">
                   {" "}
                   About
                 </Link>
-              </li>
+              </li> */}
             </ul>
             {isAuthenticated ? authLinks : guestLinks}
           </div>

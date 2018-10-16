@@ -44,7 +44,7 @@ function onPlayerStateChange(event) {
     case -1:
       jQuery(target_control).fadeIn(500);
       jQuery(target_control).children().unbind('click');
-      break
+      break;
      case 0:
       jQuery(target_control).fadeIn(500);
       jQuery(target_control).children().unbind('click');

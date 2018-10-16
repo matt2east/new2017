@@ -5,7 +5,8 @@ function validEmail(email) { // see:
 }
 // get all data in form and return object
 function getFormData() {
-  var elements = document.getElementsById("gform").elements; // all form elements
+  var elements = document.getElementById("gform").elements; // all form elements
+  console.log(elements)
   var fields = Object.keys(elements).map(function(k) {
     if(elements[k].name !== undefined) {
       return elements[k].name;
@@ -75,6 +76,7 @@ function loaded() {
   form.addEventListener("submit", handleFormSubmit, false); 
 };
 function sendForm() {
-  alert("Thank you for subscribing to HUNDREDS RECORDS!");
+  // var form = document.getElementById('gform');
+  // form.addEventListener("submit", handleFormSubmit, false); 
 }
 document.addEventListener('DOMContentLoaded', loaded, false);
