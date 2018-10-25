@@ -30,11 +30,11 @@ class ProfileItem extends Component {
             <h3>
               <i className="fas fa-headphones mr-1" /> {profile.handle}
             </h3>
-            <p>
+            {/* <p>
               {isEmpty(profile.location) ? null : (
                 <span>from: {profile.location}</span>
               )}
-            </p>
+            </p> */}
             <p>
               {isEmpty(profile.demo1) ? null : (
                 <span>

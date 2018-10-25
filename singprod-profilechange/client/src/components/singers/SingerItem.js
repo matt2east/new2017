@@ -29,11 +29,11 @@ class SingerItem extends Component {
           </div>
           <div className="col-lg-6 col-md-4 col-8">
             <h3><i className="fas fa-microphone mr-1" /> {singer.handle}</h3>
-            <p>
+            {/* <p>
               {isEmpty(singer.location) ? null : (
                 <span>from: {singer.location}</span>
               )}
-            </p>
+            </p> */}
             <p>
               {isEmpty(singer.demo1) ? null : (
                 <span>
