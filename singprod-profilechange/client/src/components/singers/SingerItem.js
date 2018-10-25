@@ -7,7 +7,7 @@ import tempicon from "../../img/temp-icon.jpg";
 class SingerItem extends Component {
   render() {
     const { singer } = this.props;
-    const demo1Url = "https://" + singer.demo1;
+    const demo1Url = singer.demo1;
 
     return (
       <div className="card card-body bg-light mb-3">

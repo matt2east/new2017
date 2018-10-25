@@ -5,9 +5,9 @@ import isEmpty from "../../validation/is-empty";
 class ProfileAbout extends Component {
   render() {
     const { profile } = this.props;
-    const demo1Url = 'https://' + profile.demo1;
-    const demo2Url = 'https://' + profile.demo2;
-    const demo3Url = 'https://' + profile.demo3;
+    const demo1Url = profile.demo1;
+    const demo2Url = profile.demo2;
+    const demo3Url = profile.demo3;
     return (
       <div className="row">
         <div className="col-md-12">

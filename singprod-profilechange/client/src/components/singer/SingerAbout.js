@@ -5,9 +5,9 @@ import isEmpty from '../../validation/is-empty';
 class SingerAbout extends Component {
   render() {
     const { singer } = this.props;
-    const demo1Url = 'https://' + singer.demo1;
-    const demo2Url = 'https://' + singer.demo2;
-    const demo3Url = 'https://' + singer.demo3;
+    const demo1Url = singer.demo1;
+    const demo2Url = singer.demo2;
+    const demo3Url = singer.demo3;
     return (
       <div className="row">
         <div className="col-md-12">

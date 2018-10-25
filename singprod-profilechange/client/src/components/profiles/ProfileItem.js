@@ -7,7 +7,7 @@ import tempicon from "../../img/temp-icon.jpg";
 class ProfileItem extends Component {
   render() {
     const { profile } = this.props;
-    const demo1Url = "https://" + profile.demo1;
+    const demo1Url = profile.demo1;
     return (
       <div className="card card-body bg-light mb-3">
         <div className="row">
