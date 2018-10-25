@@ -5,7 +5,7 @@ import tempicon from "../../img/temp-icon.jpg";
 class SingerHeader extends Component {
   render() {
     const { singer } = this.props;
-    const siteUrl = singer.website;
+    const siteUrl = 'http://' + singer.website;
     return (
       <div className="row">
         <div className="col-md-12">

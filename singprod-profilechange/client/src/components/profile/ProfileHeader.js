@@ -6,7 +6,7 @@ import tempicon from "../../img/temp-icon.jpg";
 class ProfileHeader extends Component {
   render() {
     const { profile } = this.props;
-    const siteUrl = profile.website;
+    const siteUrl = "http://" + profile.website;
     return (
       <div className="row">
         <div className="col-md-12">
