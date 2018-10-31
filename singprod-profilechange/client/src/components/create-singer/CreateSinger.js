@@ -79,10 +79,10 @@ class CreateSinger extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Create Your singer</h1>
-              <p className="lead text-center">
+              <h1 className="display-4 text-center">Create Singer Profile</h1>
+              {/* <p className="lead text-center">
                 Let's get some information to make your singer stand out
-              </p>
+              </p> */}
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
