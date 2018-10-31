@@ -23,7 +23,7 @@ class About extends Component {
           <p><i>Vox:Mix</i> is built using the MERN stack (Mongodb, Express, React, Node.Js) with Redux and mLab. The original concept came from heavily modifying the <a href="https://github.com/bradtraversy/devconnector">DevConnector</a> app in Brad Traversy’s MERN stack course on Udemy. It is currently hosted for free on Heroku temporarily due to the low volume of traffic. In a year from now mLab will also be deprecated which means the data storage will need to be rewritten.</p>
           <p>If this project gets developed further then I intend to replace the Image URL with a way to upload local images to a database. I haven’t done this yet because it will require some research, and I want to release what I have now because I have another project to start. Additionally I want to add a way to search singers and producers because as this database grows then it will be more difficult to sort through profiles. For now due to the low volume of users this is not an issue yet, so I’m not concerned about it right way.</p>
           <h3 className="text-center"><i className="fas fa-envelope"></i> Contact</h3>
-          <p>Have a suggestion or want to get in touch? Contact me at: voxmixapp@gmail.com</p>
+          <p>Have a suggestion or want to get in touch? Contact me at: admin@voxmix.net</p>
           <div>Copyright &copy; {new Date().getFullYear()} Matthew Myers</div>
             </div>
         </div>
